@@ -1,0 +1,571 @@
+Newest webversion 4.8.26
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TAP Athletes — Pitching Instruction in Rogers, Arkansas | v3</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700;1,800;1,900&family=Barlow:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --navy: #1B2A4A; --navy-dark: #0E1A2E; --navy-light: #243558;
+    --blue: #2E75B6; --blue-light: #4A90D9; --green: #548235; --green-light: #6FA842;
+    --gold: #B8922A; --white: #FFFFFF; --off-white: #F5F4F0; --gray-100: #EDECEA;
+    --gray-200: #D4D2CC; --gray-600: #4A4845; --text: #0E1A2E; --text-2: #4A4845;
+    --text-3: #6E6B65; --shadow-sm: 0 2px 12px rgba(14,26,46,0.06); --shadow-md: 0 8px 32px rgba(14,26,46,0.10);
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Barlow', sans-serif; background: var(--white); color: var(--text); overflow-x: hidden; line-height: 1.6; }
+  a, button { transition: all 0.2s ease; }
+  .container { max-width: 1120px; margin: 0 auto; }
+  .skip-link { position: absolute; left: 12px; top: -48px; background: var(--navy); color: var(--white); padding: 10px 14px; text-decoration: none; z-index: 200; font-weight: 600; }
+  .skip-link:focus { top: 12px; }
+  nav { position: sticky; top: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 18px 48px; background: rgba(255,255,255,0.96); backdrop-filter: blur(12px); border-bottom: 1px solid var(--gray-100); }
+  nav.scrolled { padding: 12px 48px; box-shadow: var(--shadow-sm); }
+  .nav-logo { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 22px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--navy); text-decoration: none; }
+  .nav-logo span { color: var(--blue); }
+  .nav-links { display: flex; gap: 28px; list-style: none; align-items: center; }
+  .nav-links a { font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gray-600); text-decoration: none; }
+  .nav-links a:hover { color: var(--navy); }
+  .nav-cta, .btn-primary, .btn-white { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; display: inline-flex; align-items: center; justify-content: center; min-height: 46px; padding: 14px 24px; }
+  .nav-cta, .btn-primary { background: var(--navy); color: var(--white); }
+  .nav-cta:hover, .btn-primary:hover { background: var(--blue); transform: translateY(-1px); }
+  .btn-secondary, .btn-outline { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; display: inline-flex; align-items: center; justify-content: center; min-height: 46px; padding: 14px 24px; border: 1px solid rgba(27,42,74,0.16); color: var(--navy); background: var(--white); }
+  .btn-secondary:hover { border-color: var(--blue); color: var(--blue); }
+  .nav-toggle { display: none; min-width: 44px; min-height: 44px; border: 1px solid var(--gray-200); background: var(--white); color: var(--navy); padding: 0 12px; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+  .mobile-menu { display: none; position: absolute; top: 74px; left: 20px; right: 20px; z-index: 95; background: var(--white); border: 1px solid var(--gray-100); box-shadow: var(--shadow-md); padding: 18px; }
+  .mobile-menu.open { display: block; }
+  .mobile-menu a { display: block; padding: 12px 0; text-decoration: none; color: var(--navy); font-family: 'Barlow Condensed', sans-serif; font-size: 15px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; border-bottom: 1px solid var(--gray-100); }
+  .mobile-menu a:last-child { border-bottom: none; }
+  .hero { display: flex; align-items: center; position: relative; background: var(--white); padding: 0 48px; }
+  .hero-inner { position: relative; z-index: 3; width: 100%; max-width: 1120px; margin: 0 auto; padding-top: 80px; padding-bottom: 80px; }
+  .hero-eyebrow { display: inline-flex; align-items: center; gap: 10px; font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--blue); margin-bottom: 18px; }
+  .hero-eyebrow::before { content: ''; display: block; width: 28px; height: 2px; background: var(--blue); }
+  .hero-headline { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: clamp(50px, 6vw, 92px); line-height: 0.92; letter-spacing: -0.01em; text-transform: uppercase; color: var(--navy); margin-bottom: 20px; }
+  .hero-headline .line { display: block; }
+  .hero-headline .accent { color: var(--blue); }
+  .hero-headline .italic { font-style: italic; }
+  .hero-sub { font-size: 17px; font-weight: 300; line-height: 1.72; color: var(--text-2); max-width: 540px; margin-bottom: 28px; }
+  .hero-actions { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; margin-bottom: 20px; }
+  .hero-note { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-3); }
+  .hero-stats { display: grid; grid-template-columns: repeat(4, 1fr); background: var(--white); border-top: 1px solid var(--gray-100); border-bottom: 1px solid var(--gray-100); margin: 0 48px; }
+  .hero-stat { padding: 18px 28px; border-right: 1px solid var(--gray-100); }
+  .hero-stat:last-child { border-right: none; }
+  .hstat-num { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 30px; line-height: 1; color: var(--navy); }
+  .hstat-num em { color: var(--blue); font-size: 18px; font-style: normal; }
+  .hstat-label { font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-3); margin-top: 4px; }
+  .trust { background: var(--off-white); border-bottom: 1px solid var(--gray-100); padding: 26px 48px; }
+  .trust-inner { max-width: 1120px; margin: 0 auto; display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+  .trust-label { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--text-3); white-space: nowrap; }
+  .trust-divider { width: 1px; height: 24px; background: var(--gray-200); }
+  .trust-logos { display: flex; gap: 12px; flex-wrap: wrap; }
+  .trust-logo { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gray-600); border: 1px solid var(--gray-200); background: var(--white); padding: 7px 12px; }
+  section { padding: 96px 48px; }
+  .section-eyebrow { display: inline-flex; align-items: center; gap: 10px; font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--blue); margin-bottom: 14px; }
+  .section-eyebrow::before { content: ''; display: block; width: 22px; height: 2px; background: var(--blue); }
+  .section-title { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: clamp(34px, 4vw, 54px); line-height: 1; text-transform: uppercase; color: var(--navy); margin-bottom: 12px; }
+  .section-lead { font-size: 16px; font-weight: 300; line-height: 1.7; color: var(--text-2); max-width: 600px; }
+  .start { background: var(--white); }
+  .start-inner { max-width: 1120px; margin: 0 auto; display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 40px; align-items: start; }
+  .start-cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px; background: var(--gray-200); border: 1px solid var(--gray-200); margin-top: 34px; }
+  .start-card { background: var(--off-white); padding: 26px 22px; }
+  .start-card-kicker { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--blue); margin-bottom: 8px; }
+  .start-card-title { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 22px; line-height: 1.02; text-transform: uppercase; color: var(--navy); margin-bottom: 8px; }
+  .start-card p { font-size: 14px; color: var(--text-2); }
+  .start-proof { background: var(--navy); color: var(--white); padding: 28px; box-shadow: var(--shadow-md); }
+  .start-proof .mini-eyebrow { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--blue-light); margin-bottom: 10px; }
+  .start-proof h3 { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 32px; line-height: 0.96; text-transform: uppercase; margin-bottom: 14px; }
+  .start-proof p { color: rgba(255,255,255,0.72); font-size: 14px; margin-bottom: 18px; }
+  .proof-list { list-style: none; display: grid; gap: 12px; }
+  .proof-list li { display: grid; grid-template-columns: 90px 1fr; gap: 12px; align-items: start; padding-top: 12px; border-top: 1px solid rgba(255,255,255,0.12); }
+  .proof-list strong { font-family: 'Barlow Condensed', sans-serif; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; }
+  .proof-list span { color: rgba(255,255,255,0.76); font-size: 13px; }
+  .programs { background: var(--off-white); border-top: 1px solid var(--gray-100); }
+  .programs-inner { max-width: 1120px; margin: 0 auto; }
+  .programs-header { margin-bottom: 40px; display: flex; justify-content: space-between; align-items: end; gap: 20px; flex-wrap: wrap; }
+  .programs-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: var(--gray-200); border: 1px solid var(--gray-200); }
+  .prog-card { background: var(--white); padding: 34px 28px; display: flex; flex-direction: column; min-height: 100%; }
+  .prog-card:hover { background: #FAFAF8; }
+  .prog-card-top-bar { height: 3px; width: 100%; margin-bottom: 24px; }
+  .prog-card.academy .prog-card-top-bar { background: var(--blue); }
+  .prog-card.unprompted .prog-card-top-bar { background: var(--gold); }
+  .prog-card.instruction .prog-card-top-bar { background: var(--green); }
+  .prog-badge { display: inline-block; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; padding: 4px 12px; margin-bottom: 14px; }
+  .prog-card.academy .prog-badge { background: rgba(46,117,182,0.08); color: var(--blue); border: 1px solid rgba(46,117,182,0.25); }
+  .prog-card.unprompted .prog-badge { background: rgba(184,146,42,0.08); color: var(--gold); border: 1px solid rgba(184,146,42,0.25); }
+  .prog-card.instruction .prog-badge { background: rgba(84,130,53,0.08); color: var(--green); border: 1px solid rgba(84,130,53,0.25); }
+  .prog-name { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 30px; line-height: 1; text-transform: uppercase; color: var(--navy); margin-bottom: 4px; }
+  .prog-format { font-family: 'Barlow Condensed', sans-serif; font-weight: 500; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-3); margin-bottom: 18px; }
+  .prog-fit { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 14px; }
+  .prog-card.academy .prog-fit { color: var(--blue); }
+  .prog-card.unprompted .prog-fit { color: var(--gold); }
+  .prog-card.instruction .prog-fit { color: var(--green); }
+  .prog-desc { font-size: 14px; font-weight: 300; line-height: 1.7; color: var(--text-2); margin-bottom: 20px; }
+  .prog-details { display: flex; flex-direction: column; gap: 7px; margin-bottom: 26px; }
+  .prog-detail { display: flex; align-items: flex-start; gap: 9px; font-family: 'Barlow Condensed', sans-serif; font-size: 13px; font-weight: 600; color: var(--text-2); }
+  .prog-detail::before { content: ''; width: 4px; height: 4px; border-radius: 50%; margin-top: 7px; flex-shrink: 0; }
+  .prog-card.academy .prog-detail::before { background: var(--blue); }
+  .prog-card.unprompted .prog-detail::before { background: var(--gold); }
+  .prog-card.instruction .prog-detail::before { background: var(--green); }
+  .prog-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: auto; }
+  .club { background: var(--navy-dark); position: relative; overflow: hidden; }
+  .club-bg { position: absolute; inset: 0; background: radial-gradient(ellipse at 30% 50%, rgba(46,117,182,0.12) 0%, transparent 55%), radial-gradient(ellipse at 80% 20%, rgba(84,130,53,0.06) 0%, transparent 45%); }
+  .club-inner { position: relative; z-index: 1; max-width: 1120px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+  .club-eyebrow { display: inline-flex; align-items: center; gap: 10px; font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; }
+  .club-eyebrow::before { content: ''; width: 22px; height: 2px; background: var(--gold); display: block; }
+  .club-title { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: clamp(40px, 5vw, 68px); line-height: 0.92; text-transform: uppercase; color: var(--white); margin-bottom: 18px; }
+  .club-title .slash { color: var(--gold); }
+  .club-body { font-size: 15px; font-weight: 300; line-height: 1.75; color: rgba(255,255,255,0.66); margin-bottom: 28px; }
+  .club-body strong { color: var(--white); font-weight: 500; }
+  .club-milestones { display: flex; flex-direction: column; gap: 2px; }
+  .club-milestone { display: flex; gap: 18px; align-items: flex-start; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); padding: 18px 22px; }
+  .cm-num { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 40px; line-height: 1; flex-shrink: 0; }
+  .cm-num.blue { color: var(--blue-light); }
+  .cm-num.gold { color: var(--gold); }
+  .cm-label { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 15px; text-transform: uppercase; color: var(--white); margin-bottom: 3px; }
+  .cm-sub { font-size: 13px; font-weight: 300; color: rgba(255,255,255,0.48); line-height: 1.5; }
+  .proof-stack { display: grid; gap: 16px; }
+  .testimonial-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 30px; position: relative; }
+  .testimonial-card::before { content: '\201C'; font-family: Georgia, serif; font-size: 72px; line-height: 0.7; color: rgba(46,117,182,0.25); position: absolute; top: 22px; left: 24px; }
+  .t-text { font-family: 'Barlow Condensed', sans-serif; font-size: 20px; line-height: 1.35; color: var(--white); font-style: italic; margin-bottom: 20px; padding-top: 28px; }
+  .t-name { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 14px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--white); }
+  .t-role { font-size: 12px; color: rgba(255,255,255,0.45); margin-top: 2px; }
+  .result-card { background: rgba(255,255,255,0.04); padding: 22px; border: 1px solid rgba(255,255,255,0.08); }
+  .result-label { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--green-light); margin-bottom: 8px; }
+  .result-card h3 { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 24px; line-height: 1; text-transform: uppercase; color: var(--white); margin-bottom: 8px; }
+  .result-card p { color: rgba(255,255,255,0.66); font-size: 13px; }
+  .classes { background: var(--white); border-top: 1px solid var(--gray-100); }
+  .classes-inner { max-width: 1120px; margin: 0 auto; }
+  .classes-header { margin-bottom: 40px; display: flex; justify-content: space-between; align-items: end; gap: 20px; flex-wrap: wrap; }
+  .classes-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .class-card { background: var(--white); border: 1px solid var(--gray-100); display: flex; flex-direction: column; transition: border-color 0.2s, box-shadow 0.2s; }
+  .class-card:hover { border-color: rgba(46,117,182,0.35); box-shadow: var(--shadow-sm); }
+  .class-card-top { padding: 28px 28px 0; }
+  .class-number { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-3); margin-bottom: 16px; display: flex; gap: 10px; align-items: center; }
+  .class-number::before { content: ''; width: 20px; height: 1px; background: var(--gray-200); display: block; }
+  .class-tag { display: inline-block; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; padding: 4px 10px; margin-bottom: 14px; background: rgba(46,117,182,0.07); color: var(--blue); border: 1px solid rgba(46,117,182,0.2); }
+  .class-title { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 22px; line-height: 1.05; text-transform: uppercase; color: var(--navy); margin-bottom: 6px; }
+  .class-subtitle { font-family: 'Barlow Condensed', sans-serif; font-weight: 500; font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-3); margin-bottom: 16px; }
+  .class-divider { height: 1px; background: var(--gray-100); margin: 0 28px 20px; }
+  .class-body { padding: 0 28px; font-size: 14px; font-weight: 300; line-height: 1.7; color: var(--text-2); flex: 1; }
+  .class-topics { padding: 16px 28px 0; display: grid; gap: 6px; }
+  .class-topic { display: flex; gap: 9px; font-size: 13px; color: var(--text-2); line-height: 1.45; }
+  .class-topic::before { content: ''; width: 4px; height: 4px; border-radius: 50%; background: var(--blue); display: inline-block; flex-shrink: 0; margin-top: 6px; }
+  .class-footer { padding: 20px 28px 24px; margin-top: 20px; border-top: 1px solid var(--gray-100); display: flex; justify-content: space-between; gap: 12px; align-items: center; }
+  .class-meta { font-family: 'Barlow Condensed', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.04em; color: var(--text-3); }
+  .class-book { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--blue); text-decoration: none; border-bottom: 1px solid rgba(46,117,182,0.3); padding-bottom: 1px; }
+  .faq-lite { background: var(--off-white); border-top: 1px solid var(--gray-100); }
+  .faq-inner { max-width: 1120px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .faq-list { display: grid; gap: 2px; background: var(--gray-200); border: 1px solid var(--gray-200); }
+  .faq-item { background: var(--white); padding: 22px; }
+  .faq-q { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 18px; text-transform: uppercase; color: var(--navy); margin-bottom: 8px; }
+  .faq-a { font-size: 14px; color: var(--text-2); }
+  .cta-final { background: var(--navy); padding: 108px 48px; text-align: center; position: relative; overflow: hidden; }
+  .cta-bg { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 100%, rgba(46,117,182,0.14) 0%, transparent 55%); }
+  .cta-inner { position: relative; z-index: 1; max-width: 720px; margin: 0 auto; }
+  .cta-eyebrow { font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--blue-light); margin-bottom: 18px; }
+  .cta-title { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: clamp(38px, 5vw, 66px); line-height: 0.94; text-transform: uppercase; color: var(--white); margin-bottom: 18px; }
+  .cta-sub { font-size: 15px; font-weight: 300; line-height: 1.7; color: rgba(255,255,255,0.58); margin-bottom: 30px; }
+  .cta-buttons { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-bottom: 18px; }
+  .btn-white { background: var(--white); color: var(--navy); }
+  .btn-white:hover { background: var(--blue-light); color: var(--white); }
+  .btn-outline { color: rgba(255,255,255,0.82); border: 1px solid rgba(255,255,255,0.22); background: transparent; }
+  .btn-outline:hover { border-color: var(--blue-light); color: var(--blue-light); }
+  .cta-footnote { font-family: 'Barlow Condensed', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.42); }
+  footer { background: var(--navy-dark); padding: 34px 48px; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.07); flex-wrap: wrap; gap: 16px; }
+  .footer-logo { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 18px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--white); }
+  .footer-logo span { color: var(--blue-light); }
+  .footer-links { display: flex; gap: 24px; flex-wrap: wrap; }
+  .footer-links a { font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.35); text-decoration: none; }
+  .footer-links a:hover { color: var(--white); }
+  .footer-info { font-size: 12px; color: rgba(255,255,255,0.34); text-align: right; line-height: 1.7; }
+  .footer-info a { color: inherit; text-decoration: none; }
+  .reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.55s ease, transform 0.55s ease; }
+  .reveal.visible { opacity: 1; transform: none; }
+  .rd1 { transition-delay: 0.08s; } .rd2 { transition-delay: 0.16s; } .rd3 { transition-delay: 0.24s; }
+  /* ── RESPONSIVE ── */
+
+  /* Tablet landscape + small desktop (≤1080px) */
+  @media (max-width: 1080px) {
+    .start-inner { grid-template-columns: 1fr; }
+    .club-inner { grid-template-columns: 1fr; gap: 40px; }
+    .faq-inner { grid-template-columns: 1fr; }
+    .programs-grid { grid-template-columns: 1fr; }
+    .classes-grid { grid-template-columns: 1fr 1fr; }
+  }
+
+  /* Tablet portrait (≤768px) */
+  @media (max-width: 768px) {
+    .classes-grid { grid-template-columns: 1fr; }
+    .start-cards { grid-template-columns: 1fr; }
+    .hero-stats { grid-template-columns: repeat(2, 1fr); margin: 0 24px; }
+    .faq-inner { grid-template-columns: 1fr; }
+  }
+
+  /* Mobile nav + hero collapse (≤960px) */
+  @media (max-width: 960px) {
+    nav { padding: 14px 24px; }
+    nav.scrolled { padding: 10px 24px; }
+    .nav-links, .nav-cta { display: none; }
+    .nav-toggle { display: inline-flex; align-items: center; justify-content: center; }
+    .hero { padding: 0 24px; min-height: auto; }
+    .hero-inner { padding-top: 112px; padding-bottom: 72px; }
+    .hero-stats { grid-template-columns: repeat(2, 1fr); margin: 0 24px; }
+    section { padding-left: 24px; padding-right: 24px; }
+    .cta-final { padding-left: 24px; padding-right: 24px; }
+    footer { padding-left: 24px; padding-right: 24px; }
+    .faq-lite > .container { padding-left: 24px !important; padding-right: 24px !important; }
+  }
+
+  /* Mobile (≤640px) */
+  @media (max-width: 640px) {
+    section { padding-top: 68px; padding-bottom: 68px; }
+    .hero-headline { font-size: clamp(42px, 13vw, 64px); }
+    .hero-sub { font-size: 15px; }
+    .hero-actions, .cta-buttons { flex-direction: column; align-items: stretch; }
+    .hero-actions a, .cta-buttons a { width: 100%; }
+    .hero-stats { grid-template-columns: 1fr 1fr; }
+    .hero-stat { padding: 14px 16px; }
+    .hstat-num { font-size: 22px; }
+    .hstat-label { font-size: 10px; }
+    .section-title, .club-title, .cta-title { font-size: clamp(28px, 9vw, 44px); }
+    .footer-info { text-align: left; }
+    .faq-inner { grid-template-columns: 1fr; }
+    .start-cards { grid-template-columns: 1fr; }
+    .proof-outcome-headline { font-size: 22px !important; }
+    .start-proof { padding: 20px !important; }
+    .start-proof > div { gap: 2px; }
+    .proof-card { padding: 16px 18px !important; }
+    footer { flex-direction: column; align-items: flex-start; gap: 12px; }
+    .footer-links { gap: 16px; }
+    .cta-final { padding-left: 20px; padding-right: 20px; }
+    .programs-header, .classes-header { flex-direction: column; align-items: flex-start; }
+    .prog-name { font-size: 26px; }
+    .club-inner { padding: 0; }
+  }
+
+  /* Accessibility */
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .reveal { opacity: 1; transform: none; transition: none; }
+    * { transition: none !important; }
+  }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<nav>
+  <a href="#top" class="nav-logo">TAP <span>Athletes</span></a>
+  <ul class="nav-links">
+    <li><a href="tel:+18338602711">Start Here</a></li>
+    <li><a href="https://www.tapathletes.com/services">Programs</a></li>
+    <li><a href="https://www.tapathletes.com/services">Classes</a></li>
+    <li><a href="#faq-lite">FAQ</a></li>
+  </ul>
+  <a href="tel:+18338602711" class="nav-cta">Talk With a Coach</a>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu">Menu</button>
+</nav>
+<div class="mobile-menu" id="mobile-menu">
+  <a href="tel:+18338602711">Start Here</a>
+  <a href="https://www.tapathletes.com/services">Programs</a>
+  <a href="https://www.tapathletes.com/services">Classes</a>
+  <a href="#faq-lite">FAQ</a>
+  <a href="tel:+18338602711">Call or Text</a>
+</div>
+<main id="main">
+  <section class="hero" id="top">
+    <div class="hero-inner">
+      <!-- HERO IMAGE: replace src="" with your image URL to enable. Remove display:none to make visible. Recommended: 920x1080px, webp format -->
+      <img src="" alt="TAP Athletes pitching instruction" style="display:none;position:absolute;right:0;top:0;bottom:0;width:46%;height:100%;object-fit:cover;" aria-hidden="true">
+      <div class="hero-content reveal">
+        <div class="hero-eyebrow">Rogers, Arkansas · Youth &amp; HS Baseball Pitching Instruction</div>
+        <h1 class="hero-headline">
+          <span class="line">Anyone Can</span>
+          <span class="line">Learn to <span class="accent italic">Pitch.</span></span>
+        </h1>
+        <p class="hero-sub">TAP Athletes is a pitching academy built on the belief that anyone can learn to pitch. We help young pitchers build mechanics, command, and confidence through structured programs, classes, and individual instruction.</p>
+        <div class="hero-actions">
+          <a class="btn-primary" href="https://www.tapathletes.com/services">Explore Programs</a>
+          <a class="btn-secondary" href="tel:+18338602711">Talk With a Coach</a>
+        </div>
+        <div class="hero-note">Call or text for the fastest next step</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="hero-stats" aria-label="Key program stats">
+    <div class="hero-stat"><div class="hstat-num">72<em> sessions</em></div><div class="hstat-label">Flagship Curriculum</div></div>
+    <div class="hero-stat"><div class="hstat-num">4<em> athlete max</em></div><div class="hstat-label">Per Group / Cohort</div></div>
+    <div class="hero-stat"><div class="hstat-num">18<em> skills</em></div><div class="hstat-label">Across 4 Effort Phases</div></div>
+    <div class="hero-stat"><div class="hstat-num">60<em>/</em>10</div><div class="hstat-label">Performance Benchmark</div></div>
+  </div>
+
+  <section class="start" id="start-here">
+    <div class="start-inner">
+      <div>
+        <div class="section-eyebrow reveal">The TAP Athletes Model</div>
+        <h2 class="section-title reveal rd1">One Standard. Every Format.</h2>
+        <p class="section-lead reveal rd2">TAP Athletes is a pitching academy built on the belief that anyone can learn to pitch. We teach pitching through programs, classes, and individual instruction — each designed around a defined curriculum, delivered by coaches who meet athletes where they are, and measured against a real standard of progress.</p>
+        <div class="start-cards reveal rd2">
+          <article class="start-card"><div class="start-card-title">Foundations</div><p>Ages 8 and up. Self-paced individual instruction with a clear milestone path into the full system.</p></article>
+          <article class="start-card"><div class="start-card-title">Pitching Academy</div><p>The full development path. Structured sessions, progression, and measurable standards across 6 months.</p></article>
+          <article class="start-card"><div class="start-card-title">Train Unprompted™</div><p>A 6-week accountability program for athletes ready to take ownership of their own development.</p></article>
+          <article class="start-card"><div class="start-card-title">Classes &amp; Instruction</div><p>Standalone classes and individual sessions. Targeted skill work with no long-term commitment required.</p></article>
+        </div>
+      </div>
+      <aside class="start-proof reveal rd2" style="background:var(--navy);padding:28px;">
+        <div class="mini-eyebrow" style="color:var(--blue-light);font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;margin-bottom:18px;">What Athletes Achieve</div>
+        <div style="display:flex;flex-direction:column;gap:2px;">
+
+          <div class="proof-card" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);padding:20px 22px;">
+            <div style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--blue-light);margin-bottom:10px;">Pitching Academy</div>
+            <div class="proof-outcome-headline" style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:28px;line-height:1;color:var(--white);margin-bottom:8px;">Measurable Progress. Guaranteed.</div>
+            <div style="font-size:13px;font-weight:300;color:rgba(255,255,255,0.5);line-height:1.5;">+5 MPH on fastball velocity and +5% strike percentage — within 6 months, or a full refund.</div>
+          </div>
+
+          <div class="proof-card" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);padding:20px 22px;">
+            <div style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;">Train Unprompted™</div>
+            <div class="proof-outcome-headline" style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:28px;line-height:1;color:var(--white);margin-bottom:8px;">Trains Without Being Told To</div>
+            <div style="font-size:13px;font-weight:300;color:rgba(255,255,255,0.5);line-height:1.5;">A personal drill library, six weeks of logged sessions, and the confidence to run their own training.</div>
+          </div>
+
+          <div class="proof-card" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);padding:20px 22px;">
+            <div style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--green-light);margin-bottom:10px;">Foundations</div>
+            <div class="proof-outcome-headline" style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:28px;line-height:1;color:var(--white);margin-bottom:8px;">Built Right From the Start</div>
+            <div style="font-size:13px;font-weight:300;color:rgba(255,255,255,0.5);line-height:1.5;">Four earned milestones that give every young pitcher the mechanical foundation to keep developing for years.</div>
+          </div>
+
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="programs" id="programs">
+    <div class="programs-inner">
+      <div class="programs-header">
+        <div><div class="section-eyebrow reveal">Three Programs</div><h2 class="section-title reveal rd1">Find Your Program</h2></div>
+        <p class="section-lead reveal rd2" style="max-width:340px; font-size:14px;">Every offer leads back to pitching instruction. The difference is how much structure, accountability, and support your athlete needs right now.</p>
+      </div>
+      <div class="programs-grid">
+        <article class="prog-card academy reveal">
+          <div class="prog-card-top-bar"></div>
+          <div class="prog-badge">Flagship</div>
+          <div class="prog-name">Pitching<br>Academy</div>
+          <div class="prog-format">6-Month Cohort Program</div>
+          <div class="prog-fit">Best for committed athletes ready for the full system</div>
+          <p class="prog-desc">Our most complete pitching development path. Athletes train through a defined curriculum with structured sessions, tech feedback, and a standard that makes progress visible.</p>
+          <div class="prog-details">
+            <div class="prog-detail">6 months · 4 athletes per cohort</div>
+            <div class="prog-detail">72 sessions across 18 skills</div>
+            <div class="prog-detail">Rapsodo analysis + live at-bats</div>
+            <div class="prog-detail">4 effort phases from 30% to 85%+</div>
+            <div class="prog-detail">$4,500 per athlete</div>
+          </div>
+          <div class="prog-actions"><a href="https://www.tapathletes.com/pitching-academy" class="btn-secondary">Learn More</a></div>
+        </article>
+        <article class="prog-card unprompted reveal rd1">
+          <div class="prog-card-top-bar"></div>
+          <div class="prog-badge">Cohort Program</div>
+          <div class="prog-name">Train<br>Unprompted™</div>
+          <div class="prog-format">6 Weeks · 3 Touchpoints Per Week</div>
+          <div class="prog-fit">Best for athletes who need structure between sessions</div>
+          <p class="prog-desc">A 6-week program designed to build athlete ownership. The goal is simple: help athletes train without being told to through repeated touchpoints and practical accountability.</p>
+          <div class="prog-details">
+            <div class="prog-detail">3–4 athletes per cohort</div>
+            <div class="prog-detail">Facility session, home visit, and recorded video call</div>
+            <div class="prog-detail">15+ total touchpoints across the program</div>
+            <div class="prog-detail">Student-athlete planner included</div>
+            <div class="prog-detail">$497 flat — no add-ons</div>
+          </div>
+          <div class="prog-actions"><a href="https://www.perplexity.ai/computer/a/train-unprompted-tap-athletes-2FkDqnC6TQCTEGI7Q62Z9g" class="btn-secondary">Learn More</a></div>
+        </article>
+        <article class="prog-card instruction reveal rd2">
+          <div class="prog-card-top-bar"></div>
+          <div class="prog-badge">Foundations</div>
+          <div class="prog-name">TAP Athletes<br>Foundations</div>
+          <div class="prog-format">Individual · Self-Paced · Monthly</div>
+          <div class="prog-fit">Best for young and new pitchers</div>
+          <p class="prog-desc">Built for athletes ages 8 and up who need a structured first step. Foundations gives families a clear starting point without the pressure of jumping into an advanced program too early.</p>
+          <div class="prog-details">
+            <div class="prog-detail">30-minute sessions · up to 2x per week</div>
+            <div class="prog-detail"><strong>Ages 8+</strong></div>
+            <div class="prog-detail">$160 per month</div>
+            <div class="prog-detail">Four milestones: Balance · Connected · Sequence · Consistency through Constraints</div>
+          </div>
+          <div class="prog-actions"><a href="https://www.tapathletes.com/services" class="btn-secondary">Learn More</a></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="club" id="club">
+    <div class="club-bg"></div>
+    <div class="club-inner">
+      <div class="club-text reveal">
+        <div class="club-eyebrow">The Standard</div>
+        <h2 class="club-title">The 60<span class="slash">/</span>10 Club</h2>
+        <p class="club-body">TAP Athletes uses a benchmark to show what serious training can produce. To earn it, an athlete must achieve <strong>60%+ strikes across two consecutive competitive bullpens</strong> and record a <strong>+10 MPH fastball gain</strong> since starting at TAP Athletes.</p>
+        <div class="club-milestones">
+          <div class="club-milestone">
+            <div class="cm-num blue">60%+</div>
+            <div><div class="cm-label">Strike Standard</div><div class="cm-sub">Two consecutive competitive bullpens at a real command threshold. MLB average: ~62%.</div></div>
+          </div>
+          <div class="club-milestone">
+            <div class="cm-num gold">+10</div>
+            <div><div class="cm-label">Velocity Gain</div><div class="cm-sub">A measurable fastball gain tied to work done inside the system.</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="proof-stack reveal rd1">
+        <article class="testimonial-card">
+          <div class="t-text">"My son loves working with Coach Calhoun. The ability he has to meet my son where he was performing and then make a plan with measurable steps of growth — in combination with his know-how, technology use, flexibility of teaching strategies, genuine listening skills, and his love of the sport — make him a great private instructor."</div>
+          <div class="t-name">Jill S.</div>
+          <div class="t-role">TAP Athletes Parent</div>
+        </article>
+        <article class="result-card">
+          <div class="result-label">Not sure where to start?</div>
+          <h3>Talk to a Coach First</h3>
+          <p>If you are deciding between programs, the fastest move is a quick call. We will point you to the right entry point before you commit to anything.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="classes" id="classes">
+    <div class="classes-inner">
+      <div class="classes-header">
+        <div><div class="section-eyebrow reveal">Standalone Bookings</div><h2 class="section-title reveal rd1">TAP Athletes Classes</h2></div>
+        <p class="section-lead reveal rd2" style="font-size:14px; max-width:340px;">Focused classes open to any athlete — no program enrollment required. Book a single session or attend regularly.</p>
+      </div>
+      <div class="classes-grid">
+        <article class="class-card reveal">
+          <div class="class-card-top">
+            <div class="class-number">Class 01</div>
+            <div class="class-tag">Pitch Design</div>
+            <div class="class-title">Sequencing &amp; Mix Creation</div>
+            <div class="class-subtitle">Pitch Design Concepts</div>
+          </div>
+          <div class="class-divider"></div>
+          <div class="class-body">How to build a pitch mix that works in sequence, not just individually. Athletes learn to think like pitchers instead of just throwing harder.</div>
+          <div class="class-topics">
+            <div class="class-topic">Sequence pitches to create deception and tunnel effectively</div>
+            <div class="class-topic">Build a mix around your actual stuff, not a template</div>
+            <div class="class-topic">Make smarter count-based decisions</div>
+            <div class="class-topic">Read hitters and adjust mid-outing</div>
+          </div>
+          <div class="class-footer"><div class="class-meta">Open Enrollment · All Levels</div><a href="https://wix.to/dpJ1izs" class="class-book" target="_blank" rel="noopener noreferrer">Book Class</a></div>
+        </article>
+        <article class="class-card reveal rd1">
+          <div class="class-card-top">
+            <div class="class-number">Class 02</div>
+            <div class="class-tag">Complete Pitcher</div>
+            <div class="class-title">Beyond the Pitch</div>
+            <div class="class-subtitle">Pitcher Responsibilities</div>
+          </div>
+          <div class="class-divider"></div>
+          <div class="class-body">The game doesn't stop when the pitch crosses the plate. This class covers everything a pitcher is responsible for that doesn't show up in a velocity reading.</div>
+          <div class="class-topics">
+            <div class="class-topic">Pickoff mechanics and holding runners effectively</div>
+            <div class="class-topic">Backup responsibilities on throws and wild pitches</div>
+            <div class="class-topic">Fielding your position — PFPs and game situations</div>
+            <div class="class-topic">Communicating with your catcher and infield</div>
+          </div>
+          <div class="class-footer"><div class="class-meta">Open Enrollment · All Levels</div><a href="https://wix.to/6k7W5iF" class="class-book" target="_blank" rel="noopener noreferrer">Book Class</a></div>
+        </article>
+        <article class="class-card reveal rd2">
+          <div class="class-card-top">
+            <div class="class-number">Not sure which class?</div>
+            <div class="class-tag">Fastest Next Step</div>
+            <div class="class-title">Ask Before You Book</div>
+            <div class="class-subtitle">Program vs. Class Guidance</div>
+          </div>
+          <div class="class-divider"></div>
+          <div class="class-body">If you're deciding between a class, Foundations, or a full program, the fastest move is to talk to a coach first and get pointed in the right direction.</div>
+          <div class="class-topics">
+            <div class="class-topic">Get a recommendation based on age and experience</div>
+            <div class="class-topic">Avoid starting in the wrong offer</div>
+            <div class="class-topic">Use classes as a smart entry point when needed</div>
+          </div>
+          <div class="class-footer"><div class="class-meta">Call or Text for Guidance</div><a href="tel:+18338602711" class="class-book">Talk With a Coach</a></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq-lite" id="faq-lite">
+    <div class="container" style="padding: 52px 48px;">
+      <div class="section-eyebrow reveal">FAQ</div>
+      <h2 class="section-title reveal rd1" style="margin-bottom:32px;">Questions Parents Ask Before They Call</h2>
+      <div class="faq-list reveal" style="max-width:800px;">
+        <article class="faq-item"><div class="faq-q">What age does TAP Athletes work with?</div><div class="faq-a">We work with pitchers ages 8 and up. Foundations is designed specifically for younger and newer athletes. The Academy and Train Unprompted™ programs are best suited for athletes who already have some pitching experience.</div></article>
+        <article class="faq-item"><div class="faq-q">Do you offer private instruction outside of programs?</div><div class="faq-a">Yes. We offer individual instruction, group sessions, live at-bats, and Rapsodo scripted bullpens outside of our structured programs. Classes are also available as standalone bookings with no long-term commitment required.</div></article>
+        <article class="faq-item"><div class="faq-q">What makes TAP Athletes different from a private pitching coach?</div><div class="faq-a">A defined curriculum, measurable outcomes, and a structured environment where athletes train alongside other pitchers. Every session has a purpose and every program has a real finish line — not just ongoing lessons with no clear destination.</div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-final">
+    <div class="cta-bg"></div>
+    <div class="cta-inner reveal">
+      <div class="cta-eyebrow">Rogers, Arkansas · tapathletes.com</div>
+      <h2 class="cta-title">Find the Right Program for Your Athlete</h2>
+      <p class="cta-sub">Three programs. One standard. Whether you're ready for a cohort or just getting started, there's a path at TAP Athletes.</p>
+      <div class="cta-buttons">
+        <a href="https://www.tapathletes.com/services" class="btn-white">See All Programs & Pricing</a>
+        <a href="mailto:support@tapathletes.com" class="btn-outline">Get in Touch</a>
+      </div>
+      <div class="cta-footnote">1751 S 1st Street · Rogers, Arkansas · (833) 860-2711</div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-logo">TAP <span>Athletes</span></div>
+  <div class="footer-links">
+    <a href="tel:+18338602711">Start Here</a>
+    <a href="https://www.tapathletes.com/services">Programs</a>
+    <a href="https://www.tapathletes.com/services">Classes</a>
+    <a href="https://www.tapathletes.com/faq">FAQ</a>
+    <a href="https://www.tapathletes.com/blog">Blog</a>
+  </div>
+  <div class="footer-info">
+    1751 S 1st Street, Rogers, Arkansas 72758<br>
+    <a href="tel:+18338602711">(833) 860-2711</a> · <a href="mailto:support@tapathletes.com">support@tapathletes.com</a>
+  </div>
+</footer>
+
+<script>
+  // Reveal animations
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((e) => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+
+  // Mobile menu toggle
+  const menuButton = document.querySelector('.nav-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  menuButton.addEventListener('click', () => {
+    const isOpen = mobileMenu.classList.toggle('open');
+    menuButton.setAttribute('aria-expanded', String(isOpen));
+  });
+  mobileMenu.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+      menuButton.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  // Auto-resize for Wix embed
+  function notifyHeight() {
+    window.parent.postMessage({ type: 'height', height: document.body.scrollHeight }, '*');
+  }
+  window.addEventListener('load', notifyHeight);
+  window.addEventListener('resize', notifyHeight);
+  setTimeout(notifyHeight, 500);
+</script>
+</body>
+</html>
