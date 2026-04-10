@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Train Unprompted — TAP Athletes Pitching Academy</title>
@@ -63,7 +62,7 @@ body{font-family:'Inter',system-ui,sans-serif;background:var(--cream);color:var(
 /* PROOF */
 .proof{padding:5rem 0;border-bottom:1px solid var(--rule)}
 .proof-inner{display:grid;grid-template-columns:280px 1fr;gap:3rem;align-items:center}
-.proof-img{width:100%;border:1px solid var(--rule);box-shadow:0 4px 20px rgba(0,0,0,0.05)}
+.proof-img{width:100%;border:1px solid var(--rule);box-shadow:0 4px 20px rgba(0,0,0,0.05);display:block;height:auto}
 .proof-quote{font-family:'DM Serif Display',Georgia,serif;font-size:1.6rem;font-style:italic;color:var(--navy);line-height:1.4;margin-bottom:0.8rem}
 .proof-attr{font-size:0.75rem;color:var(--muted);letter-spacing:0.04em}
 .proof-result{display:inline-flex;align-items:center;gap:0.3rem;margin-top:0.5rem;font-size:0.72rem;font-weight:600;color:var(--green)}
@@ -79,7 +78,7 @@ body{font-family:'Inter',system-ui,sans-serif;background:var(--cream);color:var(
 .loop-row strong{color:var(--text);font-weight:500}
 .loop-coda{margin-top:1.2rem;padding:1rem 1.2rem;border-left:2px solid var(--navy);font-size:0.9rem;font-style:italic;color:var(--body);line-height:1.6}
 
-/* RHYTHM — 3 touchpoints */
+/* RHYTHM */
 .rhythm-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:3rem}
 .rhythm-card{background:var(--white);border:1px solid var(--rule);padding:2rem 1.8rem}
 .rhythm-icon{font-size:0.62rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);margin-bottom:0.8rem}
@@ -92,7 +91,6 @@ body{font-family:'Inter',system-ui,sans-serif;background:var(--cream);color:var(
 .stage{background:var(--cream);padding:2.8rem 2.2rem;transition:box-shadow 0.3s,border-color 0.3s;border:1px solid var(--rule)}
 .stage:hover{border-color:var(--navy);box-shadow:0 4px 16px rgba(0,0,0,0.04)}
 .stage-n{font-size:0.62rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--faint);margin-bottom:0.8rem}
-.stage-timing{font-size:0.6rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:1rem}
 .stage-name{font-family:'DM Serif Display',Georgia,serif;font-size:1.15rem;font-style:italic;color:var(--navy);margin-bottom:0.7rem}
 .stage-body{font-size:0.85rem;line-height:1.65;color:var(--body)}
 .stage-body strong{color:var(--text);font-weight:500}
@@ -123,6 +121,7 @@ body{font-family:'Inter',system-ui,sans-serif;background:var(--cream);color:var(
 .sci-stats{display:flex;flex-direction:column}
 .sci-stat{padding:1.2rem 0;border-bottom:1px solid var(--rule);display:grid;grid-template-columns:70px 1fr;gap:1rem;align-items:center}
 .sci-stat:first-child{padding-top:0}
+.sci-stat:last-child{border-bottom:none}
 .sci-num{font-family:'DM Serif Display',Georgia,serif;font-size:2rem;color:var(--navy);line-height:1}
 .sci-body{font-size:0.85rem;line-height:1.55;color:var(--body)}
 .sci-body strong{color:var(--text);font-weight:500}
@@ -149,27 +148,42 @@ body{font-family:'Inter',system-ui,sans-serif;background:var(--cream);color:var(
 .wl-submit{width:100%;padding:0.85rem;margin-top:0.8rem;background:var(--navy);color:var(--white);border:none;cursor:pointer;font-family:'Inter',sans-serif;font-size:0.68rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;transition:opacity 0.2s}
 .wl-submit:hover{opacity:0.85}
 .wl-fine{margin-top:0.6rem;font-size:0.62rem;color:var(--faint);text-align:center;line-height:1.5}
+.wl-success{display:none;margin-top:1rem;padding:1rem 1.2rem;background:var(--green-bg);border:1px solid var(--green-rule);font-size:0.88rem;color:var(--green);line-height:1.6;text-align:center}
 
 footer{padding:3rem 0;text-align:center;background:var(--cream);border-top:1px solid var(--rule)}
 .ft-mark{font-size:0.65rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted);margin-bottom:0.3rem}
-.ft-copy{font-size:0.62rem;color:var(--faint);margin-bottom:0.15rem}
-.ft-link{font-size:0.58rem;color:var(--faint);text-decoration:none}
-.ft-link:hover{color:var(--text)}
+.ft-copy{font-size:0.62rem;color:var(--faint)}
 
 .rv{opacity:0;transform:translateY(12px);transition:opacity 0.5s ease,transform 0.5s ease}
 .rv.v{opacity:1;transform:none}
 
+/* RESPONSIVE */
 @media(max-width:960px){
   .nav-right .nav-link{display:none}
   .hero{padding:7rem 0 4rem}
-  .proof-inner,.two-col,.sci-grid,.wl-grid{grid-template-columns:1fr;gap:2.5rem}
+  .proof-inner{grid-template-columns:1fr;gap:2rem}
+  .proof-img{max-height:420px;min-height:200px;width:auto;max-width:100%;margin:0 auto;display:block;height:auto}
+  .two-col,.sci-grid,.wl-grid{grid-template-columns:1fr;gap:2.5rem}
   .rhythm-grid,.stages,.arc,.outcomes-grid{grid-template-columns:1fr}
   .sec{padding:4.5rem 0}
+}
+@media(max-width:768px){
+  .nav-inner,.wrap{padding-left:1.4rem;padding-right:1.4rem}
+  .hero-h{font-size:clamp(2.6rem,8vw,3.8rem)}
+  .hero-body{font-size:1rem}
+  .proof-inner{grid-template-columns:1fr}
+  .sec{padding:3.5rem 0}
+  .sec-h{font-size:clamp(1.7rem,5vw,2.4rem)}
+  .wl-card{padding:1.8rem}
 }
 @media(max-width:580px){
   .nav-inner,.wrap{padding-left:1.2rem;padding-right:1.2rem}
   .hero-actions{flex-direction:column;align-items:flex-start}
-  .proof-inner{grid-template-columns:200px 1fr;gap:2rem}
+  .hero-h{font-size:clamp(2.2rem,9vw,3.2rem)}
+  .nav-btn{padding:0.5rem 1rem;font-size:0.6rem}
+  .loop{padding:1.4rem}
+  .stage{padding:2rem 1.5rem}
+  .rhythm-card{padding:1.5rem 1.2rem}
 }
 </style>
 </head>
@@ -196,18 +210,6 @@ footer{padding:3rem 0;text-align:center;background:var(--cream);border-top:1px s
   </div>
 </div></section>
 
-<!-- PROOF -->
-<section class="proof"><div class="wrap">
-  <div class="proof-inner">
-    <img src="https://raw.githubusercontent.com/tapathletes/tapathletes.com/main/parent-text.jpg" alt="Parent text: he's outside doing his baseball, haven't told him to" class="proof-img">
-    <div>
-      <div class="proof-quote">"He's outside doing his baseball — I haven't even told him to."</div>
-      <div class="proof-attr">TAP Athletes parent · Mid-program</div>
-      <div class="proof-result">Self-directed training without a reminder</div>
-    </div>
-  </div>
-</div></section>
-
 <!-- PROBLEM -->
 <section class="sec"><div class="wrap">
   <div class="sec-label">The Problem</div>
@@ -231,11 +233,27 @@ footer{padding:3rem 0;text-align:center;background:var(--cream);border-top:1px s
   </div>
 </div></section>
 
+<!-- PROOF -->
+<section class="proof"><div class="wrap">
+  <div class="proof-inner">
+    <img
+      src="https://cdn.jsdelivr.net/gh/tapathletes/tapathletes.com@main/parent-text.jpg"
+      alt="Parent text: he's outside doing his baseball, haven't told him to"
+      class="proof-img"
+    >
+    <div>
+      <div class="proof-quote">"He's outside doing his baseball — I haven't even told him to."</div>
+      <div class="proof-attr">TAP Athletes parent · Mid-program</div>
+      <div class="proof-result">Self-directed training without a reminder</div>
+    </div>
+  </div>
+</div></section>
+
 <!-- WEEKLY RHYTHM -->
 <section class="sec sec--white"><div class="wrap">
   <div class="sec-label">The Weekly Rhythm</div>
   <div class="sec-h">Three touchpoints per week, <em>every week</em></div>
-  <div class="sec-intro">The specific days flex around each athlete's schedule. The structure doesn't. What changes across the six weeks is who is in the room and how much the coach is doing versus the athlete.</div>
+  <div class="sec-intro">The specific days flex around each athlete's schedule. The structure doesn't. What changes across the six weeks is who is in the room and how much the coach is doing versus the athlete. <strong>Three touchpoints. Under two hours a week total.</strong></div>
   <div class="rhythm-grid">
     <div class="rhythm-card">
       <div class="rhythm-icon">Day 1 · 1 Hour</div>
@@ -280,7 +298,6 @@ footer{padding:3rem 0;text-align:center;background:var(--cream);border-top:1px s
       <div class="stage-shift">He's outside working on his mechanics. You didn't say a word.</div>
     </div>
   </div>
-
 </div></section>
 
 <!-- WHAT HE LEAVES WITH -->
@@ -306,8 +323,6 @@ footer{padding:3rem 0;text-align:center;background:var(--cream);border-top:1px s
       <div class="outcome-desc">By Phase 3, he's directing his own facility sessions with coach guidance, not coach instruction. He knows how to warm up, structure reps, and evaluate his own work. That skill doesn't expire.</div>
     </div>
   </div>
-
-  <!-- GUARANTEE -->
   <div class="guarantee">
     <div class="guarantee-title">Our commitment</div>
     <div class="guarantee-body">Every athlete leaves with a personal drill library, a training plan he built himself, and six weeks of logged work in his planner. If he completes the program and isn't independently running his own training sessions, <strong>we continue working with him at no additional cost until he is.</strong> Extra check-ins in Phase 3 are always included at no charge — the program closes when the athlete is ready.</div>
@@ -329,23 +344,22 @@ footer{padding:3rem 0;text-align:center;background:var(--cream);border-top:1px s
       <div class="sci-stat"><div class="sci-num">3</div><div class="sci-body"><strong>Autonomy · Competence · Relatedness</strong> — the SDT pillars built into every session.</div></div>
       <div class="sci-stat"><div class="sci-num">6</div><div class="sci-body"><strong>Weeks</strong> — aligned with habit formation research on behavioral automaticity.</div></div>
       <div class="sci-stat"><div class="sci-num">15+</div><div class="sci-body"><strong>Touchpoints</strong> — facility, home visit, and video call every single week.</div></div>
-
     </div>
   </div>
 </div></section>
 
-<!-- INSTRUCTORS -->  
+<!-- INSTRUCTORS -->
 <section class="sec" style="padding:3.5rem 0;border-bottom:1px solid var(--rule)"><div class="wrap">
   <div style="display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:1.5rem">
     <div>
       <div class="sec-label" style="margin-bottom:0.4rem">Our Instructors</div>
-      <div style="font-size:0.95rem;line-height:1.6;color:var(--body);max-width:640px">TAP Athletes instructors bring <strong style="color:var(--text);font-weight:500">12+ years of youth pitching development</strong>, high school freshman and varsity coaching experience, NFHS Level 2+ certification, and USA Baseball A, B, and C credentials. The system was developed through collegiate study in behavioral science and over a decade of applied work with young pitchers. Every session is coached from a documented process — the same structure, the same progression, every time.</div>
+      <div style="font-size:0.95rem;line-height:1.6;color:var(--body);max-width:640px">TAP Athletes instructors bring <strong style="color:var(--text);font-weight:500">12+ years of youth pitching development</strong>, high school freshman and varsity coaching experience, NFHS Level 2+ certification, and USA Baseball A, B, and C credentials. The system was developed through collegiate study in behavioral science and over a decade of applied work with young pitchers. Every session is coached from a documented process — the same structure, the same progression, every time.<br><br><strong style="color:var(--text);font-weight:500">Eugene Calhoun, Pitching Director</strong> — leads every intake call personally and oversees all program delivery. He's the one who answers the phone.</div>
     </div>
     <a href="#enroll" class="btn-dark" style="flex-shrink:0">Secure a Seat — Free</a>
   </div>
 </div></section>
 
-<!-- WAITLIST -->
+<!-- ENROLL -->
 <section class="sec" id="enroll"><div class="wrap">
   <div class="sec-label">Enrollment</div>
   <div class="sec-h">Stop being <em>the reminder</em></div>
@@ -360,25 +374,35 @@ footer{padding:3rem 0;text-align:center;background:var(--cream);border-top:1px s
         <div class="wl-pt"><strong>Three touchpoints per week</strong> — facility session, coach home visit, recorded video call.</div>
         <div class="wl-pt"><strong>Personal drill library and training plan</strong> built by the athlete from Week 1.</div>
         <div class="wl-pt"><strong>Student-Athlete Planner</strong> included. Identity arc documented throughout.</div>
-        <div class="wl-pt"><strong>$497, six-weeks.</strong> Extra Phase 3 check-ins at no charge.</div>
+        <div class="wl-pt"><strong>$497, six weeks.</strong> Extra Phase 3 check-ins at no charge.</div>
       </div>
     </div>
     <div class="wl-card">
       <div class="wl-price">
         <div class="wl-price-label">Program</div>
-        <div class="wl-price-amount">$497 <span>/ six-weeks</span></div>
-        <div class="wl-price-note">15+ touchpoints · Home visits · Planner included</div>
+        <div class="wl-price-amount">$497 <span>/ six weeks</span></div>
+        <div class="wl-price-note">15+ touchpoints · Home visits · Planner included · Ages 11–18</div>
       </div>
-      <div class="wl-form-title">Get notified when your group forms</div>
-      <div class="wl-form-sub">We'll reach out when a group is forming in your son's age range.</div>
-      <form onsubmit="handleSubmit(event)">
-        <div class="f"><label>Parent / Guardian</label><input type="text" placeholder="Your name" required></div>
-        <div class="f"><label>Email</label><input type="email" placeholder="your@email.com" required></div>
-        <div class="f"><label>Phone Number</label><input type="tel" placeholder="(555) 555-5555" required></div>
-        <div class="f"><label>Athlete's Age</label><select required><option value="">Select</option><option>11–13</option><option>14–16</option><option>17–18</option></select></div>
-        <button type="submit" class="wl-submit">Get Notified</button>
+      <div class="wl-form-title">Join the Train Unprompted Waitlist</div>
+      <div class="wl-form-sub">Expect a call within 48 hours from Pitching Director Eugene Calhoun. No payment required.</div>
+      <form id="waitlist-form" action="https://formspree.io/f/xzdkloyq" method="POST">
+        <div class="f"><label>Parent / Guardian</label><input type="text" name="parent_name" placeholder="Your name" required></div>
+        <div class="f"><label>Athlete's Name</label><input type="text" name="athlete_name" placeholder="Athlete's name" required></div>
+        <div class="f"><label>Email</label><input type="email" name="email" placeholder="your@email.com" required></div>
+        <div class="f"><label>Phone Number</label><input type="tel" name="phone" placeholder="(555) 555-5555" required></div>
+        <div class="f">
+          <label>Athlete's Age <span style="font-weight:300;text-transform:none;letter-spacing:0">(ages 11–18)</span></label>
+          <select name="athlete_age" required>
+            <option value="">Select</option>
+            <option>11–13</option>
+            <option>14–16</option>
+            <option>17–18</option>
+          </select>
+        </div>
+        <button type="submit" class="wl-submit">Join the Train Unprompted Waitlist</button>
       </form>
-      <div class="wl-fine">No payment required. We'll reach out when a group in your athlete's age range is forming.</div>
+      <div class="wl-success" id="wl-success">You're on the list. Expect a call within 48 hours from Eugene Calhoun.</div>
+      <div class="wl-fine">No payment required. Spots are limited — 3 to 4 athletes per cohort.</div>
     </div>
   </div>
 </div></section>
@@ -386,107 +410,55 @@ footer{padding:3rem 0;text-align:center;background:var(--cream);border-top:1px s
 <footer><div class="wrap">
   <div class="ft-mark">TAP Athletes Pitching Academy</div>
   <div class="ft-copy">1751 S 1st Street, Rogers, AR 72758 · © 2026 Training Athletic Performance Inc.</div>
-  <a href="https://www.perplexity.ai/computer" target="_blank" rel="noopener noreferrer" class="ft-link">Created with Perplexity Computer</a>
 </div></footer>
 
 <script>
-const API="port/8000".startsWith("__")?"http://localhost:8000":"port/8000";
-async function handleSubmit(e){
+/* FORM — Formspree AJAX
+   Submits to formspree.io/f/xzdkloyq
+   Eugene receives an email for every submission. No page redirect. */
+const form = document.getElementById('waitlist-form');
+const successMsg = document.getElementById('wl-success');
+
+form.addEventListener('submit', async function(e) {
   e.preventDefault();
-  const b=e.target.querySelector('.wl-submit');
-  const form=e.target;
-  b.textContent='Submitting...';
-  b.disabled=true;
-  try{
-    const data={
-      parent_name:form.querySelector('input[type=text]').value,
-      email:form.querySelector('input[type=email]').value,
-      phone:form.querySelector('input[type=tel]').value,
-      athlete_age:form.querySelector('select').value
-    };
-    const res=await fetch(API+'/api/lead',{
-      method:'POST',
-      headers:{'Content-Type':'application/json'},
-      body:JSON.stringify(data)
+  const btn = form.querySelector('.wl-submit');
+  btn.textContent = 'Submitting...';
+  btn.disabled = true;
+
+  try {
+    const res = await fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
     });
-    if(res.ok){
-      b.textContent="You're on the list. We'll be in touch.";
-      b.style.background='#3B7A2D';
-    }else{
-      b.textContent='Something went wrong. Try again.';
-      b.style.background='#a33';
-      b.disabled=false;
+    if (res.ok) {
+      form.style.display = 'none';
+      successMsg.style.display = 'block';
+    } else {
+      btn.textContent = 'Something went wrong. Try again.';
+      btn.style.background = '#a33';
+      btn.disabled = false;
     }
-  }catch(err){
-    b.textContent='Something went wrong. Try again.';
-    b.style.background='#a33';
-    b.disabled=false;
+  } catch(err) {
+    btn.textContent = 'Something went wrong. Try again.';
+    btn.style.background = '#a33';
+    btn.disabled = false;
   }
-}
-const o=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('v');o.unobserve(e.target)}})},{threshold:0.06,rootMargin:'0px 0px -10px 0px'});
-document.querySelectorAll('.rv').forEach(el=>o.observe(el));
-document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',function(e){const t=document.querySelector(this.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'})}})});
-</script>
-<script data-pplx-inline-edit>
-(function(){
-  if(window===window.top)return;
-  function inlineAll(orig,clone){
-    if(orig.nodeType!==1)return;
-    try{
-      var cs=getComputedStyle(orig);
-      var t='';
-      for(var i=0;i<cs.length;i++){t+=cs[i]+':'+cs.getPropertyValue(cs[i])+';';}
-      clone.style.cssText=t;
-    }catch(e){}
-    var oc=orig.children,cc=clone.children;
-    for(var j=0;j<oc.length&&j<cc.length;j++){inlineAll(oc[j],cc[j]);}
-  }
-  function stripExternal(clone){
-    var imgs=clone.querySelectorAll('img');
-    for(var i=0;i<imgs.length;i++){
-      var s=imgs[i].getAttribute('src');
-      if(s&&!s.startsWith('data:'))imgs[i].removeAttribute('src');
-    }
-    var all=clone.querySelectorAll('*');
-    for(var i=0;i<all.length;i++){
-      var st=all[i].style.cssText;
-      if(st&&st.indexOf('url(')>=0){
-        all[i].style.cssText=st.replace(/url\(["']?(?!data:)[^)"']*["']?\)/gi,'none');
-      }
-    }
-  }
-  window.addEventListener('message',function(e){
-    if(!e.data||e.data.type!=='INLINE_EDIT_CAPTURE_REQUEST')return;
-    var scrollX=window.scrollX||window.pageXOffset||0;
-    var scrollY=window.scrollY||window.pageYOffset||0;
-    var w=window.innerWidth,h=window.innerHeight;
-    try{
-      var clone=document.documentElement.cloneNode(true);
-      var rm=clone.querySelectorAll('script,link[rel="stylesheet"],style');
-      for(var i=0;i<rm.length;i++){rm[i].remove();}
-      inlineAll(document.documentElement,clone);
-      stripExternal(clone);
-      var html=new XMLSerializer().serializeToString(clone);
-      var svg='<svg xmlns="http://www.w3.org/2000/svg" width="'+w+'" height="'+h+'">'
-        +'<foreignObject width="100%" height="100%">'
-        +'<div xmlns="http://www.w3.org/1999/xhtml" style="width:'+w+'px;height:'+h+'px;overflow:hidden">'
-        +'<div style="transform:translate(-'+scrollX+'px,-'+scrollY+'px);transform-origin:top left">'
-        +html+'</div></div></foreignObject></svg>';
-      var svgUrl='data:image/svg+xml;charset=utf-8,'+encodeURIComponent(svg);
-      var img=new Image();
-      img.onload=function(){
-        var c=document.createElement('canvas');c.width=w;c.height=h;
-        c.getContext('2d').drawImage(img,0,0);
-        window.parent.postMessage({type:'INLINE_EDIT_SCREENSHOT_RESULT',dataUrl:c.toDataURL('image/png'),scrollX:scrollX,scrollY:scrollY},'*');
-      };
-      img.onerror=function(){
-        window.parent.postMessage({type:'INLINE_EDIT_SCREENSHOT_RESULT',dataUrl:null,scrollX:scrollX,scrollY:scrollY},'*');
-      };
-      img.src=svgUrl;
-    }catch(err){
-      window.parent.postMessage({type:'INLINE_EDIT_SCREENSHOT_RESULT',dataUrl:null,scrollX:scrollX,scrollY:scrollY},'*');
-    }
+});
+
+/* SCROLL REVEAL */
+const o = new IntersectionObserver(es => {
+  es.forEach(e => { if(e.isIntersecting){ e.target.classList.add('v'); o.unobserve(e.target); } });
+}, { threshold: 0.06, rootMargin: '0px 0px -10px 0px' });
+document.querySelectorAll('.rv').forEach(el => o.observe(el));
+
+/* SMOOTH SCROLL */
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', function(e) {
+    const t = document.querySelector(this.getAttribute('href'));
+    if(t){ e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
   });
-})();
-</script></body>
+});
+</script>
+</body>
 </html>
