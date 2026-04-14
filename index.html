@@ -35,7 +35,7 @@
   .btn-secondary, .btn-outline { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; display: inline-flex; align-items: center; justify-content: center; min-height: 46px; padding: 14px 24px; border: 1px solid rgba(27,42,74,0.16); color: var(--navy); background: var(--white); }
   .btn-secondary:hover { border-color: var(--blue); color: var(--blue); }
   .nav-toggle { display: none; min-width: 44px; min-height: 44px; border: 1px solid var(--gray-200); background: var(--white); color: var(--navy); padding: 0 12px; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
-  .mobile-menu { display: none; position: absolute; top: 74px; left: 20px; right: 20px; z-index: 95; background: var(--white); border: 1px solid var(--gray-100); box-shadow: var(--shadow-md); padding: 18px; }
+  .mobile-menu { display: none; position: fixed; top: 74px; left: 20px; right: 20px; z-index: 95; background: var(--white); border: 1px solid var(--gray-100); box-shadow: var(--shadow-md); padding: 18px; max-height: calc(100vh - 94px); overflow-y: auto; }
   .mobile-menu.open { display: block; }
   .mobile-menu a { display: block; padding: 12px 0; text-decoration: none; color: var(--navy); font-family: 'Barlow Condensed', sans-serif; font-size: 15px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; border-bottom: 1px solid var(--gray-100); }
   .mobile-menu a:last-child { border-bottom: none; }
@@ -351,17 +351,17 @@
         <article class="prog-card instruction reveal rd2">
           <div class="prog-card-top-bar"></div>
           <div class="prog-badge">Foundations</div>
-          <div class="prog-name">TAP Athletes<br>FoundationsPrep</div>
-          <div class="prog-format">Individual · Self-Paced · Monthly</div>
-          <div class="prog-fit">Best for young and new pitchers</div>
-          <p class="prog-desc">Built for athletes ages 8 and up who need a structured first step. Foundations gives families a clear starting point without the pressure of jumping into an advanced program too early.</p>
+          <div class="prog-name">TAP Athletes<br>Foundations</div>
+          <div class="prog-format">Individual · Progression-Based · Monthly</div>
+          <div class="prog-fit">Best for pitchers ages 8+ building from the ground up</div>
+          <p class="prog-desc">Not session-based training — a defined development system. Every athlete starts with a free in-person assessment, gets placed into the right phase, and advances by demonstrating execution. Reserved weekly time slots, no weekly booking.</p>
           <div class="prog-details">
-            <div class="prog-detail">30-minute sessions · up to 2x per week</div>
+            <div class="prog-detail">Up to 2 sessions per week · up to 8 per month</div>
             <div class="prog-detail"><strong>Ages 8+</strong></div>
-            <div class="prog-detail">$150 per month</div>
-            <div class="prog-detail">Four milestones: Balance · Connected · Sequence · Consistency through Constraints</div>
+            <div class="prog-detail">$510/mo All-Facility · $600/mo Hybrid</div>
+            <div class="prog-detail">Phased progression: execution-based advancement, not attendance</div>
           </div>
-          <div class="prog-actions"><a href="https://www.trainingathleticperformance.com/services" class="btn-secondary">Learn More</a></div>
+          <div class="prog-actions"><a href="https://www.tapathletes.com/foundations.html" class="btn-secondary">Learn More</a></div>
         </article>
       </div>
     </div>
