@@ -227,8 +227,36 @@ button{cursor:pointer;background:none;border:none}
 .site-footer-info{font-size:12px;color:rgba(255,255,255,0.34);text-align:right;line-height:1.7}
 .site-footer-info a{color:inherit;text-decoration:none}
 
-@media(max-width:900px){.hero-inner{flex-direction:column;align-items:flex-start}.hero-visual{display:none}.steps-grid{flex-direction:column;align-items:stretch}.step-connector{transform:rotate(90deg);align-self:center;margin:0}.structure-grid{grid-template-columns:1fr}.problem-split{grid-template-columns:1fr;gap:var(--space-10)}.assessment-inner{grid-template-columns:1fr;gap:var(--space-10)}.audience-grid{grid-template-columns:1fr}.prep-list{grid-template-columns:1fr}.site-footer-main{flex-direction:column;align-items:flex-start}.site-footer-info{text-align:left}}
-@media(max-width:640px){.main-nav,.nav-actions .btn-primary{display:none}.mobile-menu-btn{display:flex}.hero-headline{font-size:var(--text-3xl)}.hero-cta-group{flex-direction:column}.hero-cta-group .btn{width:100%;justify-content:center}.positioning-quote{font-size:var(--text-lg)}.pace-bar{grid-template-columns:repeat(2,1fr)}.cycle-visual{flex-direction:column}.cycle-vs{margin-block:var(--space-2)}.prep-content{padding:var(--space-6) var(--space-5)}.prep-badge{position:static;display:inline-block;margin-bottom:var(--space-4)}.compare-table th:first-child,.compare-table td:first-child{display:none}.assessment-inner{grid-template-columns:1fr}.options-grid{grid-template-columns:1fr}.site-footer-main{padding:24px 20px}}
+/* ── BEHIND THE SCENES SECTION ── */
+.bts-section{background:#111827;padding:clamp(3rem,7vw,5.5rem) 0;position:relative;overflow:hidden}
+.bts-bg{position:absolute;inset:0;background:radial-gradient(ellipse at 75% 40%,rgba(46,117,182,0.09) 0%,transparent 55%);pointer-events:none}
+.bts-header{max-width:600px;margin:0 auto clamp(2rem,4vw,3rem);text-align:center}
+.bts-eyebrow{display:inline-block;font-family:'Barlow Condensed',sans-serif;font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:0.18em;color:rgba(74,144,217,0.9);background:rgba(46,117,182,0.12);border:1px solid rgba(46,117,182,0.2);padding:3px 12px;border-radius:999px;margin-bottom:0.9rem}
+.bts-title{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(1.8rem,3.5vw,2.75rem);text-transform:uppercase;color:#fff;line-height:1.02;margin-bottom:0.75rem}
+.bts-sub{font-size:0.9rem;font-weight:300;color:rgba(255,255,255,0.48);line-height:1.7;max-width:48ch;margin:0 auto}
+.bts-note{max-width:680px;margin:0 auto clamp(1.75rem,3vw,2.5rem);background:rgba(255,255,255,0.03);border-left:3px solid rgba(74,144,217,0.6);padding:1rem 1.25rem}
+.bts-note-label{font-family:'Barlow Condensed',sans-serif;font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.14em;color:rgba(74,144,217,0.8);margin-bottom:0.35rem}
+.bts-note p{font-size:0.85rem;color:rgba(255,255,255,0.5);line-height:1.65;max-width:none}
+.bts-parts{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,0.05);margin-bottom:clamp(1.5rem,3vw,2.5rem)}
+.bts-part{background:#111827;padding:1.25rem 1.5rem;display:flex;gap:1rem;align-items:flex-start}
+.bts-part-num{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.5rem;line-height:1;color:rgba(46,117,182,0.3);flex-shrink:0;width:2rem;text-align:right}
+.bts-part-body{}
+.bts-part-title{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:0.875rem;text-transform:uppercase;letter-spacing:0.06em;color:#fff;margin-bottom:0.3rem}
+.bts-part-desc{font-size:0.8rem;color:rgba(255,255,255,0.42);line-height:1.6;max-width:none}
+.bts-pills{display:flex;flex-wrap:wrap;gap:5px;margin-top:0.6rem}
+.bts-pill{font-family:'Barlow Condensed',sans-serif;font-size:0.65rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:rgba(74,144,217,0.85);background:rgba(46,117,182,0.1);border:1px solid rgba(46,117,182,0.18);padding:2px 9px;border-radius:999px}
+.bts-proprioception{font-size:0.72rem;font-style:italic;color:rgba(255,255,255,0.25);margin-top:0.4rem;max-width:none}
+.bts-outputs{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,0.05);margin-bottom:clamp(1.5rem,3vw,2rem)}
+.bts-output{background:rgba(46,117,182,0.06);padding:1.1rem 1rem;text-align:center}
+.bts-output-label{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1rem;text-transform:uppercase;letter-spacing:0.04em;color:#fff;margin-bottom:0.2rem}
+.bts-output-desc{font-size:0.75rem;color:rgba(255,255,255,0.35);max-width:none;line-height:1.5}
+.bts-cta{text-align:center}
+.bts-cta a{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:0.85rem;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;display:inline-flex;align-items:center;gap:6px;padding:12px 24px;background:#D64A0A;color:#fff;transition:background 0.18s}
+.bts-cta a:hover{background:#B83D07;color:#fff}
+.bts-cta-note{margin-top:0.6rem;font-family:'Barlow Condensed',sans-serif;font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.22)}
+
+@media(max-width:900px){.hero-inner{flex-direction:column;align-items:flex-start}.hero-visual{display:none}.steps-grid{flex-direction:column;align-items:stretch}.step-connector{transform:rotate(90deg);align-self:center;margin:0}.structure-grid{grid-template-columns:1fr}.problem-split{grid-template-columns:1fr;gap:var(--space-10)}.assessment-inner{grid-template-columns:1fr;gap:var(--space-10)}.audience-grid{grid-template-columns:1fr}.prep-list{grid-template-columns:1fr}.site-footer-main{flex-direction:column;align-items:flex-start}.site-footer-info{text-align:left}.bts-outputs{grid-template-columns:1fr 1fr}.options-grid{grid-template-columns:1fr}}
+@media(max-width:640px){.main-nav,.nav-actions .btn-primary{display:none}.mobile-menu-btn{display:flex}.hero-headline{font-size:var(--text-3xl)}.hero-cta-group{flex-direction:column}.hero-cta-group .btn{width:100%;justify-content:center}.positioning-quote{font-size:var(--text-lg)}.pace-bar{grid-template-columns:repeat(2,1fr)}.prep-content{padding:var(--space-6) var(--space-5)}.prep-badge{position:static;display:inline-block;margin-bottom:var(--space-4)}.assessment-inner{grid-template-columns:1fr}.options-grid{grid-template-columns:1fr}.site-footer-main{padding:24px 20px}.bts-parts{grid-template-columns:1fr}.bts-outputs{grid-template-columns:1fr}.bts-cta a{width:100%;justify-content:center}.compare-grid-2col{grid-template-columns:1fr !important}}
   </style>
 </head>
 <body>
@@ -330,7 +358,8 @@ button{cursor:pointer;background:none;border:none}
             <div class="step-number">01</div>
             <div class="step-icon"><svg width="32" height="32" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="10" r="5" stroke="var(--color-primary)" stroke-width="2"/><path d="M6 26c0-5.523 4.477-10 10-10s10 4.477 10 10" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round"/></svg></div>
             <h3>In-Person Assessment</h3>
-            <p>Every athlete begins with a structured evaluation. We assess current ability, identify limitations, and determine the correct starting phase within the program.</p>
+            <p>Every athlete begins with a free, structured evaluation before a single training session starts. This is not a tryout — there are no right or wrong answers, and no score to be concerned about. The goal is to understand where your athlete is starting so every session is the right fit for them.</p>
+            <p style="margin-top:0.75rem;font-size:0.9em;color:var(--color-text-muted);">The evaluation covers athlete background, a full warm-up with movement quality grading, four athleticism benchmarks (broad jump, balance, med ball throw, acceleration), and a flat-ground throwing observation. Everything is documented and produces a starting phase, an effort band, and a first session recommendation specific to your athlete.</p>
           </div>
           <div class="step-connector" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round"/></svg></div>
           <div class="step-card">
@@ -354,6 +383,97 @@ button{cursor:pointer;background:none;border:none}
       </div>
     </section>
 
+    <!-- BEHIND THE SCENES: ASSESSMENT -->
+    <section class="bts-section" id="assessment-detail">
+      <div class="bts-bg" aria-hidden="true"></div>
+      <div class="container" style="position:relative;z-index:1;">
+
+        <div class="bts-header">
+          <div class="bts-eyebrow">Behind the Assessment</div>
+          <h2 class="bts-title">What Actually Happens<br>at the Assessment</h2>
+          <p class="bts-sub">Not a coach watching your athlete throw for 20 minutes. A documented, six-part process with specific outputs — not impressions.</p>
+        </div>
+
+        <div class="bts-note">
+          <div class="bts-note-label">A note for parents and athletes</div>
+          <p>This assessment is not a test. There are no right or wrong answers, and no score to be concerned about. The goal is to understand where your athlete is starting so every session is the right fit for them.</p>
+        </div>
+
+        <div class="bts-parts">
+          <div class="bts-part">
+            <div class="bts-part-num">01</div>
+            <div class="bts-part-body">
+              <div class="bts-part-title">Athlete Background</div>
+              <p class="bts-part-desc">Training history, competitive experience, and current season status — scored to determine starting phase. Parents can complete this before arriving.</p>
+            </div>
+          </div>
+          <div class="bts-part">
+            <div class="bts-part-num">02</div>
+            <div class="bts-part-body">
+              <div class="bts-part-title">Pitch Repertoire &amp; Game Knowledge</div>
+              <p class="bts-part-desc">What pitches the athlete throws, how long they've been throwing each, and a brief game knowledge check. Works for all ages and experience levels.</p>
+            </div>
+          </div>
+          <div class="bts-part">
+            <div class="bts-part-num">03</div>
+            <div class="bts-part-body">
+              <div class="bts-part-title">Warm-Up Quality Grading</div>
+              <p class="bts-part-desc">Every movement in the TAP Athletes Universal Warm-Up is graded 1–5 in real time. This becomes a movement quality baseline re-graded at future sessions to show progress.</p>
+            </div>
+          </div>
+          <div class="bts-part">
+            <div class="bts-part-num">04</div>
+            <div class="bts-part-body">
+              <div class="bts-part-title">Athleticism Benchmarks</div>
+              <p class="bts-part-desc">Four tests post-warm-up while the athlete is already loose. Dated and retested regularly to track athletic development independent of pitching mechanics.</p>
+              <div class="bts-pills">
+                <span class="bts-pill">Broad Jump</span>
+                <span class="bts-pill">Single-Leg Balance — Eyes Closed</span>
+                <span class="bts-pill">Rotational Med Ball Throw</span>
+                <span class="bts-pill">10-Yard Acceleration</span>
+              </div>
+              <p class="bts-proprioception">Eyes closed — measuring proprioception, not just balance.</p>
+            </div>
+          </div>
+          <div class="bts-part">
+            <div class="bts-part-num">05</div>
+            <div class="bts-part-body">
+              <div class="bts-part-title">Movement Observation</div>
+              <p class="bts-part-desc">Coach watches 8–12 throws at low effort on flat ground and identifies the dominant movement pattern. Determines the athlete's category and their very first session.</p>
+            </div>
+          </div>
+          <div class="bts-part">
+            <div class="bts-part-num">06</div>
+            <div class="bts-part-body">
+              <div class="bts-part-title">Assessment Output</div>
+              <p class="bts-part-desc">Parts 1 and 5 convert into three specific outputs. The athlete leaves with a documented start profile — not a general impression of how they looked.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bts-outputs">
+          <div class="bts-output">
+            <div class="bts-output-label">Starting Phase</div>
+            <div class="bts-output-desc">Where your athlete fits in the program from day one</div>
+          </div>
+          <div class="bts-output">
+            <div class="bts-output-label">Effort Band</div>
+            <div class="bts-output-desc">The throwing intensity that's right for them right now</div>
+          </div>
+          <div class="bts-output">
+            <div class="bts-output-label">First Session ID</div>
+            <div class="bts-output-desc">A specific session from the TAP curriculum — not a general plan</div>
+          </div>
+        </div>
+
+        <div class="bts-cta">
+          <a href="#assessment">Book Your Free Assessment →</a>
+          <p class="bts-cta-note">Free · No commitment required to attend</p>
+        </div>
+
+      </div>
+    </section>
+
     <!-- PROGRAM STRUCTURE -->
     <section class="section section-alt" id="program-structure">
       <div class="container">
@@ -366,14 +486,6 @@ button{cursor:pointer;background:none;border:none}
           <div class="structure-feature">
             <div class="structure-icon-wrap"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="2" y="5" width="24" height="21" rx="2" stroke="var(--color-primary)" stroke-width="1.8"/><path d="M8 2v6M20 2v6M2 12h24" stroke="var(--color-primary)" stroke-width="1.8" stroke-linecap="round"/><rect x="7" y="16" width="4" height="4" rx="1" fill="var(--color-primary)"/></svg></div>
             <div><h3>Reserved Weekly Slots</h3><p>Training times are assigned in advance. No weekly booking. No scheduling friction. Just show up and develop.</p></div>
-          </div>
-          <div class="structure-feature">
-            <div class="structure-icon-wrap"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="11" stroke="var(--color-primary)" stroke-width="1.8"/><path d="M14 7v7l4 4" stroke="var(--color-primary)" stroke-width="1.8" stroke-linecap="round"/></svg></div>
-            <div><h3>2× Per Week Pace</h3><p>The recommended training frequency gives skills time to carry over session-to-session, building momentum without burnout.</p></div>
-          </div>
-          <div class="structure-feature">
-            <div class="structure-icon-wrap"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M4 20L10 9l7 8 4-5 3 8" stroke="var(--color-primary)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 4v20h20" stroke="var(--color-primary)" stroke-width="1.8" stroke-linecap="round"/></svg></div>
-            <div><h3>Consistency = Progress</h3><p>Athletes who train more frequently move through the program at a faster pace. The program sets the path — consistency determines the speed.</p></div>
           </div>
           <div class="structure-feature">
             <div class="structure-icon-wrap"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M6 14l5 5 11-11" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="14" cy="14" r="11" stroke="var(--color-primary)" stroke-width="1.8"/></svg></div>
@@ -403,23 +515,25 @@ button{cursor:pointer;background:none;border:none}
           <h2>Foundations vs. Traditional Lessons</h2>
           <p class="section-desc">Private lessons and Foundations serve different purposes. Understanding the difference helps families make the right choice.</p>
         </div>
-        <div class="compare-table-wrap">
-          <table class="compare-table" role="table" aria-label="Foundations vs Traditional Lessons comparison">
-            <thead>
-              <tr>
-                <th scope="col"></th>
-                <th scope="col" class="col-lessons">Traditional Lessons</th>
-                <th scope="col" class="col-foundations">Foundations Program</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td class="compare-label">Approach</td><td class="col-lessons"><span class="tag tag-neutral">Reactive</span><p>Addresses recent game or practice problems session-to-session</p></td><td class="col-foundations"><span class="tag tag-primary">Developmental</span><p>Follows a structured progression focused on long-term skill building</p></td></tr>
-              <tr><td class="compare-label">Session Focus</td><td class="col-lessons"><p>Changes direction each session based on current issues</p></td><td class="col-foundations"><p>Each session builds on the last — continuity is built in</p></td></tr>
-              <tr><td class="compare-label">Advancement</td><td class="col-lessons"><p>No structured path forward</p></td><td class="col-foundations"><p>Progression through defined phases based on execution</p></td></tr>
-              <tr><td class="compare-label">Long-Term Outcome</td><td class="col-lessons"><p>Short-term fixes that may not carry over</p></td><td class="col-foundations"><p>Repeatable mechanics and consistent performance</p></td></tr>
-              <tr><td class="compare-label">Scheduling</td><td class="col-lessons"><p>Booked individually as needed</p></td><td class="col-foundations"><p>Reserved weekly slots — no weekly booking required</p></td></tr>
-            </tbody>
-          </table>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--color-border);border:1px solid var(--color-border);border-radius:var(--radius-xl);overflow:hidden;margin-bottom:var(--space-6);">
+          <div style="background:color-mix(in oklab,var(--color-primary) 4%,var(--color-surface));padding:var(--space-8);border-right:2px solid var(--color-primary);">
+            <div style="font-family:var(--font-display);font-size:var(--text-base);font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--color-primary);margin-bottom:var(--space-5);">Foundations Program</div>
+            <ul style="list-style:none;display:flex;flex-direction:column;gap:var(--space-4);">
+              <li style="font-size:var(--text-sm);color:var(--color-text);padding-left:var(--space-5);position:relative;max-width:none;font-weight:500;"><span style="position:absolute;left:0;color:var(--color-primary);">✓</span>Developmental — follows a defined progression toward lasting results</li>
+              <li style="font-size:var(--text-sm);color:var(--color-text);padding-left:var(--space-5);position:relative;max-width:none;font-weight:500;"><span style="position:absolute;left:0;color:var(--color-primary);">✓</span>Each session builds on the last — continuity is built in</li>
+              <li style="font-size:var(--text-sm);color:var(--color-text);padding-left:var(--space-5);position:relative;max-width:none;font-weight:500;"><span style="position:absolute;left:0;color:var(--color-primary);">✓</span>Repeatable mechanics and consistent performance over time</li>
+              <li style="font-size:var(--text-sm);color:var(--color-text);padding-left:var(--space-5);position:relative;max-width:none;font-weight:500;"><span style="position:absolute;left:0;color:var(--color-primary);">✓</span>Reserved weekly slots — no rebooking, no scheduling friction</li>
+            </ul>
+          </div>
+          <div style="background:var(--color-surface-2);padding:var(--space-8);">
+            <div style="font-family:var(--font-display);font-size:var(--text-base);font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--color-text-muted);margin-bottom:var(--space-5);">Traditional Lessons</div>
+            <ul style="list-style:none;display:flex;flex-direction:column;gap:var(--space-4);">
+              <li style="font-size:var(--text-sm);color:var(--color-text-muted);padding-left:var(--space-5);position:relative;max-width:none;"><span style="position:absolute;left:0;color:var(--color-text-faint);">—</span>Reactive — addresses recent game problems session to session</li>
+              <li style="font-size:var(--text-sm);color:var(--color-text-muted);padding-left:var(--space-5);position:relative;max-width:none;"><span style="position:absolute;left:0;color:var(--color-text-faint);">—</span>No structured path forward between sessions</li>
+              <li style="font-size:var(--text-sm);color:var(--color-text-muted);padding-left:var(--space-5);position:relative;max-width:none;"><span style="position:absolute;left:0;color:var(--color-text-faint);">—</span>Short-term fixes that may not carry over to games</li>
+              <li style="font-size:var(--text-sm);color:var(--color-text-muted);padding-left:var(--space-5);position:relative;max-width:none;"><span style="position:absolute;left:0;color:var(--color-text-faint);">—</span>Booked individually as needed, no continuity required</li>
+            </ul>
+          </div>
         </div>
         <div class="compare-callout">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
@@ -441,53 +555,6 @@ button{cursor:pointer;background:none;border:none}
           <div class="audience-card"><div class="audience-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M14 14l-4-5" stroke="var(--color-warning)" stroke-width="1.8" stroke-linecap="round"/><circle cx="14" cy="16" r="3" stroke="var(--color-warning)" stroke-width="1.8"/></svg></div><div><h3>Struggling with Consistency</h3><p>Athletes whose mechanics aren't repeatable, who regress after instruction, or who can't transfer skills to game situations.</p></div></div>
           <div class="audience-card"><div class="audience-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="4" y="8" width="20" height="16" rx="2" stroke="var(--color-primary)" stroke-width="1.8"/><path d="M9 8V6a5 5 0 0110 0v2" stroke="var(--color-primary)" stroke-width="1.8"/><path d="M12 16l2 2 4-4" stroke="var(--color-primary)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><h3>Had Instruction, No Lasting Results</h3><p>Athletes who have received coaching but haven't seen lasting progress. Foundations addresses the underlying cause — lack of progression structure.</p></div></div>
           <div class="audience-card"><div class="audience-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M14 4v8" stroke="var(--color-primary)" stroke-width="1.8" stroke-linecap="round"/><path d="M10 8l4-4 4 4" stroke="var(--color-primary)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><rect x="6" y="12" width="16" height="8" rx="2" stroke="var(--color-primary)" stroke-width="1.8"/></svg></div><div><h3>New to Pitching</h3><p>Athletes who are just beginning and need a clear, structured starting point rather than uncoordinated drop-in sessions.</p></div></div>
-        </div>
-        <div class="not-for-callout">
-          <div class="not-for-header"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg><span>Not the right fit if…</span></div>
-          <p>You're looking for occasional drop-in training or session-based instruction. Foundations requires commitment to a consistent schedule. It is built for families seeking a structured, long-term development approach.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- THE PROBLEM WE SOLVE -->
-    <section class="section problem-section">
-      <div class="container">
-        <div class="problem-split">
-          <div class="problem-left">
-            <span class="section-label">The Pattern We Break</span>
-            <h2>Why Athletes Regress After Instruction</h2>
-            <p>Many athletes experience a cycle: receive instruction → show temporary improvement → regress back to old patterns. This happens because skills haven't been reinforced enough to stabilize.</p>
-            <p>Without a defined progression and consistent schedule, there's no continuity between sessions. The athlete never builds on what they learned — they reset.</p>
-          </div>
-          <div class="problem-right">
-            <div class="cycle-visual">
-              <div class="cycle-before">
-                <div class="cycle-header cycle-bad">The Common Cycle</div>
-                <div class="cycle-steps">
-                  <div class="cycle-step bad">Instruction received</div>
-                  <div class="cycle-arrow bad">↓</div>
-                  <div class="cycle-step bad">Temporary improvement</div>
-                  <div class="cycle-arrow bad">↓</div>
-                  <div class="cycle-step bad">Regression</div>
-                  <div class="cycle-arrow bad">↓</div>
-                  <div class="cycle-step bad">Repeat instruction</div>
-                </div>
-              </div>
-              <div class="cycle-vs">vs</div>
-              <div class="cycle-after">
-                <div class="cycle-header cycle-good">The Foundations Cycle</div>
-                <div class="cycle-steps">
-                  <div class="cycle-step good">Assessment + placement</div>
-                  <div class="cycle-arrow good">↓</div>
-                  <div class="cycle-step good">Structured session</div>
-                  <div class="cycle-arrow good">↓</div>
-                  <div class="cycle-step good">Skills carry over</div>
-                  <div class="cycle-arrow good">↓</div>
-                  <div class="cycle-step good">Advance to next phase</div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
@@ -566,28 +633,27 @@ button{cursor:pointer;background:none;border:none}
       </div>
     </section>
 
-    <!-- CTA / ASSESSMENT — kept as final CTA exactly as original -->
+    <!-- ASSESSMENT CTA -->
     <section class="section assessment-section" id="assessment">
       <div class="container">
         <div class="assessment-inner">
           <div class="assessment-text">
             <span class="section-label section-label-light">Start Here</span>
             <h2>Every Athlete Begins With an Assessment</h2>
-            <p>The TAP Athletes intake assessment is a proprietary 90-minute evaluation — and it's completely free. This isn't a standard skills test. It's how we get to know your athlete before a single session begins.</p>
-            <p style="color:rgba(255,255,255,0.75);font-size:var(--text-base);line-height:1.7;margin-bottom:var(--space-6);max-width:52ch;">We assess mechanics and skill execution on the mound — documented and video recorded. We also ask questions: about pitching knowledge, what kind of athlete they want to become, what they care about outside of baseball, and what actually motivates them. The assessment gives us everything we need to place them correctly and build a plan that fits who they are.</p>
+            <p>The intake assessment is free, 90 minutes, and the only way into the Foundations program. We evaluate mechanics on the mound, document everything on video, and ask the questions that help us build the right plan for your athlete specifically.</p>
             <div class="assessment-steps">
               <div class="assessment-step"><span class="step-dot">1</span><span>Book your free 90-minute intake assessment</span></div>
               <div class="assessment-step"><span class="step-dot">2</span><span>Attend in-person — athlete and parent both welcome</span></div>
-              <div class="assessment-step"><span class="step-dot">3</span><span>Skill testing is documented and video recorded</span></div>
-              <div class="assessment-step"><span class="step-dot">4</span><span>Receive phase placement and your athlete's development path</span></div>
+              <div class="assessment-step"><span class="step-dot">3</span><span>Receive phase placement and your athlete's development path</span></div>
+              <div class="assessment-step"><span class="step-dot">4</span><span>Begin training on your reserved schedule</span></div>
             </div>
           </div>
           <div class="assessment-cta-card">
             <div class="cta-card-inner">
               <h3>Book Your Free Assessment</h3>
-              <p>90 minutes. No cost. The only way into the Foundations program.</p>
+              <p>90 minutes. No cost. No commitment required to attend.</p>
               <a href="https://www.trainingathleticperformance.com/services" class="btn btn-primary btn-lg btn-full">Book My Assessment</a>
-              <p class="cta-note">Free for all new athletes. No commitment required to attend.</p>
+              <p class="cta-note">The only way into the Foundations program.</p>
             </div>
           </div>
         </div>
@@ -608,11 +674,11 @@ button{cursor:pointer;background:none;border:none}
     </div>
     <div class="site-footer-info">
       1751 S 1st Street, Rogers, Arkansas 72758<br>
-      <a href="tel:+18338602711">(833) 860-2711</a> · <a href="/cdn-cgi/l/email-protection#a6d5d3d6d6c9d4d2e6d2c7d6c7d2cecac3d2c3d588c5c9cb"><span class="__cf_email__" data-cfemail="75060005051a07013501140514011d19100110065b161a18">[email&#160;protected]</span></a>
+      <a href="tel:+18338602711">(833) 860-2711</a> · <a href="mailto:support@tapathletes.com">support@tapathletes.com</a>
     </div>
   </footer>
 
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js" defer></script><script>
+  <script>
 (function(){
   'use strict';
   const themeToggle=document.querySelector('[data-theme-toggle]');
@@ -626,7 +692,11 @@ button{cursor:pointer;background:none;border:none}
   const menuBtn=document.getElementById('menuBtn');
   const mobileNav=document.getElementById('mobileNav');
   if(menuBtn&&mobileNav){menuBtn.addEventListener('click',()=>{const open=mobileNav.classList.toggle('open');menuBtn.setAttribute('aria-expanded',open.toString());mobileNav.setAttribute('aria-hidden',(!open).toString());});mobileNav.querySelectorAll('a').forEach(link=>{link.addEventListener('click',()=>{mobileNav.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');mobileNav.setAttribute('aria-hidden','true');});});}
-  const fadeEls=document.querySelectorAll('.step-card,.structure-feature,.audience-card,.pace-visual,.compare-table-wrap,.cycle-visual');
+  const fadeEls=document.querySelectorAll('.step-card,.structure-feature,.audience-card,.pace-visual,.option-card');
   fadeEls.forEach(el=>el.classList.add('fade-up'));
   if('IntersectionObserver' in window){const obs=new IntersectionObserver((entries)=>{entries.forEach((entry)=>{if(entry.isIntersecting){const delay=Array.from(entry.target.parentElement.children).indexOf(entry.target)*80;setTimeout(()=>{entry.target.classList.add('visible');},delay);obs.unobserve(entry.target);}});},{threshold:0.12,rootMargin:'0px 0px -40px 0px'});fadeEls.forEach(el=>obs.observe(el));}else{fadeEls.forEach(el=>el.classList.add('visible'));}
-  document.querySelectorAll('a[href^="#"
+  document.querySelectorAll('a[href^="#"]').forEach(anchor=>{anchor.addEventListener('click',function(e){const target=document.querySelector(this.getAttribute('href'));if(target){e.preventDefault();target.scrollIntoView({behavior:'smooth',block:'start'});}});});
+})();
+  </script>
+</body>
+</html>
