@@ -115,6 +115,13 @@ a,button{transition:all 0.2s ease}
 .faq-body{padding:0 4px 22px;font-size:15px;line-height:1.6;color:var(--text-2);max-width:680px}
 .faq-body strong{color:var(--text);font-weight:600}
 
+/* DICTIONARY */
+.dict{padding:56px 0;background:var(--white);border-bottom:1px solid var(--gray-100)}
+.dict-inner{display:grid;grid-template-columns:1fr auto;gap:32px;align-items:center}
+.dict-h{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(24px,2.6vw,32px);line-height:1.05;text-transform:uppercase;color:var(--navy);margin-bottom:8px}
+.dict-h em{font-style:normal;color:var(--blue)}
+.dict-body{font-size:15px;line-height:1.55;color:var(--text-2);max-width:600px}
+
 /* BOTTOM CTA */
 .cta-bottom{padding:80px 0;background:var(--white);text-align:center}
 .cta-bottom-h{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(34px,4vw,52px);line-height:1;text-transform:uppercase;color:var(--navy);margin-bottom:12px}
@@ -143,6 +150,7 @@ footer{padding:32px 0;background:var(--off-white);border-top:1px solid var(--gra
   .pricing{padding:56px 0}
   .faq{padding:56px 0}
   .cta-bottom{padding:56px 0;padding-bottom:96px}
+  .dict-inner{grid-template-columns:1fr;gap:18px}
   .sticky-cta{display:block}
 }
 @media(max-width:580px){
@@ -175,7 +183,7 @@ footer{padding:32px 0;background:var(--off-white);border-top:1px solid var(--gra
     <div>
       <div class="hero-eyebrow eyebrow">Indoor Live At-Bats · Rogers, AR</div>
       <h1 class="hero-h">Compete Against<br>Real Hitters.<br><em>Get Real Data.</em></h1>
-      <p class="hero-sub">Pitchers face <strong>live hitters in real at-bats</strong> with <strong>Rapsodo tracking every pitch</strong> — velo, spin, movement, location. Coach in your ear. Data in your hand. <strong>From $45.</strong></p>
+      <p class="hero-sub">Pitchers face <strong>live hitters in real at-bats</strong> with <strong>Rapsodo tracking every pitch</strong> — velo, spin, movement, location. Show up, compete, take your data home. <strong>From $45.</strong></p>
       <div class="hero-cta-row">
         <a href="#book" class="btn btn--primary btn--lg">Book Your Session</a>
         <a href="#pricing" class="btn" style="background:var(--off-white);color:var(--navy)">See Pricing</a>
@@ -185,7 +193,7 @@ footer{padding:32px 0;background:var(--off-white);border-top:1px solid var(--gra
         <span class="hero-meta-dot"></span>
         <span><strong>Rapsodo</strong> · Pro-Grade Data</span>
         <span class="hero-meta-dot"></span>
-        <span><strong>Coach-Led</strong> · Every Session</span>
+        <span><strong>Coaching</strong> · Optional Add-On</span>
       </div>
     </div>
     <div class="hero-video">
@@ -209,8 +217,8 @@ footer{padding:32px 0;background:var(--off-white);border-top:1px solid var(--gra
     </div>
     <div class="value-card">
       <div class="value-num">03</div>
-      <div class="value-h">Coach-Led, In-Game Adjustments</div>
-      <p class="value-body">A TAP coach calls pitches, reads the data, and makes adjustments live — so you leave with what to train next.</p>
+      <div class="value-h">Just Hit and Pitch — Or Add a Coach</div>
+      <p class="value-body">Staff handles Rapsodo setup and your data. Most kids just want to compete — coaching is available as an <strong>optional add-on</strong> when you want active feedback during the session.</p>
     </div>
   </div>
 </div></section>
@@ -220,7 +228,7 @@ footer{padding:32px 0;background:var(--off-white);border-top:1px solid var(--gra
   <div class="pricing-head">
     <div class="pricing-eyebrow eyebrow">Pricing</div>
     <h2 class="pricing-h">Pick Your Pack</h2>
-    <p class="pricing-sub">One-hour sessions. Live hitters, full Rapsodo data, and coach-led feedback every time.</p>
+    <p class="pricing-sub">One-hour sessions. Live hitters and full Rapsodo data on every pitch. Coaching available as an optional add-on.</p>
   </div>
   <div class="pricing-grid" id="book">
     <div class="tier">
@@ -284,11 +292,11 @@ footer{padding:32px 0;background:var(--off-white);border-top:1px solid var(--gra
   <div class="faq-list">
     <details class="faq-item">
       <summary>What ages and skill levels is this for?</summary>
-      <div class="faq-body">Live At-Bats are open to pitchers ranging from middle school through college and beyond. Sessions are coach-supervised and structured around the pitcher's experience level — bring your stuff, we'll bring the hitters and the data.</div>
+      <div class="faq-body">Live At-Bats are open to pitchers ranging from middle school through college and beyond. Sessions are staff-supervised and structured around the pitcher's experience level — bring your stuff, we'll bring the hitters and the data.</div>
     </details>
     <details class="faq-item">
-      <summary>What do I get from each session?</summary>
-      <div class="faq-body">A full hour of <strong>real at-bats against live hitters</strong>, every pitch tracked on Rapsodo (velo, spin, movement, location, release), and <strong>in-session coaching</strong> from a TAP Athletes coach. You leave with your data and a clear next step to train.</div>
+      <summary>What's included in a session?</summary>
+      <div class="faq-body">A full hour of <strong>real at-bats against live hitters</strong> and every pitch tracked on Rapsodo (velo, spin, movement, location, release). A TAP Athletes staff member handles the Rapsodo setup so you can focus on competing — and you take your pitch data home. <strong>Coaching is optional</strong> and available as an add-on if you want active feedback during the session.</div>
     </details>
     <details class="faq-item">
       <summary>How do the multi-session packs work?</summary>
@@ -300,15 +308,31 @@ footer{padding:32px 0;background:var(--off-white);border-top:1px solid var(--gra
     </details>
     <details class="faq-item">
       <summary>Do I need my own gear?</summary>
-      <div class="faq-body">Bring your glove, cleats, and pitching gear. We provide the hitters, the L-screen, the Rapsodo unit, and the coach. Showing up ready to compete is on you.</div>
+      <div class="faq-body">Bring your glove, cleats, and pitching gear. We provide the hitters, the L-screen, the Rapsodo unit, and a staff member to run it. Showing up ready to compete is on you.</div>
     </details>
+    <details class="faq-item">
+      <summary>Can I add coaching to my session?</summary>
+      <div class="faq-body">Yes. Coaching is an <strong>optional add-on</strong> for athletes who want active feedback during the session — pitch calling, in-game adjustments, and a debrief. Most kids who book Live ABs just want to compete and take their data home, which is why coaching isn't included by default. Mention it when you book and we'll quote the add-on.</div>
+    </details>
+  </div>
+</div></section>
+
+<!-- PITCHING DICTIONARY -->
+<section class="dict"><div class="wrap">
+  <div class="dict-inner">
+    <div>
+      <div class="eyebrow" style="color:var(--blue);margin-bottom:8px">Free Download</div>
+      <h2 class="dict-h">Want to <em>Learn More?</em></h2>
+      <p class="dict-body">Download the TAP Athletes Pitching Dictionary to deepen your understanding of every Rapsodo metric — what it means, why it matters, and how it shows up in a live at-bat.</p>
+    </div>
+    <a href="/foundations/TAP-Athletes-Foundations-Curriculum-Guide.pdf" class="btn btn--primary">Download Pitching Dictionary</a>
   </div>
 </div></section>
 
 <!-- BOTTOM CTA -->
 <section class="cta-bottom"><div class="wrap">
   <h2 class="cta-bottom-h">Is Your Arsenal<br><em>Good Enough?</em></h2>
-  <p class="cta-bottom-sub">Find out the way the pros do — against live hitters, on Rapsodo, with a coach in your ear.</p>
+  <p class="cta-bottom-sub">Find out the way the pros do — against live hitters, on Rapsodo, with your data in hand.</p>
   <a href="#book" class="btn btn--primary btn--lg">Book Your Live At-Bats</a>
   <div class="cta-bottom-meta">From $45 · Rogers, AR · Call or text (833) 860-2711</div>
 </div></section>
