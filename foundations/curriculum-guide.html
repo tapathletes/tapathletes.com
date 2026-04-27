@@ -812,6 +812,63 @@
   #tweaks-root { position: fixed; inset: 0; pointer-events: none; z-index: 2147483646; }
   #tweaks-root > * { pointer-events: auto; }
 
+  /* ───────── Mobile responsive ───────── */
+  @media (max-width: 900px) {
+    .doc { padding: 16px 0 48px; }
+    .page { padding: 32px 24px; min-height: auto; margin-bottom: 16px; }
+    .page.cover { height: auto; min-height: auto; padding: 32px 24px 40px; }
+    .cover::before { left: 24px; right: 24px; }
+    .cover-title h1 { font-size: 48px; }
+    .cover-title h1 .sub { font-size: 22px; margin-top: 10px; }
+    .cover-title .program { font-size: 16px; }
+    .cover-title { padding: 32px 0 28px; }
+    .cover-foot { grid-template-columns: 1fr; gap: 16px; }
+    .cover-foot .col:last-child { display: flex; justify-content: flex-start; }
+    .cover-abstract { margin-top: 24px; font-size: 14px; }
+    .seal { width: 72px; height: 72px; font-size: 8px; }
+    .seal .yr { font-size: 10px; }
+
+    .two-col { grid-template-columns: 1fr; gap: 16px; }
+    .three-col { grid-template-columns: 1fr; gap: 16px; }
+    .section-head { grid-template-columns: 1fr; gap: 12px; }
+    .heading-xl { font-size: 28px; }
+    .heading-lg { font-size: 24px; }
+    .heading-md { font-size: 18px; }
+    .display { font-size: 36px; }
+    .lede { font-size: 14px; }
+
+    .phase { grid-template-columns: 1fr; gap: 12px; }
+    .phase .pnum { font-size: 28px; display: flex; align-items: baseline; gap: 8px; }
+    .phase .pnum small { display: inline; margin-top: 0; margin-left: 8px; }
+    .phase .pband { text-align: left; display: flex; align-items: center; gap: 8px; }
+
+    .phase-banner { grid-template-columns: 1fr; gap: 8px; }
+    .phase-banner .num { font-size: 48px; }
+    .phase-banner .name { font-size: 20px; }
+    .phase-banner .meta { text-align: left; }
+
+    .skill-row { grid-template-columns: 36px 1fr; gap: 8px; }
+    .skill-row .name { font-size: 13px; }
+    .skill-row .drills { grid-column: 1 / -1; font-size: 10.5px; padding-left: 36px; }
+
+    .matrix-grid { grid-template-columns: 1fr; }
+
+    .step { grid-template-columns: 1fr; gap: 8px; }
+    .step .num { font-size: 32px; display: flex; align-items: baseline; gap: 8px; }
+    .step .num small { display: inline; margin-top: 0; margin-left: 8px; }
+
+    .plans { grid-template-columns: 1fr; }
+    .intro-card { grid-template-columns: 1fr; gap: 16px; }
+    .intro-card .right { text-align: left; border-left: none; padding-left: 0; border-top: 1px solid var(--rule); padding-top: 12px; }
+
+    .contact-block { grid-template-columns: 1fr; gap: 16px; }
+    .contact-block .right { text-align: left; }
+
+    .toc { grid-template-columns: 1fr; }
+
+    .page-head { flex-wrap: wrap; gap: 4px; margin-bottom: 20px; }
+  }
+
 </style>
 </head>
 <body>
