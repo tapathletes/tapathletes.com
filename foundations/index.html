@@ -588,7 +588,7 @@
         form.reset();
         submitBtn.textContent = 'Download';
         submitBtn.disabled = false;
-        window.open(pdfUrl, '_blank');
+        window.location.href = pdfUrl;
       } else { throw new Error('fail'); }
     }).catch(function() {
       errorMsg.classList.remove('hidden');
