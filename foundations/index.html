@@ -1,707 +1,653 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TAP Athletes Foundations — Structured Pitching Development</title>
-  <meta name="description" content="TAP Athletes Foundations is a structured, progression-based pitching development program for athletes ages 8+. Not session-based training — a defined system that builds repeatable mechanics over time." />
-  <meta property="og:title" content="TAP Athletes Foundations" />
-  <meta property="og:description" content="Structured pitching development. Not session-based training. A defined progression system that builds repeatable mechanics and lasting performance." />
-  <meta property="og:type" content="website" />
+  <title>TAP Athletes Foundations — Sandbox</title>
+  <meta name="robots" content="noindex, nofollow" />
   <link rel="icon" href="data:," />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-  <style>
-:root,[data-theme='light']{--color-bg:#F8F8F6;--color-surface:#FFFFFF;--color-surface-2:#F3F3F0;--color-surface-offset:#EEECEA;--color-surface-dynamic:#E5E3DF;--color-divider:#E0DDD8;--color-border:#D5D2CC;--color-text:#1A1916;--color-text-muted:#6B6965;--color-text-faint:#8A8884;--color-text-inverse:#F8F8F6;--color-primary:#0A5C88;--color-primary-hover:#084E75;--color-primary-active:#063D5C;--color-primary-highlight:#C6DCE8;--color-primary-light:#EAF4FA;--color-accent:#D64A0A;--color-accent-hover:#B83D07;--color-accent-light:#FCE8DF;--color-success:#2E7D32;--color-success-light:#E8F5E9;--color-warning:#96641A;--color-warning-light:#FFF3E0;--font-display:'Barlow Condensed','Arial Narrow',sans-serif;--font-body:'Inter','Helvetica Neue',sans-serif;--text-xs:clamp(0.75rem,0.7rem + 0.25vw,0.875rem);--text-sm:clamp(0.875rem,0.8rem + 0.35vw,1rem);--text-base:clamp(1rem,0.95rem + 0.25vw,1.125rem);--text-lg:clamp(1.125rem,1rem + 0.75vw,1.5rem);--text-xl:clamp(1.5rem,1.2rem + 1.25vw,2.25rem);--text-2xl:clamp(2rem,1.2rem + 2.5vw,3.5rem);--text-3xl:clamp(2.5rem,1rem + 4vw,5rem);--text-hero:clamp(3rem,0.5rem + 7vw,6.5rem);--space-1:0.25rem;--space-2:0.5rem;--space-3:0.75rem;--space-4:1rem;--space-5:1.25rem;--space-6:1.5rem;--space-8:2rem;--space-10:2.5rem;--space-12:3rem;--space-16:4rem;--space-20:5rem;--space-24:6rem;--space-32:8rem;--radius-sm:0.375rem;--radius-md:0.5rem;--radius-lg:0.75rem;--radius-xl:1rem;--radius-2xl:1.5rem;--radius-full:9999px;--shadow-sm:0 1px 3px rgba(10,20,30,0.07);--shadow-md:0 4px 14px rgba(10,20,30,0.09);--shadow-lg:0 12px 32px rgba(10,20,30,0.12);--shadow-xl:0 20px 48px rgba(10,20,30,0.16);--content-narrow:640px;--content-default:960px;--content-wide:1160px;--transition:180ms cubic-bezier(0.16,1,0.3,1)}
-[data-theme='dark']{--color-bg:#131415;--color-surface:#1A1C1E;--color-surface-2:#1F2124;--color-surface-offset:#232628;--color-surface-dynamic:#2C2F33;--color-divider:#2E3236;--color-border:#383C42;--color-text:#E4E5E6;--color-text-muted:#909498;--color-text-faint:#555A60;--color-text-inverse:#131415;--color-primary:#5BAAD0;--color-primary-hover:#4A9DC5;--color-primary-active:#3B8FB5;--color-primary-highlight:#1E3848;--color-primary-light:#172030;--color-accent:#F07140;--color-accent-hover:#E8602C;--color-accent-light:#2E1A10;--color-success:#66BB6A;--color-success-light:#1B2E1C;--color-warning:#FFA726;--color-warning-light:#2A2010;--shadow-sm:0 1px 3px rgba(0,0,0,0.3);--shadow-md:0 4px 14px rgba(0,0,0,0.35);--shadow-lg:0 12px 32px rgba(0,0,0,0.45);--shadow-xl:0 20px 48px rgba(0,0,0,0.55)}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{-webkit-text-size-adjust:none;text-size-adjust:none;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility;scroll-behavior:smooth;scroll-padding-top:80px}
-body{min-height:100dvh;font-family:var(--font-body);font-size:var(--text-base);line-height:1.6;color:var(--color-text);background:var(--color-bg)}
-img,picture,video,canvas,svg{display:block;max-width:100%;height:auto}
-ul[role='list'],ol[role='list']{list-style:none}
-input,button,textarea,select{font:inherit;color:inherit}
-h1,h2,h3,h4,h5,h6{font-family:var(--font-display);text-transform:uppercase;letter-spacing:0.01em;text-wrap:balance;line-height:1.05}
-p,li,figcaption{text-wrap:pretty;max-width:68ch}
-a{color:var(--color-primary);text-decoration:none;transition:color var(--transition)}
-a:hover{color:var(--color-primary-hover)}
-::selection{background:color-mix(in oklab,var(--color-primary) 20%,transparent);color:var(--color-text)}
-:focus-visible{outline:2px solid var(--color-primary);outline-offset:3px;border-radius:var(--radius-sm)}
-@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:0.01ms !important;transition-duration:0.01ms !important;scroll-behavior:auto !important}}
-button{cursor:pointer;background:none;border:none}
-.container{width:100%;max-width:var(--content-wide);margin-inline:auto;padding-inline:clamp(var(--space-5),5vw,var(--space-16))}
-.section{padding-block:clamp(var(--space-16),8vw,var(--space-32))}
-.section-alt{background:var(--color-surface-2)}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:var(--space-2);font-family:var(--font-body);font-weight:600;border-radius:var(--radius-md);cursor:pointer;transition:background var(--transition),color var(--transition),box-shadow var(--transition),transform var(--transition);text-decoration:none;border:2px solid transparent;white-space:nowrap}
-.btn-sm{font-size:var(--text-sm);padding:var(--space-2) var(--space-4)}
-.btn-md{font-size:var(--text-sm);padding:var(--space-3) var(--space-6)}
-.btn-lg{font-size:var(--text-base);padding:var(--space-4) var(--space-8)}
-.btn-full{width:100%}
-.btn-primary{background:var(--color-accent);color:#fff;border-color:var(--color-accent)}
-.btn-primary:hover{background:var(--color-accent-hover);border-color:var(--color-accent-hover);color:#fff;box-shadow:var(--shadow-md);transform:translateY(-1px)}
-.btn-primary:active{transform:translateY(0)}
-.btn-secondary{background:var(--color-primary);color:#fff;border-color:var(--color-primary)}
-.btn-secondary:hover{background:var(--color-primary-hover);border-color:var(--color-primary-hover);color:#fff;box-shadow:var(--shadow-md)}
-.btn-ghost{background:transparent;color:var(--color-text);border-color:var(--color-border)}
-.btn-ghost:hover{background:var(--color-surface-offset);color:var(--color-text);border-color:var(--color-border)}
-.site-header{position:sticky;top:0;z-index:100;background:color-mix(in oklab,var(--color-bg) 92%,transparent);backdrop-filter:blur(16px);border-bottom:1px solid var(--color-divider);transition:box-shadow var(--transition)}
-.site-header.scrolled{box-shadow:var(--shadow-sm)}
-.nav-inner{display:flex;align-items:center;gap:var(--space-6);height:72px}
-.logo{display:flex;align-items:center;gap:0;text-decoration:none;color:var(--color-text);flex-shrink:0}
-.logo-text{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:800;text-transform:uppercase;letter-spacing:0.04em;color:#1B2A4A}
-.logo-text span{color:#2E75B6}
-.main-nav{display:flex;align-items:center;gap:var(--space-6);margin-left:var(--space-4)}
-.main-nav a{font-size:var(--text-sm);font-weight:500;color:var(--color-text-muted);text-decoration:none;transition:color var(--transition)}
-.main-nav a:hover{color:var(--color-primary)}
-.nav-actions{display:flex;align-items:center;gap:var(--space-3);margin-left:auto}
-.theme-toggle{display:flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:var(--radius-md);color:var(--color-text-muted);background:var(--color-surface-offset);border:1px solid var(--color-border);transition:background var(--transition),color var(--transition)}
-.theme-toggle:hover{background:var(--color-surface-dynamic);color:var(--color-text)}
-.mobile-menu-btn{display:none;flex-direction:column;gap:5px;width:36px;height:36px;align-items:center;justify-content:center;margin-left:auto;padding:var(--space-2);border-radius:var(--radius-md);background:var(--color-surface-offset);border:1px solid var(--color-border)}
-.mobile-menu-btn span{display:block;width:18px;height:2px;background:var(--color-text);border-radius:2px;transition:transform var(--transition),opacity var(--transition)}
-.mobile-nav{display:none;flex-direction:column;gap:var(--space-1);padding:var(--space-4) var(--space-5) var(--space-6);border-top:1px solid var(--color-divider);background:var(--color-bg)}
-.mobile-nav a{font-size:var(--text-base);color:var(--color-text);padding:var(--space-3) var(--space-2);border-radius:var(--radius-md);transition:background var(--transition)}
-.mobile-nav a:hover{background:var(--color-surface-offset)}
-.mobile-nav .btn{margin-top:var(--space-3)}
-.mobile-nav.open{display:flex}
-.section-label{display:inline-block;font-family:var(--font-body);font-size:var(--text-xs);font-weight:700;text-transform:uppercase;letter-spacing:0.12em;color:var(--color-primary);background:var(--color-primary-light);padding:var(--space-1) var(--space-3);border-radius:var(--radius-full);margin-bottom:var(--space-4)}
-.section-label-light{color:#fff;background:rgba(255,255,255,0.2)}
-.section-intro{text-align:center;max-width:640px;margin:0 auto var(--space-12)}
-.section-intro h2{font-size:var(--text-2xl);margin-bottom:var(--space-4);color:var(--color-text)}
-.section-desc{font-size:var(--text-base);color:var(--color-text-muted);max-width:52ch;margin:0 auto}
-.hero{position:relative;min-height:88vh;display:flex;align-items:center;overflow:hidden;background:var(--color-surface);padding-block:var(--space-20)}
-.hero-bg-shape{position:absolute;inset:0;background:linear-gradient(135deg,color-mix(in oklab,var(--color-primary) 5%,var(--color-surface)) 0%,var(--color-surface) 50%,color-mix(in oklab,var(--color-accent) 4%,var(--color-surface)) 100%);z-index:0}
-.hero-bg-shape::after{content:'';position:absolute;top:-20%;right:-10%;width:60%;height:120%;background:radial-gradient(ellipse,color-mix(in oklab,var(--color-primary) 8%,transparent) 0%,transparent 70%);pointer-events:none}
-.hero-inner{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;gap:var(--space-12)}
-.hero-content{flex:1;min-width:0;max-width:680px}
-.hero-label{font-size:var(--text-sm);font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:var(--color-primary);margin-bottom:var(--space-5)}
-.hero-headline{font-size:var(--text-hero);font-weight:800;line-height:0.95;color:var(--color-text);margin-bottom:var(--space-6);max-width:14ch}
-.hero-headline em{font-style:normal;color:var(--color-primary)}
-.hero-sub{font-size:var(--text-lg);color:var(--color-text-muted);max-width:50ch;line-height:1.5;margin-bottom:var(--space-8);font-family:var(--font-body);font-weight:400}
-.hero-cta-group{display:flex;flex-wrap:wrap;gap:var(--space-3);margin-bottom:var(--space-8)}
-.hero-proof{display:flex;flex-wrap:wrap;gap:var(--space-3)}
-.proof-pill{display:inline-flex;align-items:center;gap:var(--space-2);font-size:var(--text-xs);font-weight:600;color:var(--color-text-muted);background:var(--color-surface-2);border:1px solid var(--color-border);padding:var(--space-2) var(--space-3);border-radius:var(--radius-full)}
-.proof-pill svg{color:var(--color-success);flex-shrink:0}
-.hero-visual{display:flex;align-items:center;justify-content:center;width:260px;height:260px;flex-shrink:0}
-.visual-diamond{position:relative;width:220px;height:220px;display:flex;align-items:center;justify-content:center}
-.diamond-ring{position:absolute;border-radius:50%;border:1px solid color-mix(in oklab,var(--color-primary) 20%,transparent)}
-.ring-1{width:100%;height:100%}
-.ring-2{width:72%;height:72%;border-color:color-mix(in oklab,var(--color-primary) 30%,transparent)}
-.ring-3{width:48%;height:48%;border-color:color-mix(in oklab,var(--color-primary) 45%,transparent);background:var(--color-primary-light)}
-.diamond-icon{position:relative;z-index:1}
-.positioning-bar{background:var(--color-primary);padding-block:var(--space-8)}
-.positioning-quote{text-align:center;font-family:var(--font-display);font-size:var(--text-xl);font-weight:600;color:rgba(255,255,255,0.85);text-transform:uppercase;letter-spacing:0.02em;max-width:800px;margin:0 auto;line-height:1.2}
-.positioning-quote strong{color:#fff}
-.steps-grid{display:flex;align-items:flex-start;gap:var(--space-4);margin-bottom:var(--space-10)}
-.step-card{flex:1;background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-xl);padding:var(--space-8) var(--space-6);position:relative;transition:box-shadow var(--transition),transform var(--transition)}
-.step-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-3px)}
-.step-number{font-family:var(--font-display);font-size:4rem;font-weight:800;color:color-mix(in oklab,var(--color-primary) 12%,transparent);line-height:1;margin-bottom:var(--space-3);letter-spacing:-0.02em}
-.step-icon{margin-bottom:var(--space-4);width:52px;height:52px;display:flex;align-items:center;justify-content:center;background:var(--color-primary-light);border-radius:var(--radius-lg)}
-.step-card h3{font-size:var(--text-lg);font-weight:700;color:var(--color-text);margin-bottom:var(--space-3)}
-.step-card p{font-size:var(--text-base);color:var(--color-text-muted);line-height:1.6}
-.step-connector{flex-shrink:0;align-self:center;color:var(--color-primary);margin-top:var(--space-8);opacity:0.6}
-.progression-note{display:flex;align-items:flex-start;gap:var(--space-3);background:var(--color-primary-light);border:1px solid var(--color-primary-highlight);border-radius:var(--radius-lg);padding:var(--space-4) var(--space-5);font-size:var(--text-sm);color:var(--color-primary);max-width:640px;margin:0 auto}
-.progression-note svg{flex-shrink:0;margin-top:2px}
-.structure-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--space-6);margin-bottom:var(--space-12)}
-.structure-feature{display:flex;gap:var(--space-4);padding:var(--space-6);background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-xl);transition:box-shadow var(--transition)}
-.structure-feature:hover{box-shadow:var(--shadow-md)}
-.structure-icon-wrap{flex-shrink:0;width:48px;height:48px;background:var(--color-primary-light);border-radius:var(--radius-lg);display:flex;align-items:center;justify-content:center}
-.structure-feature h3{font-size:var(--text-base);font-weight:700;color:var(--color-text);margin-bottom:var(--space-2);text-transform:uppercase;letter-spacing:0.04em}
-.structure-feature p{font-size:var(--text-sm);color:var(--color-text-muted);line-height:1.6}
-.pace-visual{background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-xl);padding:var(--space-8)}
-.pace-header{display:flex;align-items:baseline;gap:var(--space-4);margin-bottom:var(--space-6)}
-.pace-header h3{font-size:var(--text-lg);color:var(--color-text)}
-.pace-note{font-size:var(--text-xs);color:var(--color-text-muted);font-weight:500}
-.pace-bar-wrap{margin-bottom:var(--space-4)}
-.pace-bar{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--space-2)}
-.pace-segment{background:var(--color-primary-light);border:1px solid var(--color-primary-highlight);border-radius:var(--radius-lg);padding:var(--space-4) var(--space-3);text-align:center;position:relative;overflow:hidden}
-.pace-segment::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--color-primary);opacity:0.4}
-.pace-segment.seg-2::after{opacity:0.55}
-.pace-segment.seg-3::after{opacity:0.72}
-.pace-segment.seg-4::after{opacity:1;background:var(--color-accent)}
-.pace-segment span{display:block;font-size:var(--text-sm);font-weight:700;color:var(--color-primary);font-family:var(--font-display);text-transform:uppercase;letter-spacing:0.05em}
-.pace-segment small{font-size:var(--text-xs);color:var(--color-text-muted)}
-.pace-caption{font-size:var(--text-sm);color:var(--color-text-muted);text-align:center;max-width:none}
-.compare-table-wrap{overflow-x:auto;margin-bottom:var(--space-8);border-radius:var(--radius-xl);box-shadow:var(--shadow-md)}
-.compare-table{width:100%;border-collapse:collapse;background:var(--color-surface);min-width:600px}
-.compare-table thead tr{background:var(--color-surface-2)}
-.compare-table th,.compare-table td{padding:var(--space-4) var(--space-5);text-align:left;border-bottom:1px solid var(--color-divider);vertical-align:top}
-.compare-table th{font-family:var(--font-display);font-size:var(--text-base);font-weight:700;text-transform:uppercase;letter-spacing:0.06em;padding-block:var(--space-5)}
-.compare-table th:first-child{width:22%}
-.compare-table td:first-child{width:22%}
-.col-lessons{border-left:1px solid var(--color-divider)}
-.col-foundations{border-left:2px solid var(--color-primary);background:color-mix(in oklab,var(--color-primary) 3%,var(--color-surface))}
-.col-foundations th{color:var(--color-primary)}
-.compare-label{font-size:var(--text-sm);font-weight:700;color:var(--color-text-muted);text-transform:uppercase;letter-spacing:0.08em}
-.compare-table td p{font-size:var(--text-sm);color:var(--color-text-muted);margin-top:var(--space-2);max-width:none}
-.col-foundations p{color:var(--color-text)}
-.compare-table tbody tr:last-child td{border-bottom:none}
-.tag{display:inline-block;font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;padding:2px var(--space-2);border-radius:var(--radius-sm)}
-.tag-neutral{background:var(--color-surface-dynamic);color:var(--color-text-muted)}
-.tag-primary{background:var(--color-primary-light);color:var(--color-primary)}
-.compare-callout{display:flex;align-items:flex-start;gap:var(--space-3);padding:var(--space-4) var(--space-5);background:var(--color-primary-light);border:1px solid var(--color-primary-highlight);border-radius:var(--radius-lg);font-size:var(--text-sm);color:var(--color-text-muted)}
-.compare-callout svg{flex-shrink:0;color:var(--color-primary);margin-top:2px}
-.compare-callout p{max-width:none}
-.audience-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--space-5);margin-bottom:var(--space-8)}
-.audience-card{display:flex;gap:var(--space-4);padding:var(--space-6);background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-xl);transition:box-shadow var(--transition),transform var(--transition)}
-.audience-card:hover{box-shadow:var(--shadow-md);transform:translateY(-2px)}
-.audience-icon{flex-shrink:0;width:48px;height:48px;background:var(--color-primary-light);border-radius:var(--radius-lg);display:flex;align-items:center;justify-content:center}
-.audience-card h3{font-size:var(--text-base);font-weight:700;margin-bottom:var(--space-2);color:var(--color-text);text-transform:uppercase;letter-spacing:0.04em}
-.audience-card p{font-size:var(--text-sm);color:var(--color-text-muted);line-height:1.6}
-.not-for-callout{background:var(--color-surface-offset);border:1px solid var(--color-border);border-radius:var(--radius-xl);padding:var(--space-6)}
-.not-for-header{display:flex;align-items:center;gap:var(--space-2);font-family:var(--font-display);font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--color-text-muted);margin-bottom:var(--space-3);font-size:var(--text-sm)}
-.not-for-callout p{font-size:var(--text-sm);color:var(--color-text-muted);max-width:68ch}
-.problem-section{background:var(--color-bg)}
-.problem-split{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-16);align-items:center}
-.problem-left .section-label{display:inline-block;margin-bottom:var(--space-4)}
-.problem-left h2{font-size:var(--text-2xl);color:var(--color-text);margin-bottom:var(--space-5)}
-.problem-left p{font-size:var(--text-base);color:var(--color-text-muted);margin-bottom:var(--space-4);line-height:1.7}
-.cycle-visual{display:flex;gap:var(--space-4);align-items:stretch}
-.cycle-before,.cycle-after{flex:1;border-radius:var(--radius-xl);overflow:hidden;border:1px solid var(--color-border)}
-.cycle-header{font-family:var(--font-display);font-size:var(--text-sm);font-weight:700;text-transform:uppercase;letter-spacing:0.08em;padding:var(--space-3) var(--space-4);text-align:center}
-.cycle-bad{background:var(--color-surface-dynamic);color:var(--color-text-muted)}
-.cycle-good{background:var(--color-primary);color:#fff}
-.cycle-steps{padding:var(--space-4);background:var(--color-surface)}
-.cycle-step{font-size:var(--text-xs);font-weight:600;padding:var(--space-3) var(--space-4);border-radius:var(--radius-md);text-align:center}
-.cycle-step.bad{background:var(--color-surface-2);color:var(--color-text-muted);border:1px solid var(--color-divider)}
-.cycle-step.good{background:var(--color-primary-light);color:var(--color-primary);border:1px solid var(--color-primary-highlight);font-weight:700}
-.cycle-arrow{text-align:center;font-size:var(--text-sm);padding:var(--space-1) 0}
-.cycle-arrow.bad{color:var(--color-text-faint)}
-.cycle-arrow.good{color:var(--color-primary)}
-.cycle-vs{display:flex;align-items:center;justify-content:center;flex-shrink:0;font-family:var(--font-display);font-size:var(--text-base);font-weight:800;text-transform:uppercase;letter-spacing:0.1em;color:var(--color-text-faint)}
-.prep-card{background:var(--color-surface);border:2px solid var(--color-primary-highlight);border-radius:var(--radius-2xl);overflow:hidden;position:relative}
-.prep-badge{display:inline-block;position:absolute;top:var(--space-6);right:var(--space-6);font-size:var(--text-xs);font-weight:700;text-transform:uppercase;letter-spacing:0.1em;background:var(--color-primary);color:#fff;padding:var(--space-2) var(--space-4);border-radius:var(--radius-full)}
-.prep-content{padding:var(--space-10) var(--space-10)}
-.prep-content h2{font-size:var(--text-2xl);color:var(--color-text);margin-bottom:var(--space-2)}
-.prep-sub{font-size:var(--text-lg);color:var(--color-primary);font-weight:500;font-family:var(--font-body);text-transform:none;letter-spacing:0;margin-bottom:var(--space-5)}
-.prep-list{list-style:none;display:grid;grid-template-columns:repeat(2,1fr);gap:var(--space-3);margin:var(--space-5) 0 var(--space-8)}
-.prep-list li{display:flex;align-items:center;gap:var(--space-2);font-size:var(--text-sm);font-weight:500;color:var(--color-text);max-width:none}
-.prep-note{display:flex;gap:var(--space-3);background:var(--color-surface-2);border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:var(--space-4) var(--space-5);font-size:var(--text-sm);color:var(--color-text-muted)}
-.prep-note svg{flex-shrink:0;color:var(--color-text-muted);margin-top:2px}
-.prep-note p{max-width:none}
-.prep-text>p{font-size:var(--text-base);color:var(--color-text-muted);margin-bottom:var(--space-6);line-height:1.7}
-.assessment-section{background:linear-gradient(135deg,var(--color-primary) 0%,#063D5C 100%);position:relative;overflow:hidden}
-.assessment-section::before{content:'';position:absolute;top:-50%;left:-20%;width:60%;height:200%;background:radial-gradient(ellipse,rgba(255,255,255,0.05) 0%,transparent 60%);pointer-events:none}
-.assessment-inner{display:grid;grid-template-columns:1fr 400px;gap:var(--space-16);align-items:center;position:relative;z-index:1}
-.assessment-text h2{font-size:var(--text-2xl);color:#fff;margin-bottom:var(--space-5)}
-.assessment-text>p{color:rgba(255,255,255,0.75);font-size:var(--text-base);line-height:1.7;margin-bottom:var(--space-8);max-width:52ch}
-.assessment-steps{display:flex;flex-direction:column;gap:var(--space-3)}
-.assessment-step{display:flex;align-items:center;gap:var(--space-4);color:rgba(255,255,255,0.85);font-size:var(--text-sm)}
-.step-dot{flex-shrink:0;width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,0.2);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:700;font-size:var(--text-sm);color:#fff}
-.assessment-cta-card{background:var(--color-surface);border-radius:var(--radius-2xl);box-shadow:var(--shadow-xl);overflow:hidden}
-.cta-card-inner{padding:var(--space-8)}
-.cta-card-inner h3{font-size:var(--text-xl);color:var(--color-text);margin-bottom:var(--space-2)}
-.cta-card-inner>p{font-size:var(--text-sm);color:var(--color-text-muted);margin-bottom:var(--space-6);max-width:none}
-.cta-note{font-size:var(--text-xs);color:var(--color-text-faint);text-align:center;margin-top:var(--space-4);max-width:none}
-.options-grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-6);margin-bottom:var(--space-8);align-items:start}
-.option-card{background:var(--color-surface);border:1.5px solid var(--color-border);border-radius:var(--radius-2xl);padding:var(--space-8);display:flex;flex-direction:column;gap:var(--space-5);transition:box-shadow var(--transition),transform var(--transition)}
-.option-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-3px)}
-.option-card-featured{border-color:var(--color-primary);border-width:2px;box-shadow:var(--shadow-md);position:relative}
-.option-header{display:flex;align-items:flex-start;gap:var(--space-4)}
-.option-icon-wrap{flex-shrink:0;width:52px;height:52px;background:var(--color-primary-light);border-radius:var(--radius-lg);display:flex;align-items:center;justify-content:center}
-.option-header>div:last-child{display:flex;flex-direction:column;gap:var(--space-1)}
-.option-tag{display:inline-block;font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;padding:2px var(--space-2);border-radius:var(--radius-sm);background:var(--color-surface-dynamic);color:var(--color-text-muted);width:fit-content}
-.option-tag-accent{background:var(--color-primary-light);color:var(--color-primary)}
-.option-card h3{font-size:var(--text-xl);color:var(--color-text);margin:0}
-.option-desc{font-size:var(--text-sm);color:var(--color-text-muted);line-height:1.65;max-width:none}
-.onsite-note{display:flex;align-items:flex-start;gap:var(--space-2);background:var(--color-accent-light);border:1px solid color-mix(in oklab,var(--color-accent) 25%,transparent);border-radius:var(--radius-lg);padding:var(--space-3) var(--space-4);font-size:var(--text-xs);color:var(--color-text-muted);line-height:1.6}
-.onsite-note svg{flex-shrink:0;color:var(--color-accent);margin-top:2px}
-.onsite-note span{max-width:none}
-.option-features{list-style:none;display:flex;flex-direction:column;gap:var(--space-2);flex:1}
-.option-features li{display:flex;align-items:center;gap:var(--space-2);font-size:var(--text-sm);color:var(--color-text);font-weight:500;max-width:none}
-.option-price{display:flex;align-items:baseline;gap:var(--space-1);padding-top:var(--space-2);border-top:1px solid var(--color-divider)}
-.price-amount{font-family:var(--font-display);font-size:var(--text-2xl);font-weight:800;color:var(--color-text);letter-spacing:-0.01em}
-.price-period{font-size:var(--text-base);color:var(--color-text-muted);font-weight:500}
-.options-footnote{display:flex;align-items:flex-start;gap:var(--space-3);background:var(--color-primary-light);border:1px solid var(--color-primary-highlight);border-radius:var(--radius-lg);padding:var(--space-4) var(--space-5);font-size:var(--text-sm);color:var(--color-text-muted)}
-.options-footnote svg{flex-shrink:0;margin-top:2px}
-.options-footnote p{max-width:none}
-.fade-up{opacity:0;transform:translateY(24px);transition:opacity 0.5s cubic-bezier(0.16,1,0.3,1),transform 0.5s cubic-bezier(0.16,1,0.3,1)}
-.fade-up.visible{opacity:1;transform:translateY(0)}
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
 
-/* ── SITE FOOTER (matching index.html) ── */
-.site-footer-main{background:#0E1A2E;padding:34px 48px;display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(255,255,255,0.07);flex-wrap:wrap;gap:16px}
-.site-footer-logo{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:18px;letter-spacing:0.04em;text-transform:uppercase;color:#fff}
-.site-footer-logo span{color:#4A90D9}
-.site-footer-links{display:flex;gap:24px;flex-wrap:wrap}
-.site-footer-links a{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.35);text-decoration:none}
-.site-footer-links a:hover{color:#fff}
-.site-footer-info{font-size:12px;color:rgba(255,255,255,0.34);text-align:right;line-height:1.7}
-.site-footer-info a{color:inherit;text-decoration:none}
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink:        { DEFAULT: '#1A1A1A', soft: '#2D2D2D', muted: '#6B6B6B', faint: '#999999', light: '#B5B5B5' },
+            cream:      { DEFAULT: '#FAF9F7', warm: '#F5F3EF', dark: '#EDEBE6' },
+            forest:     { DEFAULT: '#1B3D2F', light: '#2A5A43', pale: '#E8F0EC', bright: '#3D7A5F' },
+            rust:       { DEFAULT: '#C4501C', hover: '#A8431A', light: '#FDF0EA', pale: '#FEF7F3' },
+            slate:      { DEFAULT: '#3A4F5E', light: '#E9EEF1', pale: '#F4F6F8' },
+          },
+          fontFamily: {
+            display: ['"Instrument Serif"', 'Georgia', 'serif'],
+            body:    ['"DM Sans"', 'system-ui', 'sans-serif'],
+          },
+          fontSize: {
+            'hero':  'clamp(2.8rem, 1rem + 5.5vw, 5.5rem)',
+            '2xl-r': 'clamp(1.8rem, 1rem + 2.5vw, 3rem)',
+            'xl-r':  'clamp(1.4rem, 1.1rem + 1.25vw, 2rem)',
+            'lg-r':  'clamp(1.1rem, 1rem + 0.5vw, 1.35rem)',
+            'base-r':'clamp(0.95rem, 0.9rem + 0.25vw, 1.1rem)',
+            'sm-r':  'clamp(0.85rem, 0.8rem + 0.2vw, 0.95rem)',
+            'xs-r':  'clamp(0.75rem, 0.7rem + 0.15vw, 0.85rem)',
+          },
+          maxWidth: {
+            'narrow':  '640px',
+            'default': '900px',
+            'wide':    '1120px',
+          },
+          borderRadius: {
+            'xl':  '0.75rem',
+            '2xl': '1rem',
+          },
+          boxShadow: {
+            'soft':   '0 1px 3px rgba(0,0,0,0.04)',
+            'medium': '0 4px 16px rgba(0,0,0,0.06)',
+            'heavy':  '0 8px 30px rgba(0,0,0,0.08)',
+          },
+        },
+      },
+    }
+  </script>
 
-/* ── BEHIND THE SCENES SECTION ── */
-.bts-section{background:#111827;padding:clamp(3rem,7vw,5.5rem) 0;position:relative;overflow:hidden}
-.bts-bg{position:absolute;inset:0;background:radial-gradient(ellipse at 75% 40%,rgba(46,117,182,0.09) 0%,transparent 55%);pointer-events:none}
-.bts-header{max-width:600px;margin:0 auto clamp(2rem,4vw,3rem);text-align:center}
-.bts-eyebrow{display:inline-block;font-family:'Barlow Condensed',sans-serif;font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:0.18em;color:rgba(74,144,217,0.9);background:rgba(46,117,182,0.12);border:1px solid rgba(46,117,182,0.2);padding:3px 12px;border-radius:999px;margin-bottom:0.9rem}
-.bts-title{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(1.8rem,3.5vw,2.75rem);text-transform:uppercase;color:#fff;line-height:1.02;margin-bottom:0.75rem}
-.bts-sub{font-size:0.9rem;font-weight:300;color:rgba(255,255,255,0.48);line-height:1.7;max-width:48ch;margin:0 auto}
-.bts-note{max-width:680px;margin:0 auto clamp(1.75rem,3vw,2.5rem);background:rgba(255,255,255,0.03);border-left:3px solid rgba(74,144,217,0.6);padding:1rem 1.25rem}
-.bts-note-label{font-family:'Barlow Condensed',sans-serif;font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.14em;color:rgba(74,144,217,0.8);margin-bottom:0.35rem}
-.bts-note p{font-size:0.85rem;color:rgba(255,255,255,0.5);line-height:1.65;max-width:none}
-.bts-parts{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,0.05);margin-bottom:clamp(1.5rem,3vw,2.5rem)}
-.bts-part{background:#111827;padding:1.25rem 1.5rem;display:flex;gap:1rem;align-items:flex-start}
-.bts-part-num{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.5rem;line-height:1;color:rgba(46,117,182,0.3);flex-shrink:0;width:2rem;text-align:right}
-.bts-part-body{}
-.bts-part-title{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:0.875rem;text-transform:uppercase;letter-spacing:0.06em;color:#fff;margin-bottom:0.3rem}
-.bts-part-desc{font-size:0.8rem;color:rgba(255,255,255,0.42);line-height:1.6;max-width:none}
-.bts-pills{display:flex;flex-wrap:wrap;gap:5px;margin-top:0.6rem}
-.bts-pill{font-family:'Barlow Condensed',sans-serif;font-size:0.65rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:rgba(74,144,217,0.85);background:rgba(46,117,182,0.1);border:1px solid rgba(46,117,182,0.18);padding:2px 9px;border-radius:999px}
-.bts-proprioception{font-size:0.72rem;font-style:italic;color:rgba(255,255,255,0.25);margin-top:0.4rem;max-width:none}
-.bts-outputs{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,0.05);margin-bottom:clamp(1.5rem,3vw,2rem)}
-.bts-output{background:rgba(46,117,182,0.06);padding:1.1rem 1rem;text-align:center}
-.bts-output-label{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1rem;text-transform:uppercase;letter-spacing:0.04em;color:#fff;margin-bottom:0.2rem}
-.bts-output-desc{font-size:0.75rem;color:rgba(255,255,255,0.35);max-width:none;line-height:1.5}
-.bts-cta{text-align:center}
-.bts-cta a{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:0.85rem;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;display:inline-flex;align-items:center;gap:6px;padding:12px 24px;background:#D64A0A;color:#fff;transition:background 0.18s}
-.bts-cta a:hover{background:#B83D07;color:#fff}
-.bts-cta-note{margin-top:0.6rem;font-family:'Barlow Condensed',sans-serif;font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.22)}
-
-@media(max-width:900px){.hero-inner{flex-direction:column;align-items:flex-start}.hero-visual{display:none}.steps-grid{flex-direction:column;align-items:stretch}.step-connector{transform:rotate(90deg);align-self:center;margin:0}.structure-grid{grid-template-columns:1fr}.problem-split{grid-template-columns:1fr;gap:var(--space-10)}.assessment-inner{grid-template-columns:1fr;gap:var(--space-10)}.audience-grid{grid-template-columns:1fr}.prep-list{grid-template-columns:1fr}.site-footer-main{flex-direction:column;align-items:flex-start}.site-footer-info{text-align:left}.bts-outputs{grid-template-columns:1fr 1fr}.options-grid{grid-template-columns:1fr}}
-@media(max-width:640px){.main-nav,.nav-actions .btn-primary{display:none}.mobile-menu-btn{display:flex}.hero-headline{font-size:var(--text-3xl)}.hero-cta-group{flex-direction:column}.hero-cta-group .btn{width:100%;justify-content:center}.positioning-quote{font-size:var(--text-lg)}.pace-bar{grid-template-columns:repeat(2,1fr)}.prep-content{padding:var(--space-6) var(--space-5)}.prep-badge{position:static;display:inline-block;margin-bottom:var(--space-4)}.assessment-inner{grid-template-columns:1fr}.options-grid{grid-template-columns:1fr}.site-footer-main{padding:24px 20px}.bts-parts{grid-template-columns:1fr}.bts-outputs{grid-template-columns:1fr}.bts-cta a{width:100%;justify-content:center}.compare-grid-2col{grid-template-columns:1fr !important}}
+  <style type="text/tailwindcss">
+    @layer base {
+      html {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        scroll-behavior: smooth;
+        scroll-padding-top: 80px;
+      }
+      body {
+        font-family: theme('fontFamily.body');
+        color: theme('colors.ink.DEFAULT');
+        background: theme('colors.cream.DEFAULT');
+      }
+      ::selection {
+        background: rgba(27,61,47,0.12);
+      }
+    }
+    @layer utilities {
+      .fade-up {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.6s cubic-bezier(0.16,1,0.3,1), transform 0.6s cubic-bezier(0.16,1,0.3,1);
+      }
+      .fade-up.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
   </style>
-<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-<link rel="shortcut icon" href="/favicon.ico" />
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-<meta name="apple-mobile-web-app-title" content="TAP Athletes" />
-<link rel="manifest" href="/site.webmanifest" />
 </head>
-<body>
+<body class="min-h-screen">
 
-  <!-- NAV -->
-  <header class="site-header" id="site-header">
-    <div class="container nav-inner">
-      <a href="https://tapathletes.com" class="logo" aria-label="TAP Athletes home">
-        <span class="logo-text">TAP <span>Athletes</span></span>
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- NAV — clean, minimal, institutional -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <header class="sticky top-0 z-50 bg-cream/90 backdrop-blur-xl border-b border-cream-dark/60 transition-shadow" id="site-header">
+    <div class="max-w-wide mx-auto px-5 lg:px-12 flex items-center justify-between h-16">
+      <a href="https://tapathletes.com" class="flex items-center gap-2" aria-label="TAP Athletes home">
+        <span class="font-body text-base font-bold tracking-tight text-ink">TAP Athletes</span>
+        <span class="text-xs font-medium text-ink-muted">/ Foundations</span>
       </a>
-      <nav class="main-nav" aria-label="Primary">
-        <a href="#how-it-works">How It Works</a>
-        <a href="#program-structure">Structure</a>
-        <a href="#training-options">Options &amp; Pricing</a>
-        <a href="#vs-lessons">vs. Lessons</a>
-        <a href="#who-its-for">Who It's For</a>
+      <nav class="hidden md:flex items-center gap-8" aria-label="Primary">
+        <a href="#complete-pitcher" class="text-sm font-medium text-ink-muted hover:text-ink transition-colors">Curriculum</a>
+        <a href="#program" class="text-sm font-medium text-ink-muted hover:text-ink transition-colors">How It Works</a>
+        <a href="#enrollment" class="text-sm font-medium text-ink-muted hover:text-ink transition-colors">Enrollment</a>
+        <a href="#faq" class="text-sm font-medium text-ink-muted hover:text-ink transition-colors">FAQ</a>
       </nav>
-      <div class="nav-actions">
-        <a href="#assessment" class="btn btn-primary btn-sm">Book Assessment</a>
-        <button class="theme-toggle" data-theme-toggle aria-label="Switch to dark mode">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      <div class="flex items-center gap-3">
+        <a href="#enrollment" class="hidden md:inline-flex items-center justify-center px-5 py-2 text-sm font-semibold rounded-lg bg-forest text-white hover:bg-forest-light transition-colors">Enroll</a>
+        <button class="md:hidden flex flex-col gap-[5px] items-center justify-center w-9 h-9" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+          <span class="block w-[18px] h-[2px] bg-ink rounded-full"></span>
+          <span class="block w-[18px] h-[2px] bg-ink rounded-full"></span>
+          <span class="block w-[18px] h-[2px] bg-ink rounded-full"></span>
         </button>
       </div>
-      <button class="mobile-menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
     </div>
-    <div class="mobile-nav" id="mobileNav" aria-hidden="true">
-      <a href="#how-it-works">How It Works</a>
-      <a href="#program-structure">Structure</a>
-      <a href="#training-options">Options &amp; Pricing</a>
-      <a href="#vs-lessons">vs. Lessons</a>
-      <a href="#who-its-for">Who It's For</a>
-      <a href="#assessment" class="btn btn-primary">Book Assessment</a>
+    <div class="hidden flex-col gap-1 px-5 pb-5 pt-3 border-t border-cream-dark md:hidden" id="mobileNav" aria-hidden="true">
+      <a href="#complete-pitcher" class="text-base text-ink py-2.5 px-2 rounded-lg hover:bg-cream-warm transition-colors">Curriculum</a>
+      <a href="#program" class="text-base text-ink py-2.5 px-2 rounded-lg hover:bg-cream-warm transition-colors">How It Works</a>
+      <a href="#enrollment" class="text-base text-ink py-2.5 px-2 rounded-lg hover:bg-cream-warm transition-colors">Enrollment</a>
+      <a href="#faq" class="text-base text-ink py-2.5 px-2 rounded-lg hover:bg-cream-warm transition-colors">FAQ</a>
+      <a href="#enrollment" class="mt-2 inline-flex items-center justify-center px-5 py-2.5 text-sm font-semibold rounded-lg bg-forest text-white">Enroll</a>
     </div>
   </header>
 
   <main>
 
-    <!-- HERO -->
-    <section class="hero" id="hero">
-      <div class="hero-bg-shape" aria-hidden="true"></div>
-      <div class="container hero-inner">
-        <div class="hero-content">
-          <div class="hero-label">Structured Pitching Development · Ages 8+</div>
-          <h1 class="hero-headline">Not Session-Based Training.<br><em>A Defined Development System.</em></h1>
-          <p class="hero-sub">TAP Athletes Foundations is a progression-based program built to produce repeatable mechanics, consistent command, and lasting performance — session by session, phase by phase.</p>
-          <div class="hero-cta-group">
-            <a href="#assessment" class="btn btn-primary btn-lg">Book Your Intake Assessment</a>
-            <a href="#how-it-works" class="btn btn-ghost btn-lg">See How It Works ↓</a>
-          </div>
-          <div class="hero-proof">
-            <div class="proof-pill"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Progression-Based</div>
-            <div class="proof-pill"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>In-Person Assessment First</div>
-            <div class="proof-pill"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Reserved Weekly Time Slots</div>
-          </div>
-        </div>
-      </div>
-      <div class="hero-visual" aria-hidden="true">
-        <div class="visual-diamond">
-          <div class="diamond-ring ring-1"></div>
-          <div class="diamond-ring ring-2"></div>
-          <div class="diamond-ring ring-3"></div>
-          <div class="diamond-icon">
-            <svg width="72" height="72" viewBox="0 0 72 72" fill="none">
-              <rect x="36" y="4" width="20" height="20" rx="2" transform="rotate(45 36 4)" fill="var(--color-primary)" opacity="0.15"/>
-              <rect x="36" y="4" width="20" height="20" rx="2" transform="rotate(45 36 4)" stroke="var(--color-primary)" stroke-width="2"/>
-              <circle cx="36" cy="36" r="6" fill="var(--color-primary)" opacity="0.9"/>
-              <line x1="22" y1="36" x2="36" y2="22" stroke="var(--color-primary)" stroke-width="1.5" opacity="0.5"/>
-              <line x1="50" y1="36" x2="36" y2="22" stroke="var(--color-primary)" stroke-width="1.5" opacity="0.5"/>
-              <line x1="22" y1="36" x2="36" y2="50" stroke="var(--color-primary)" stroke-width="1.5" opacity="0.5"/>
-              <line x1="50" y1="36" x2="36" y2="50" stroke="var(--color-primary)" stroke-width="1.5" opacity="0.5"/>
-              <circle cx="22" cy="36" r="4" fill="var(--color-primary)" opacity="0.4"/>
-              <circle cx="50" cy="36" r="4" fill="var(--color-primary)" opacity="0.4"/>
-              <circle cx="36" cy="50" r="4" fill="var(--color-primary)" opacity="0.4"/>
-            </svg>
+    <!-- ═══════════════════════════════════════════════ -->
+    <!-- HERO — institutional, confident, clear -->
+    <!-- ═══════════════════════════════════════════════ -->
+    <section class="pt-20 pb-16 lg:pt-32 lg:pb-24" id="hero">
+      <div class="max-w-wide mx-auto px-5 lg:px-12">
+        <div class="max-w-[740px]">
+          <p class="text-sm-r font-semibold uppercase tracking-[0.15em] text-forest mb-6">Foundations Program · Ages 8+</p>
+          <h1 class="font-display text-hero text-ink leading-[1.05] mb-6">
+            Structured pitching development<br>
+            <em class="text-forest">that builds over time.</em>
+          </h1>
+          <p class="text-lg-r text-ink-muted leading-relaxed mb-10 max-w-[52ch]">
+            Structured pitching development for new & active pitchers — where progress drives motivation and mechanics develop underneath.
+          </p>
+          <div class="flex flex-wrap gap-3 mb-10">
+            <a href="#enrollment" class="inline-flex items-center justify-center px-7 py-3.5 text-base-r font-semibold rounded-lg bg-forest text-white hover:bg-forest-light transition-all hover:-translate-y-px hover:shadow-medium">
+              Enroll
+            </a>
+            <a href="#" data-guide-btn class="inline-flex items-center gap-2 justify-center px-7 py-3.5 text-base-r font-semibold rounded-lg bg-transparent text-ink border border-ink/15 hover:border-ink/30 hover:bg-cream-warm transition-all">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Curriculum Guide
+            </a>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- POSITIONING CALLOUT -->
-    <section class="positioning-bar">
-      <div class="container">
-        <blockquote class="positioning-quote">"Lessons fix recent problems. <strong>Foundations builds the athlete.</strong>"</blockquote>
-      </div>
-    </section>
-
-    <!-- HOW IT WORKS -->
-    <section class="section" id="how-it-works">
-      <div class="container">
-        <div class="section-intro">
-          <span class="section-label">The Process</span>
-          <h2>How Foundations Works</h2>
-          <p class="section-desc">Every athlete follows the same structured entry point. The system evaluates where you are, places you correctly, and builds from there.</p>
-        </div>
-        <div class="steps-grid">
-          <div class="step-card">
-            <div class="step-number">01</div>
-            <div class="step-icon"><svg width="32" height="32" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="10" r="5" stroke="var(--color-primary)" stroke-width="2"/><path d="M6 26c0-5.523 4.477-10 10-10s10 4.477 10 10" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round"/></svg></div>
-            <h3>In-Person Assessment</h3>
-            <p>Every athlete begins with a free, structured evaluation before a single training session starts. This is not a tryout — there are no right or wrong answers, and no score to be concerned about. The goal is to understand where your athlete is starting so every session is the right fit for them.</p>
-            <p style="margin-top:0.75rem;font-size:0.9em;color:var(--color-text-muted);">The evaluation covers athlete background, a full warm-up with movement quality grading, four athleticism benchmarks (broad jump, balance, med ball throw, acceleration), and a flat-ground throwing observation. Everything is documented and produces a starting phase, an effort band, and a first session recommendation specific to your athlete.</p>
+        <!-- Enrollment stats strip -->
+        <div class="border-t border-cream-dark pt-8 grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-10">
+          <div>
+            <div class="font-display text-2xl-r text-ink italic">90 min</div>
+            <div class="text-xs-r text-ink-muted mt-1">Intake assessment</div>
           </div>
-          <div class="step-connector" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round"/></svg></div>
-          <div class="step-card">
-            <div class="step-number">02</div>
-            <div class="step-icon"><svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect x="4" y="6" width="24" height="20" rx="2" stroke="var(--color-primary)" stroke-width="2"/><path d="M10 12h12M10 17h8M10 22h5" stroke="var(--color-primary)" stroke-width="1.5" stroke-linecap="round"/></svg></div>
-            <h3>Phase Placement</h3>
-            <p>Based on the assessment, the athlete is assigned a specific phase and subphase. Training starts at the right level — not too early, not too late.</p>
+          <div>
+            <div class="font-display text-2xl-r text-ink italic">4 max</div>
+            <div class="text-xs-r text-ink-muted mt-1">Athletes per session</div>
           </div>
-          <div class="step-connector" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round"/></svg></div>
-          <div class="step-card">
-            <div class="step-number">03</div>
-            <div class="step-icon"><svg width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M4 24L12 8l8 10 4-6 4 12" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <h3>Progression-Based Training</h3>
-            <p>Athletes advance by demonstrating execution and consistency — not by simply showing up. Each session builds on the last. Skills compound over time.</p>
+          <div>
+            <div class="font-display text-2xl-r text-ink italic">8 sessions</div>
+            <div class="text-xs-r text-ink-muted mt-1">Available per month</div>
           </div>
-        </div>
-        <div class="progression-note">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
-          <span>There's no required weekly session count — athletes train at a pace that fits their schedule. That said, athletes who average <strong>2 sessions per week</strong> generally complete one subphase per month. Up to <strong>8 sessions per month</strong> are available.</span>
+          <div>
+            <div class="font-display text-2xl-r text-ink italic">Progression</div>
+            <div class="text-xs-r text-ink-muted mt-1">Earned, not assumed</div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- BEHIND THE SCENES: ASSESSMENT -->
-    <section class="bts-section" id="assessment-detail">
-      <div class="bts-bg" aria-hidden="true"></div>
-      <div class="container" style="position:relative;z-index:1;">
-
-        <div class="bts-header">
-          <div class="bts-eyebrow">Behind the Assessment</div>
-          <h2 class="bts-title">What Actually Happens<br>at the Assessment</h2>
-          <p class="bts-sub">Not a coach watching your athlete throw for 20 minutes. A documented, six-part process with specific outputs — not impressions.</p>
-        </div>
-
-        <div class="bts-note">
-          <div class="bts-note-label">A note for parents and athletes</div>
-          <p>This assessment is not a test. There are no right or wrong answers, and no score to be concerned about. The goal is to understand where your athlete is starting so every session is the right fit for them.</p>
-        </div>
-
-        <div class="bts-parts">
-          <div class="bts-part">
-            <div class="bts-part-num">01</div>
-            <div class="bts-part-body">
-              <div class="bts-part-title">Athlete Background</div>
-              <p class="bts-part-desc">Training history, competitive experience, and current season status — scored to determine starting phase. Parents can complete this before arriving.</p>
-            </div>
+    <!-- ═══════════════════════════════════════════════ -->
+    <!-- THE COMPLETE PITCHER — overview + download -->
+    <!-- ═══════════════════════════════════════════════ -->
+    <section class="py-16 lg:py-24 bg-white" id="complete-pitcher">
+      <div class="max-w-wide mx-auto px-5 lg:px-12">
+        <div class="grid grid-cols-1 lg:grid-cols-[1fr_1fr] gap-12 lg:gap-20 items-start">
+          <div>
+            <p class="text-xs-r font-semibold uppercase tracking-[0.15em] text-forest mb-4">What We Develop</p>
+            <h2 class="font-display text-2xl-r text-ink leading-tight mb-5">The complete pitcher.</h2>
+            <p class="text-base-r text-ink-muted leading-relaxed mb-5">Most programs focus on one piece — velocity, mechanics, or data. Foundations develops the whole pitcher through a 4-phase, 72-session curriculum covering 18 mechanical skills. Our classes cover everything else the position demands — pitch design, pickoffs, fielding, game IQ.</p>
+            <p class="text-base-r text-ink-muted leading-relaxed mb-8">Foundations builds the mechanics. Classes build the pitcher. Together, they cover what no single program in this market does.</p>
+            <a href="#" data-guide-btn class="inline-flex items-center justify-center gap-2 px-7 py-3.5 text-base-r font-semibold rounded-lg bg-transparent text-ink border border-ink/15 hover:border-ink/30 hover:bg-cream-warm transition-all">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Download Curriculum Guide
+            </a>
           </div>
-          <div class="bts-part">
-            <div class="bts-part-num">02</div>
-            <div class="bts-part-body">
-              <div class="bts-part-title">Pitch Repertoire &amp; Game Knowledge</div>
-              <p class="bts-part-desc">What pitches the athlete throws, how long they've been throwing each, and a brief game knowledge check. Works for all ages and experience levels.</p>
-            </div>
-          </div>
-          <div class="bts-part">
-            <div class="bts-part-num">03</div>
-            <div class="bts-part-body">
-              <div class="bts-part-title">Warm-Up Quality Grading</div>
-              <p class="bts-part-desc">Every movement in the TAP Athletes Universal Warm-Up is graded 1–5 in real time. This becomes a movement quality baseline re-graded at future sessions to show progress.</p>
-            </div>
-          </div>
-          <div class="bts-part">
-            <div class="bts-part-num">04</div>
-            <div class="bts-part-body">
-              <div class="bts-part-title">Athleticism Benchmarks</div>
-              <p class="bts-part-desc">Four tests post-warm-up while the athlete is already loose. Dated and retested regularly to track athletic development independent of pitching mechanics.</p>
-              <div class="bts-pills">
-                <span class="bts-pill">Broad Jump</span>
-                <span class="bts-pill">Single-Leg Balance — Eyes Closed</span>
-                <span class="bts-pill">Rotational Med Ball Throw</span>
-                <span class="bts-pill">10-Yard Acceleration</span>
+          <div class="space-y-3">
+            <div class="bg-cream rounded-xl p-4">
+              <div class="flex items-baseline gap-3 mb-1">
+                <span class="font-display text-lg italic text-forest">Phase 1</span>
+                <span class="text-xs font-semibold text-ink-muted uppercase tracking-wide">Movement & Throwing Foundations</span>
               </div>
-              <p class="bts-proprioception">Eyes closed — measuring proprioception, not just balance.</p>
             </div>
-          </div>
-          <div class="bts-part">
-            <div class="bts-part-num">05</div>
-            <div class="bts-part-body">
-              <div class="bts-part-title">Movement Observation</div>
-              <p class="bts-part-desc">Coach watches 8–12 throws at low effort on flat ground and identifies the dominant movement pattern. Determines the athlete's category and their very first session.</p>
+            <div class="bg-cream rounded-xl p-4">
+              <div class="flex items-baseline gap-3 mb-1">
+                <span class="font-display text-lg italic text-forest">Phase 2</span>
+                <span class="text-xs font-semibold text-ink-muted uppercase tracking-wide">Stability & Transfer</span>
+              </div>
             </div>
-          </div>
-          <div class="bts-part">
-            <div class="bts-part-num">06</div>
-            <div class="bts-part-body">
-              <div class="bts-part-title">Assessment Output</div>
-              <p class="bts-part-desc">Parts 1 and 5 convert into three specific outputs. The athlete leaves with a documented start profile — not a general impression of how they looked.</p>
+            <div class="bg-cream rounded-xl p-4">
+              <div class="flex items-baseline gap-3 mb-1">
+                <span class="font-display text-lg italic text-forest">Phase 3</span>
+                <span class="text-xs font-semibold text-ink-muted uppercase tracking-wide">Command & Intent Development</span>
+              </div>
             </div>
-          </div>
-        </div>
-
-        <div class="bts-outputs">
-          <div class="bts-output">
-            <div class="bts-output-label">Starting Phase</div>
-            <div class="bts-output-desc">Where your athlete fits in the program from day one</div>
-          </div>
-          <div class="bts-output">
-            <div class="bts-output-label">Effort Band</div>
-            <div class="bts-output-desc">The throwing intensity that's right for them right now</div>
-          </div>
-          <div class="bts-output">
-            <div class="bts-output-label">First Session ID</div>
-            <div class="bts-output-desc">A specific session from the TAP curriculum — not a general plan</div>
-          </div>
-        </div>
-
-        <div class="bts-cta">
-          <a href="#assessment">Book Your Free Assessment →</a>
-          <p class="bts-cta-note">Free · No commitment required to attend</p>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- PROGRAM STRUCTURE -->
-    <section class="section section-alt" id="program-structure">
-      <div class="container">
-        <div class="section-intro">
-          <span class="section-label">Training Structure</span>
-          <h2>Built Around Consistent Progress</h2>
-          <p class="section-desc">The program is structured to eliminate guesswork and scheduling friction. Reserved time slots mean no weekly booking — just consistent training.</p>
-        </div>
-        <div class="structure-grid">
-          <div class="structure-feature">
-            <div class="structure-icon-wrap"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="2" y="5" width="24" height="21" rx="2" stroke="var(--color-primary)" stroke-width="1.8"/><path d="M8 2v6M20 2v6M2 12h24" stroke="var(--color-primary)" stroke-width="1.8" stroke-linecap="round"/><rect x="7" y="16" width="4" height="4" rx="1" fill="var(--color-primary)"/></svg></div>
-            <div><h3>Reserved Weekly Slots</h3><p>Training times are assigned in advance. No weekly booking. No scheduling friction. Just show up and develop.</p></div>
-          </div>
-          <div class="structure-feature">
-            <div class="structure-icon-wrap"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M6 14l5 5 11-11" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="14" cy="14" r="11" stroke="var(--color-primary)" stroke-width="1.8"/></svg></div>
-            <div><h3>Execution-Based Advancement</h3><p>No athlete moves to the next phase just by attending. Advancement is earned by demonstrating the ability to perform and repeat the skills being trained.</p></div>
-          </div>
-        </div>
-        <div class="pace-visual">
-          <div class="pace-header"><h3>Typical Monthly Progress</h3><span class="pace-note">At 2× per week · Effort Band 1 entry</span></div>
-          <div class="pace-bar-wrap">
-            <div class="pace-bar">
-              <div class="pace-segment seg-1"><span>Sessions 1–2</span><small>Effort Band 1 · Constraint introduced · Movement-first</small></div>
-              <div class="pace-segment seg-2"><span>Sessions 3–4</span><small>Effort Band 1 · Constraint reinforced · Quality over intent</small></div>
-              <div class="pace-segment seg-3"><span>Sessions 5–6</span><small>Effort Band 2 · Stability check · Repeatability assessed</small></div>
-              <div class="pace-segment seg-4"><span>Sessions 7–8</span><small>Effort Band 2 · Phase readiness · Advancement earned, not assumed</small></div>
+            <div class="bg-cream rounded-xl p-4">
+              <div class="flex items-baseline gap-3 mb-1">
+                <span class="font-display text-lg italic text-forest">Phase 4</span>
+                <span class="text-xs font-semibold text-ink-muted uppercase tracking-wide">Competitive Integration</span>
+              </div>
             </div>
+            <div class="flex gap-3 pt-2">
+              <span class="text-xs font-semibold uppercase tracking-[0.1em] text-rust bg-rust-pale px-3 py-1 rounded-full">+ Pitch Design Class</span>
+              <span class="text-xs font-semibold uppercase tracking-[0.1em] text-rust bg-rust-pale px-3 py-1 rounded-full">+ Beyond the Pitch Class</span>
+            </div>
+            <p class="text-xs-r text-ink-faint pt-1">Classes included free for Foundations members.</p>
           </div>
-          <p class="pace-caption">All new athletes enter at Effort Band 1. Progression to Band 2 requires demonstrated movement quality and effort awareness — not attendance.</p>
         </div>
       </div>
     </section>
 
-    <!-- VS LESSONS -->
-    <section class="section" id="vs-lessons">
-      <div class="container">
-        <div class="section-intro">
-          <span class="section-label">The Difference</span>
-          <h2>Foundations vs. Traditional Lessons</h2>
-          <p class="section-desc">Private lessons and Foundations serve different purposes. Understanding the difference helps families make the right choice.</p>
+    <!-- ═══════════════════════════════════════════════ -->
+    <!-- HOW IT WORKS — the process (formerly Program Overview) -->
+    <!-- ═══════════════════════════════════════════════ -->
+    <section class="py-16 lg:py-24 bg-cream" id="program">
+      <div class="max-w-wide mx-auto px-5 lg:px-12">
+        <div class="grid grid-cols-1 lg:grid-cols-[1fr_1fr] gap-12 lg:gap-20 items-start">
+          <div>
+            <p class="text-xs-r font-semibold uppercase tracking-[0.15em] text-forest mb-4">How It Works</p>
+            <h2 class="font-display text-2xl-r text-ink leading-tight mb-5">
+              Not lessons.<br>A development system.
+            </h2>
+            <p class="text-base-r text-ink-muted leading-relaxed mb-5">Most pitching instruction is reactive — a coach watches your kid throw, gives some tips, and you come back next week hoping something stuck. There's often no structure connecting one session to the next.</p>
+            <p class="text-base-r text-ink-muted leading-relaxed">Foundations works differently. Every session is part of a defined progression. Skills are introduced, reinforced, then tested before advancing. Your pitcher doesn't move forward by showing up — they move forward by demonstrating they're ready.</p>
+          </div>
+          <div class="space-y-4">
+            <div class="flex gap-4 p-5 bg-cream rounded-xl fade-up">
+              <div class="shrink-0 w-10 h-10 rounded-lg bg-forest-pale flex items-center justify-center text-forest font-display text-lg italic">1</div>
+              <div>
+                <h3 class="text-sm-r font-bold text-ink mb-1">Assessment</h3>
+                <p class="text-sm-r text-ink-muted leading-relaxed">Every pitcher begins with a 90-minute in-person evaluation. No one skips this step — it's how we understand where your pitcher actually is.</p>
+              </div>
+            </div>
+            <div class="flex gap-4 p-5 bg-cream rounded-xl fade-up">
+              <div class="shrink-0 w-10 h-10 rounded-lg bg-forest-pale flex items-center justify-center text-forest font-display text-lg italic">2</div>
+              <div>
+                <h3 class="text-sm-r font-bold text-ink mb-1">Placement</h3>
+                <p class="text-sm-r text-ink-muted leading-relaxed">Based on the assessment, your pitcher is placed into the right phase and subphase. Training starts where it should — not too early, not too late.</p>
+              </div>
+            </div>
+            <div class="flex gap-4 p-5 bg-cream rounded-xl fade-up">
+              <div class="shrink-0 w-10 h-10 rounded-lg bg-forest-pale flex items-center justify-center text-forest font-display text-lg italic">3</div>
+              <div>
+                <h3 class="text-sm-r font-bold text-ink mb-1">Reserved Weekly Training</h3>
+                <p class="text-sm-r text-ink-muted leading-relaxed">Training times are assigned in advance. No weekly booking, no scheduling friction — just show up and develop.</p>
+              </div>
+            </div>
+            <div class="flex gap-4 p-5 bg-cream rounded-xl fade-up">
+              <div class="shrink-0 w-10 h-10 rounded-lg bg-forest-pale flex items-center justify-center text-forest font-display text-lg italic">4</div>
+              <div>
+                <h3 class="text-sm-r font-bold text-ink mb-1">Advance When Ready</h3>
+                <p class="text-sm-r text-ink-muted leading-relaxed">No pitcher moves to the next phase just by attending. Advancement is earned by demonstrating the ability to perform and repeat what's being trained.</p>
+              </div>
+            </div>
+            <div class="flex gap-4 p-5 bg-cream rounded-xl fade-up">
+              <div class="shrink-0 w-10 h-10 rounded-lg bg-forest-pale flex items-center justify-center text-forest font-display text-lg italic">5</div>
+              <div>
+                <h3 class="text-sm-r font-bold text-ink mb-1">60/10 Club</h3>
+                <p class="text-sm-r text-ink-muted leading-relaxed">The destination. 60%+ strikes across two consecutive competitive bullpens and a +10 MPH fastball gain since starting.</p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--color-border);border:1px solid var(--color-border);border-radius:var(--radius-xl);overflow:hidden;margin-bottom:var(--space-6);">
-          <div style="background:color-mix(in oklab,var(--color-primary) 4%,var(--color-surface));padding:var(--space-8);border-right:2px solid var(--color-primary);">
-            <div style="font-family:var(--font-display);font-size:var(--text-base);font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--color-primary);margin-bottom:var(--space-5);">Foundations Program</div>
-            <ul style="list-style:none;display:flex;flex-direction:column;gap:var(--space-4);">
-              <li style="font-size:var(--text-sm);color:var(--color-text);padding-left:var(--space-5);position:relative;max-width:none;font-weight:500;"><span style="position:absolute;left:0;color:var(--color-primary);">✓</span>Developmental — follows a defined progression toward lasting results</li>
-              <li style="font-size:var(--text-sm);color:var(--color-text);padding-left:var(--space-5);position:relative;max-width:none;font-weight:500;"><span style="position:absolute;left:0;color:var(--color-primary);">✓</span>Each session builds on the last — continuity is built in</li>
-              <li style="font-size:var(--text-sm);color:var(--color-text);padding-left:var(--space-5);position:relative;max-width:none;font-weight:500;"><span style="position:absolute;left:0;color:var(--color-primary);">✓</span>Repeatable mechanics and consistent performance over time</li>
-              <li style="font-size:var(--text-sm);color:var(--color-text);padding-left:var(--space-5);position:relative;max-width:none;font-weight:500;"><span style="position:absolute;left:0;color:var(--color-primary);">✓</span>Reserved weekly slots — no rebooking, no scheduling friction</li>
+        <p class="mt-10 text-base-r text-ink-muted italic border-l-2 border-forest/20 pl-5 max-w-[52ch]">Lessons are adjustments. Foundations is development.</p>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════ -->
+    <!-- TRAINING STRUCTURE — pace visual only -->
+    <!-- ═══════════════════════════════════════════════ -->
+    <section class="py-16 lg:py-24 bg-white" id="structure">
+      <div class="max-w-wide mx-auto px-5 lg:px-12">
+        <div class="max-w-[640px] mb-10">
+          <p class="text-xs-r font-semibold uppercase tracking-[0.15em] text-forest mb-4">Training Structure</p>
+          <h2 class="font-display text-2xl-r text-ink leading-tight">Typical Monthly Progress</h2>
+        </div>
+
+        <div class="bg-cream rounded-xl p-6 lg:p-8 fade-up">
+          <div class="flex flex-wrap items-baseline gap-3 mb-5">
+            <span class="text-sm-r text-ink-muted font-medium">At 2 sessions per week · Effort Band 1 entry</span>
+          </div>
+          <div class="grid grid-cols-2 lg:grid-cols-4 gap-2 mb-4">
+            <div class="bg-white border border-cream-dark rounded-xl p-4 text-center relative overflow-hidden">
+              <div class="absolute bottom-0 left-0 right-0 h-[3px] bg-forest/30"></div>
+              <div class="font-body text-sm font-bold text-forest mb-1">Sessions 1–2</div>
+              <div class="text-xs-r text-ink-muted">Effort Band 1 · Movement-first</div>
+            </div>
+            <div class="bg-white border border-cream-dark rounded-xl p-4 text-center relative overflow-hidden">
+              <div class="absolute bottom-0 left-0 right-0 h-[3px] bg-forest/50"></div>
+              <div class="font-body text-sm font-bold text-forest mb-1">Sessions 3–4</div>
+              <div class="text-xs-r text-ink-muted">Constraint reinforced · Quality over intent</div>
+            </div>
+            <div class="bg-white border border-cream-dark rounded-xl p-4 text-center relative overflow-hidden">
+              <div class="absolute bottom-0 left-0 right-0 h-[3px] bg-forest/70"></div>
+              <div class="font-body text-sm font-bold text-forest mb-1">Sessions 5–6</div>
+              <div class="text-xs-r text-ink-muted">Effort Band 2 · Repeatability assessed</div>
+            </div>
+            <div class="bg-white border border-cream-dark rounded-xl p-4 text-center relative overflow-hidden">
+              <div class="absolute bottom-0 left-0 right-0 h-[3px] bg-rust"></div>
+              <div class="font-body text-sm font-bold text-forest mb-1">Sessions 7–8</div>
+              <div class="text-xs-r text-ink-muted">Phase readiness · Advancement earned</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════ -->
+    <!-- FAQ -->
+    <!-- ═══════════════════════════════════════════════ -->
+    <section class="py-16 lg:py-24 bg-cream" id="faq">
+      <div class="max-w-default mx-auto px-5 lg:px-12">
+        <div class="max-w-[640px] mb-10">
+          <p class="text-xs-r font-semibold uppercase tracking-[0.15em] text-forest mb-4">Common Questions</p>
+          <h2 class="font-display text-2xl-r text-ink leading-tight">Before you schedule.</h2>
+        </div>
+
+        <div class="space-y-3">
+          <!-- FAQ 1 -->
+          <details class="group bg-white border border-cream-dark rounded-xl">
+            <summary class="cursor-pointer select-none flex items-center justify-between gap-4 px-6 py-5 text-base-r font-semibold text-ink hover:text-forest transition-colors list-none [&::-webkit-details-marker]:hidden">
+              How is this different from private lessons?
+              <svg class="w-4 h-4 text-ink-light transition-transform duration-200 group-open:rotate-180 shrink-0" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6l4 4 4-4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </summary>
+            <div class="px-6 pb-6 pt-0 border-t border-cream-dark">
+              <p class="text-sm-r text-ink-muted mt-4 mb-4">Many athletes benefit from both — but they solve different problems. Lessons are adjustments. Foundations is development.</p>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-cream-dark rounded-lg overflow-hidden">
+                <div class="bg-white p-5">
+                  <div class="text-xs font-bold uppercase tracking-[0.1em] text-forest mb-3">Foundations</div>
+                  <ul class="flex flex-col gap-2">
+                    <li class="text-sm-r text-ink pl-4 relative font-medium"><span class="absolute left-0 text-forest">+</span>Defined progression toward lasting results</li>
+                    <li class="text-sm-r text-ink pl-4 relative font-medium"><span class="absolute left-0 text-forest">+</span>Each session builds on the last</li>
+                    <li class="text-sm-r text-ink pl-4 relative font-medium"><span class="absolute left-0 text-forest">+</span>Repeatable mechanics over time</li>
+                    <li class="text-sm-r text-ink pl-4 relative font-medium"><span class="absolute left-0 text-forest">+</span>Reserved weekly slots</li>
+                  </ul>
+                </div>
+                <div class="bg-cream-warm p-5">
+                  <div class="text-xs font-bold uppercase tracking-[0.1em] text-ink-muted mb-3">Traditional Lessons</div>
+                  <ul class="flex flex-col gap-2">
+                    <li class="text-sm-r text-ink-muted pl-4 relative"><span class="absolute left-0 text-ink-light">—</span>Addresses recent game problems</li>
+                    <li class="text-sm-r text-ink-muted pl-4 relative"><span class="absolute left-0 text-ink-light">—</span>No structured path between sessions</li>
+                    <li class="text-sm-r text-ink-muted pl-4 relative"><span class="absolute left-0 text-ink-light">—</span>Short-term fixes that may not carry over</li>
+                    <li class="text-sm-r text-ink-muted pl-4 relative"><span class="absolute left-0 text-ink-light">—</span>Booked individually as needed</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </details>
+
+          <!-- FAQ 2 -->
+          <details class="group bg-white border border-cream-dark rounded-xl">
+            <summary class="cursor-pointer select-none flex items-center justify-between gap-4 px-6 py-5 text-base-r font-semibold text-ink hover:text-forest transition-colors list-none [&::-webkit-details-marker]:hidden">
+              Does my pitcher need experience to start?
+              <svg class="w-4 h-4 text-ink-light transition-transform duration-200 group-open:rotate-180 shrink-0" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6l4 4 4-4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </summary>
+            <div class="px-6 pb-6 pt-0 border-t border-cream-dark">
+              <p class="text-sm-r text-ink-muted leading-relaxed mt-4">No. Foundations is built for any pitcher age 8 and up — whether they're brand new to pitching, struggling with consistency, or have had instruction before without consistent results. The assessment determines where your pitcher starts.</p>
+            </div>
+          </details>
+
+          <!-- FAQ 3 -->
+          <details class="group bg-white border border-cream-dark rounded-xl">
+            <summary class="cursor-pointer select-none flex items-center justify-between gap-4 px-6 py-5 text-base-r font-semibold text-ink hover:text-forest transition-colors list-none [&::-webkit-details-marker]:hidden">
+              How often does my pitcher need to train?
+              <svg class="w-4 h-4 text-ink-light transition-transform duration-200 group-open:rotate-180 shrink-0" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6l4 4 4-4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </summary>
+            <div class="px-6 pb-6 pt-0 border-t border-cream-dark">
+              <p class="text-sm-r text-ink-muted leading-relaxed mt-4">There's no required weekly count — pitchers train at a pace that fits their schedule. That said, pitchers who average 2 sessions per week typically complete one subphase per month. Up to 8 sessions per month are available.</p>
+            </div>
+          </details>
+
+          <!-- FAQ 4 -->
+          <details class="group bg-white border border-cream-dark rounded-xl">
+            <summary class="cursor-pointer select-none flex items-center justify-between gap-4 px-6 py-5 text-base-r font-semibold text-ink hover:text-forest transition-colors list-none [&::-webkit-details-marker]:hidden">
+              What happens at the assessment?
+              <svg class="w-4 h-4 text-ink-light transition-transform duration-200 group-open:rotate-180 shrink-0" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6l4 4 4-4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </summary>
+            <div class="px-6 pb-6 pt-0 border-t border-cream-dark">
+              <p class="text-sm-r text-ink-muted leading-relaxed mt-4 mb-4">A 90-minute in-person evaluation. Free, no commitment to enroll. Parent and pitcher both attend.</p>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3">
+                <div>
+                  <div class="text-xs-r font-bold text-ink mb-0.5">Athlete Background</div>
+                  <p class="text-xs-r text-ink-muted leading-relaxed">Training history, experience, season status — scored to determine starting phase.</p>
+                </div>
+                <div>
+                  <div class="text-xs-r font-bold text-ink mb-0.5">Pitch Repertoire &amp; Game Knowledge</div>
+                  <p class="text-xs-r text-ink-muted leading-relaxed">What they throw, how long, and a brief game knowledge check.</p>
+                </div>
+                <div>
+                  <div class="text-xs-r font-bold text-ink mb-0.5">Warm-Up Quality Grading</div>
+                  <p class="text-xs-r text-ink-muted leading-relaxed">Every warm-up movement graded 1–5. Re-graded at future sessions to track progress.</p>
+                </div>
+                <div>
+                  <div class="text-xs-r font-bold text-ink mb-0.5">Athleticism Benchmarks</div>
+                  <p class="text-xs-r text-ink-muted leading-relaxed">Broad jump, single-leg balance, rotational med ball throw, 10-yard acceleration.</p>
+                </div>
+                <div>
+                  <div class="text-xs-r font-bold text-ink mb-0.5">Movement Observation</div>
+                  <p class="text-xs-r text-ink-muted leading-relaxed">8–12 throws on flat ground to identify the dominant pattern and first session.</p>
+                </div>
+                <div>
+                  <div class="text-xs-r font-bold text-ink mb-0.5">Documented Output</div>
+                  <p class="text-xs-r text-ink-muted leading-relaxed">A documented start profile specific to your pitcher.</p>
+                </div>
+              </div>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════ -->
+    <!-- ENROLLMENT OPTIONS -->
+    <!-- ═══════════════════════════════════════════════ -->
+    <section class="py-16 lg:py-24 bg-cream" id="enrollment">
+      <div class="max-w-wide mx-auto px-5 lg:px-12">
+        <div class="max-w-[640px] mb-10">
+          <p class="text-xs-r font-semibold uppercase tracking-[0.15em] text-forest mb-4">Enrollment Options</p>
+          <h2 class="font-display text-2xl-r text-ink leading-tight mb-5">Two formats. Same progression.</h2>
+          <p class="text-base-r text-ink-muted leading-relaxed">Both options begin with an in-person assessment and follow the same Foundations curriculum. The only difference is where training happens.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-8 items-start">
+          <!-- All-Facility -->
+          <div class="bg-white border border-cream-dark rounded-2xl p-6 lg:p-8 flex flex-col gap-5 fade-up">
+            <div>
+              <span class="inline-block text-xs font-semibold uppercase tracking-[0.1em] text-ink-muted mb-2">Standard</span>
+              <h3 class="font-display text-xl-r italic text-ink">All-Facility</h3>
+            </div>
+            <p class="text-sm-r text-ink-muted leading-relaxed">Every session at the TAP Athletes facility. Full access to equipment and a controlled training environment.</p>
+            <ul class="flex flex-col gap-2 flex-1">
+              <li class="flex items-center gap-2.5 text-sm-r text-ink font-medium"><svg class="shrink-0" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1B3D2F" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>2 sessions/week recommended</li>
+              <li class="flex items-center gap-2.5 text-sm-r text-ink font-medium"><svg class="shrink-0" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1B3D2F" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Up to 8 sessions per month</li>
+              <li class="flex items-center gap-2.5 text-sm-r text-ink font-medium"><svg class="shrink-0" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1B3D2F" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Reserved weekly time slots</li>
             </ul>
+            <div class="pt-4 border-t border-cream-dark">
+              <span class="font-display text-2xl-r italic text-ink">$510</span>
+              <span class="text-sm-r text-ink-muted">/month</span>
+            </div>
+            <a href="https://www.trainingathleticperformance.com/checkout?checkoutId=ca727402-5272-44a4-a72f-3f265e998db3&disableContinueShopping=true" class="w-full inline-flex items-center justify-center px-6 py-3 text-sm-r font-semibold rounded-lg bg-forest text-white hover:bg-forest-light transition-colors">Enroll</a>
           </div>
-          <div style="background:var(--color-surface-2);padding:var(--space-8);">
-            <div style="font-family:var(--font-display);font-size:var(--text-base);font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--color-text-muted);margin-bottom:var(--space-5);">Traditional Lessons</div>
-            <ul style="list-style:none;display:flex;flex-direction:column;gap:var(--space-4);">
-              <li style="font-size:var(--text-sm);color:var(--color-text-muted);padding-left:var(--space-5);position:relative;max-width:none;"><span style="position:absolute;left:0;color:var(--color-text-faint);">—</span>Reactive — addresses recent game problems session to session</li>
-              <li style="font-size:var(--text-sm);color:var(--color-text-muted);padding-left:var(--space-5);position:relative;max-width:none;"><span style="position:absolute;left:0;color:var(--color-text-faint);">—</span>No structured path forward between sessions</li>
-              <li style="font-size:var(--text-sm);color:var(--color-text-muted);padding-left:var(--space-5);position:relative;max-width:none;"><span style="position:absolute;left:0;color:var(--color-text-faint);">—</span>Short-term fixes that may not carry over to games</li>
-              <li style="font-size:var(--text-sm);color:var(--color-text-muted);padding-left:var(--space-5);position:relative;max-width:none;"><span style="position:absolute;left:0;color:var(--color-text-faint);">—</span>Booked individually as needed, no continuity required</li>
+
+          <!-- Hybrid -->
+          <div class="bg-white border-2 border-forest rounded-2xl p-6 lg:p-8 flex flex-col gap-5 shadow-medium fade-up">
+            <div>
+              <span class="inline-block text-xs font-semibold uppercase tracking-[0.1em] text-forest mb-2">Flexible</span>
+              <h3 class="font-display text-xl-r italic text-ink">Hybrid</h3>
+            </div>
+            <p class="text-sm-r text-ink-muted leading-relaxed">Facility sessions plus up to 4 on-site visits per month — coach comes to your pitcher's home, park, or field.</p>
+            <ul class="flex flex-col gap-2 flex-1">
+              <li class="flex items-center gap-2.5 text-sm-r text-ink font-medium"><svg class="shrink-0" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1B3D2F" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>All facility sessions included</li>
+              <li class="flex items-center gap-2.5 text-sm-r text-ink font-medium"><svg class="shrink-0" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1B3D2F" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Up to 4 on-site sessions/month</li>
+              <li class="flex items-center gap-2.5 text-sm-r text-ink font-medium"><svg class="shrink-0" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1B3D2F" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Same progression — no gaps</li>
+              <li class="flex items-center gap-2.5 text-sm-r text-ink font-medium"><svg class="shrink-0" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1B3D2F" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Ideal for busy schedules</li>
             </ul>
+            <div class="pt-4 border-t border-cream-dark">
+              <span class="font-display text-2xl-r italic text-ink">$600</span>
+              <span class="text-sm-r text-ink-muted">/month</span>
+            </div>
+            <a href="https://www.trainingathleticperformance.com/checkout?checkoutId=ca727402-cb9a-477e-96de-9f04b06f488a&disableContinueShopping=true" class="w-full inline-flex items-center justify-center px-6 py-3 text-sm-r font-semibold rounded-lg bg-rust text-white hover:bg-rust-hover transition-colors">Enroll</a>
           </div>
         </div>
-        <div class="compare-callout">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
-          <p><strong>Lessons are adjustments.</strong> Foundations is development. Many athletes benefit from both — but they solve different problems.</p>
+
+        <!-- Foundations Prep — absorbed into enrollment -->
+        <div class="bg-white border border-cream-dark rounded-2xl p-6 lg:p-8 mt-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+          <div class="flex-1 min-w-0">
+            <div class="flex flex-wrap items-center gap-3 mb-3">
+              <span class="inline-block text-xs font-semibold uppercase tracking-[0.1em] text-forest bg-forest-pale px-3 py-1 rounded-full">Introductory</span>
+              <h3 class="font-display text-xl-r italic text-ink">Foundations Prep</h3>
+            </div>
+            <p class="text-sm-r text-ink-muted leading-relaxed mb-3 max-w-[48ch]">A one-month entry point for younger pitchers, beginners, or families new to structured training. Two 30-minute sessions per week.</p>
+            <div class="flex flex-wrap gap-x-6 gap-y-1 text-sm-r text-ink font-medium">
+              <span class="flex items-center gap-2"><svg class="shrink-0" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1B3D2F" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>2×/week, 30 min</span>
+              <span class="flex items-center gap-2"><svg class="shrink-0" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1B3D2F" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>One-month commitment</span>
+              <span class="flex items-center gap-2"><svg class="shrink-0" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1B3D2F" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Ideal for ages 8–12</span>
+            </div>
+          </div>
+          <a href="https://www.trainingathleticperformance.com/checkout?checkoutId=ca727402-6aa5-4a0a-bc3a-8a03060f95cb&disableContinueShopping=true" class="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 text-sm-r font-semibold rounded-lg bg-forest text-white hover:bg-forest-light transition-colors shrink-0">Enroll in Prep</a>
         </div>
+
       </div>
     </section>
 
-    <!-- WHO ITS FOR -->
-    <section class="section section-alt" id="who-its-for">
-      <div class="container">
-        <div class="section-intro">
-          <span class="section-label">Eligibility</span>
-          <h2>Who Foundations Is Built For</h2>
-          <p class="section-desc">This program is designed for athletes who are ready for a structured, consistent approach to development.</p>
-        </div>
-        <div class="audience-grid">
-          <div class="audience-card"><div class="audience-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="8" r="4" stroke="var(--color-primary)" stroke-width="1.8"/><path d="M6 22c0-4.418 3.582-8 8-8s8 3.582 8 8" stroke="var(--color-primary)" stroke-width="1.8" stroke-linecap="round"/></svg></div><div><h3>Athletes Ages 8+</h3><p>Any pitcher 8 years and up who is ready to commit to structured training. No experience level required.</p></div></div>
-          <div class="audience-card"><div class="audience-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M14 14l-4-5" stroke="var(--color-warning)" stroke-width="1.8" stroke-linecap="round"/><circle cx="14" cy="16" r="3" stroke="var(--color-warning)" stroke-width="1.8"/></svg></div><div><h3>Struggling with Consistency</h3><p>Athletes whose mechanics aren't repeatable, who regress after instruction, or who can't transfer skills to game situations.</p></div></div>
-          <div class="audience-card"><div class="audience-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="4" y="8" width="20" height="16" rx="2" stroke="var(--color-primary)" stroke-width="1.8"/><path d="M9 8V6a5 5 0 0110 0v2" stroke="var(--color-primary)" stroke-width="1.8"/><path d="M12 16l2 2 4-4" stroke="var(--color-primary)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><h3>Had Instruction, No Lasting Results</h3><p>Athletes who have received coaching but haven't seen lasting progress. Foundations addresses the underlying cause — lack of progression structure.</p></div></div>
-          <div class="audience-card"><div class="audience-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M14 4v8" stroke="var(--color-primary)" stroke-width="1.8" stroke-linecap="round"/><path d="M10 8l4-4 4 4" stroke="var(--color-primary)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><rect x="6" y="12" width="16" height="8" rx="2" stroke="var(--color-primary)" stroke-width="1.8"/></svg></div><div><h3>New to Pitching</h3><p>Athletes who are just beginning and need a clear, structured starting point rather than uncoordinated drop-in sessions.</p></div></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- TRAINING OPTIONS -->
-    <section class="section" id="training-options">
-      <div class="container">
-        <div class="section-intro">
-          <span class="section-label">Training Options</span>
-          <h2>All-Facility or Hybrid</h2>
-          <p class="section-desc">The Foundations program is available in two formats. Both follow the same structured progression — the difference is where training happens.</p>
-        </div>
-        <div class="options-grid">
-          <div class="option-card">
-            <div class="option-header">
-              <div class="option-icon-wrap"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M4 14L14 4l10 10v10H4V14z" stroke="var(--color-primary)" stroke-width="1.8" stroke-linejoin="round"/><rect x="10" y="18" width="8" height="8" rx="1" stroke="var(--color-primary)" stroke-width="1.6"/></svg></div>
-              <div><div class="option-tag">Core</div><h3>All-Facility</h3></div>
-            </div>
-            <p class="option-desc">Every session takes place at the TAP Athletes facility. This is the standard program format — full access to training equipment and a controlled environment built for development.</p>
-            <ul class="option-features" role="list">
-              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>All sessions at the TAP facility</li>
-              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>2 sessions per week (recommended pace)</li>
-              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Up to 8 sessions per month</li>
-              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Reserved weekly time slots</li>
-            </ul>
-            <div class="option-price"><span class="price-amount">$510</span><span class="price-period">/month</span></div>
-            <a href="https://www.trainingathleticperformance.com/services" class="btn btn-secondary btn-full">Book Assessment</a>
-          </div>
-          <div class="option-card option-card-featured">
-            <div class="option-header">
-              <div class="option-icon-wrap"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M4 14L14 4l10 10v10H4V14z" stroke="var(--color-primary)" stroke-width="1.8" stroke-linejoin="round"/><rect x="10" y="18" width="8" height="8" rx="1" stroke="var(--color-primary)" stroke-width="1.6"/><circle cx="22" cy="22" r="6" fill="var(--color-accent)" stroke="var(--color-surface)" stroke-width="1.5"/><path d="M19 22l2 2 3-3" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-              <div><div class="option-tag option-tag-accent">Flexible</div><h3>Hybrid</h3></div>
-            </div>
-            <p class="option-desc">Combines facility sessions with on-site visits — meaning the coach comes to the athlete's home, park, or field when making it to the facility isn't possible. Includes up to 4 on-site sessions per month.</p>
-            <div class="onsite-note"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span><strong>On-site</strong> = athlete's home, local park, or team field. For weeks when getting to the facility isn't possible.</span></div>
-            <ul class="option-features" role="list">
-              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>All facility sessions included</li>
-              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Up to 4 on-site sessions per month</li>
-              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Same progression system — no gaps</li>
-              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Ideal for busy schedules or travel</li>
-            </ul>
-            <div class="option-price"><span class="price-amount">$600</span><span class="price-period">/month</span></div>
-            <a href="https://www.trainingathleticperformance.com/services" class="btn btn-primary btn-full">Book Assessment</a>
-          </div>
-        </div>
-        <div class="options-footnote">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
-          <p>Both options follow the exact same Foundations progression. Format doesn't change the program — it changes where you train. Every athlete still begins with an in-person assessment at the facility.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- FOUNDATIONS PREP -->
-    <section class="section section-alt" id="prep">
-      <div class="container">
-        <div class="prep-card">
-          <div class="prep-badge">Introductory Option</div>
-          <div class="prep-content">
-            <div class="prep-text">
-              <h2>Foundations Prep</h2>
-              <p class="prep-sub">For younger athletes, beginners, or families new to structured training.</p>
-              <p>Foundations Prep is a <strong>one-month introductory program</strong> — two 30-minute sessions per week. It's a controlled entry point designed to prepare athletes for the full Foundations program.</p>
-              <ul class="prep-list" role="list">
-                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>2 sessions per week, 30 minutes each</li>
-                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>One-month commitment</li>
-                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Prepares athlete for full Foundations program</li>
-                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Ideal for ages 8–10 or first-time pitchers</li>
-              </ul>
-            </div>
-            <div class="prep-note">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
-              <p>Foundations Prep is not a long-term replacement for Foundations. After one month, athletes transition into the full program for continued development.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ASSESSMENT CTA -->
-    <section class="section assessment-section" id="assessment">
-      <div class="container">
-        <div class="assessment-inner">
-          <div class="assessment-text">
-            <span class="section-label section-label-light">Start Here</span>
-            <h2>Every Athlete Begins With an Assessment</h2>
-            <p>The intake assessment is free, 90 minutes, and the only way into the Foundations program. We evaluate mechanics on the mound, document everything on video, and ask the questions that help us build the right plan for your athlete specifically.</p>
-            <div class="assessment-steps">
-              <div class="assessment-step"><span class="step-dot">1</span><span>Book your free 90-minute intake assessment</span></div>
-              <div class="assessment-step"><span class="step-dot">2</span><span>Attend in-person — athlete and parent both welcome</span></div>
-              <div class="assessment-step"><span class="step-dot">3</span><span>Receive phase placement and your athlete's development path</span></div>
-              <div class="assessment-step"><span class="step-dot">4</span><span>Begin training on your reserved schedule</span></div>
-            </div>
-          </div>
-          <div class="assessment-cta-card">
-            <div class="cta-card-inner">
-              <h3>Book Your Free Assessment</h3>
-              <p>90 minutes. No cost. No commitment required to attend.</p>
-              <a href="https://www.trainingathleticperformance.com/services" class="btn btn-primary btn-lg btn-full">Book My Assessment</a>
-              <p class="cta-note">The only way into the Foundations program.</p>
-            </div>
-          </div>
+    <!-- ═══════════════════════════════════════════════ -->
+    <!-- CLOSING CTA -->
+    <!-- ═══════════════════════════════════════════════ -->
+    <section class="py-16 lg:py-24 bg-forest" id="closing">
+      <div class="max-w-default mx-auto px-5 lg:px-12 text-center">
+        <h2 class="font-display text-2xl-r italic text-white leading-tight mb-4">When you're ready.</h2>
+        <p class="text-base-r text-white/65 leading-relaxed mb-8 max-w-[48ch] mx-auto">Enrollment begins with a 90-minute in-person assessment. Free, no commitment required.</p>
+        <div class="flex flex-wrap justify-center gap-3">
+          <a href="#enrollment" class="inline-flex items-center justify-center px-8 py-4 text-base-r font-semibold rounded-lg bg-white text-forest hover:bg-cream transition-all hover:-translate-y-px hover:shadow-medium">Enroll</a>
+          <a href="#" data-guide-btn class="inline-flex items-center gap-2 justify-center px-8 py-4 text-base-r font-semibold rounded-lg bg-transparent text-white border border-white/30 hover:border-white/60 transition-all">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Curriculum Guide
+          </a>
         </div>
       </div>
     </section>
 
   </main>
 
-  <!-- SITE FOOTER — matching index.html -->
-  <footer class="site-footer-main">
-    <div class="site-footer-logo">TAP <span>Athletes</span></div>
-    <div class="site-footer-links">
-      <a href="tel:+18338602711">Start Here</a>
-      <a href="https://www.trainingathleticperformance.com/services">Programs</a>
-      <a href="https://www.trainingathleticperformance.com/services">Classes</a>
-      <a href="https://www.trainingathleticperformance.com/faq">FAQ</a>
-      <a href="https://www.trainingathleticperformance.com/blog">Blog</a>
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- FOOTER -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <footer class="bg-ink px-5 lg:px-12 py-8 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4">
+    <div class="text-sm font-bold text-white/80 tracking-tight">TAP Athletes</div>
+    <div class="flex flex-wrap gap-6">
+      <a href="tel:+18338602711" class="text-xs font-medium text-white/30 hover:text-white/70 transition-colors">Contact</a>
+      <a href="https://www.trainingathleticperformance.com/services" class="text-xs font-medium text-white/30 hover:text-white/70 transition-colors">Programs</a>
+      <a href="https://www.trainingathleticperformance.com/faq" class="text-xs font-medium text-white/30 hover:text-white/70 transition-colors">FAQ</a>
+      <a href="https://www.trainingathleticperformance.com/blog" class="text-xs font-medium text-white/30 hover:text-white/70 transition-colors">Blog</a>
     </div>
-    <div class="site-footer-info">
-      1751 S 1st Street, Rogers, Arkansas 72758<br>
-      <a href="tel:+18338602711">(833) 860-2711</a> · <a href="mailto:support@tapathletes.com">support@tapathletes.com</a>
+    <div class="text-xs text-white/25 lg:text-right leading-relaxed">
+      1751 S 1st Street, Rogers, AR 72758<br>
+      <a href="tel:+18338602711" class="hover:text-white/50 transition-colors">(833) 860-2711</a> · <a href="mailto:support@tapathletes.com" class="hover:text-white/50 transition-colors">support@tapathletes.com</a>
     </div>
   </footer>
+
+  <!-- Email Gate Modal -->
+  <div id="emailModal" class="hidden fixed inset-0 z-[9999] bg-black/50 backdrop-blur-sm items-center justify-center">
+    <div class="bg-white rounded-2xl p-8 max-w-[400px] w-[90%] relative shadow-heavy">
+      <button id="emailModalClose" class="absolute top-4 right-4 text-ink-muted hover:text-ink text-xl leading-none cursor-pointer" aria-label="Close">&times;</button>
+      <h3 class="font-display text-xl-r italic text-ink mb-2">Curriculum Guide</h3>
+      <p class="text-sm-r text-ink-muted mb-5">Enter your email to access the full Foundations curriculum guide.</p>
+      <form id="guideForm">
+        <input type="email" name="email" required placeholder="Email address" class="w-full px-4 py-3 border border-cream-dark rounded-lg font-body text-sm-r mb-3 outline-none focus:border-forest transition-colors" />
+        <button type="submit" id="guideSubmitBtn" class="w-full inline-flex items-center justify-center px-6 py-3.5 text-base-r font-semibold rounded-lg bg-rust text-white hover:bg-rust-hover transition-colors">Download</button>
+      </form>
+      <p id="guideError" class="hidden text-xs-r text-red-600 mt-2 text-center">Something went wrong. Please try again.</p>
+    </div>
+  </div>
 
   <script>
 (function(){
   'use strict';
-  const themeToggle=document.querySelector('[data-theme-toggle]');
-  const html=document.documentElement;
-  let currentTheme='light';
-  function applyTheme(theme){html.setAttribute('data-theme',theme);currentTheme=theme;try{localStorage.setItem('tap-theme',theme);}catch(e){}if(themeToggle){themeToggle.setAttribute('aria-label','Switch to '+(theme==='dark'?'light':'dark')+' mode');themeToggle.innerHTML=theme==='dark'?'<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>':'<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';}}
-  applyTheme(currentTheme);
-  if(themeToggle){themeToggle.addEventListener('click',()=>{applyTheme(currentTheme==='dark'?'light':'dark');});}
-  const header=document.getElementById('site-header');
-  window.addEventListener('scroll',()=>{if(window.scrollY>40){header.classList.add('scrolled');}else{header.classList.remove('scrolled');}},{passive:true});
-  const menuBtn=document.getElementById('menuBtn');
-  const mobileNav=document.getElementById('mobileNav');
-  if(menuBtn&&mobileNav){menuBtn.addEventListener('click',()=>{const open=mobileNav.classList.toggle('open');menuBtn.setAttribute('aria-expanded',open.toString());mobileNav.setAttribute('aria-hidden',(!open).toString());});mobileNav.querySelectorAll('a').forEach(link=>{link.addEventListener('click',()=>{mobileNav.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');mobileNav.setAttribute('aria-hidden','true');});});}
-  const fadeEls=document.querySelectorAll('.step-card,.structure-feature,.audience-card,.pace-visual,.option-card');
-  fadeEls.forEach(el=>el.classList.add('fade-up'));
-  if('IntersectionObserver' in window){const obs=new IntersectionObserver((entries)=>{entries.forEach((entry)=>{if(entry.isIntersecting){const delay=Array.from(entry.target.parentElement.children).indexOf(entry.target)*80;setTimeout(()=>{entry.target.classList.add('visible');},delay);obs.unobserve(entry.target);}});},{threshold:0.12,rootMargin:'0px 0px -40px 0px'});fadeEls.forEach(el=>obs.observe(el));}else{fadeEls.forEach(el=>el.classList.add('visible'));}
-  document.querySelectorAll('a[href^="#"]').forEach(anchor=>{anchor.addEventListener('click',function(e){const target=document.querySelector(this.getAttribute('href'));if(target){e.preventDefault();target.scrollIntoView({behavior:'smooth',block:'start'});}});});
+
+  // Curriculum Guide email gate
+  var modal = document.getElementById('emailModal');
+  var form = document.getElementById('guideForm');
+  var closeBtn = document.getElementById('emailModalClose');
+  var submitBtn = document.getElementById('guideSubmitBtn');
+  var errorMsg = document.getElementById('guideError');
+  var pdfUrl = '/foundations/TAP-Athletes-Foundations-Curriculum-Guide.pdf';
+
+  document.querySelectorAll('[data-guide-btn]').forEach(function(btn) {
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      modal.querySelector('input[type="email"]').focus();
+    });
+  });
+
+  closeBtn.addEventListener('click', function() {
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+  });
+  modal.addEventListener('click', function(e) {
+    if (e.target === modal) { modal.classList.add('hidden'); modal.classList.remove('flex'); }
+  });
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    errorMsg.classList.add('hidden');
+    submitBtn.textContent = 'Sending...';
+    submitBtn.disabled = true;
+
+    fetch('https://formspree.io/f/mqegvvdn', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({ email: form.querySelector('input[type="email"]').value, _subject: 'Curriculum Guide Download' })
+    }).then(function(r) {
+      if (r.ok) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        form.reset();
+        submitBtn.textContent = 'Download';
+        submitBtn.disabled = false;
+        window.open(pdfUrl, '_blank');
+      } else { throw new Error('fail'); }
+    }).catch(function() {
+      errorMsg.classList.remove('hidden');
+      submitBtn.textContent = 'Download';
+      submitBtn.disabled = false;
+    });
+  });
+
+  // Header shadow
+  const header = document.getElementById('site-header');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('shadow-soft', window.scrollY > 20);
+  }, { passive: true });
+
+  // Mobile menu
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileNav = document.getElementById('mobileNav');
+  if (menuBtn && mobileNav) {
+    menuBtn.addEventListener('click', () => {
+      const isOpen = mobileNav.classList.toggle('!flex');
+      mobileNav.classList.toggle('hidden', !isOpen);
+      menuBtn.setAttribute('aria-expanded', isOpen);
+      mobileNav.setAttribute('aria-hidden', !isOpen);
+    });
+    mobileNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileNav.classList.remove('!flex');
+        mobileNav.classList.add('hidden');
+        menuBtn.setAttribute('aria-expanded', 'false');
+        mobileNav.setAttribute('aria-hidden', 'true');
+      });
+    });
+  }
+
+  // Scroll reveal
+  const fadeEls = document.querySelectorAll('.fade-up');
+  if ('IntersectionObserver' in window) {
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const siblings = Array.from(entry.target.parentElement.children).filter(el => el.classList.contains('fade-up'));
+          const delay = siblings.indexOf(entry.target) * 80;
+          setTimeout(() => entry.target.classList.add('visible'), delay);
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+    fadeEls.forEach(el => obs.observe(el));
+  } else {
+    fadeEls.forEach(el => el.classList.add('visible'));
+  }
+
+  // Smooth scroll
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    });
+  });
 })();
   </script>
 </body>
