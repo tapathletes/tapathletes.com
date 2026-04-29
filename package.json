@@ -1,0 +1,14 @@
+{
+  "name": "tapathletes-com",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "description": "Static homepage for tapathletes.com. Vite is used for local dev preview only — production deploys plain static HTML/CSS via GitHub Pages.",
+  "scripts": {
+    "dev": "vite",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.4.10"
+  }
+}
