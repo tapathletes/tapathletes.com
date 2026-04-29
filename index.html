@@ -12,7 +12,8 @@
   :root {
     --navy: #1B2A4A; --navy-dark: #0E1A2E; --navy-light: #243558;
     --blue: #2E75B6; --blue-light: #4A90D9; --green: #548235; --green-light: #6FA842;
-    --gold: #B8922A; --white: #FFFFFF; --off-white: #F5F4F0; --gray-100: #EDECEA;
+    --gold: #B8922A; --teal: #2C5F7C;
+    --white: #FFFFFF; --off-white: #F5F4F0; --gray-100: #EDECEA;
     --gray-200: #D4D2CC; --gray-600: #4A4845; --text: #0E1A2E; --text-2: #4A4845;
     --text-3: #6E6B65; --shadow-sm: 0 2px 12px rgba(14,26,46,0.06); --shadow-md: 0 8px 32px rgba(14,26,46,0.10);
   }
@@ -61,41 +62,81 @@
   .section-eyebrow::before { content: ''; display: block; width: 22px; height: 2px; background: var(--blue); }
   .section-title { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: clamp(34px, 4vw, 54px); line-height: 1; text-transform: uppercase; color: var(--navy); margin-bottom: 12px; }
   .section-lead { font-size: 16px; font-weight: 300; line-height: 1.7; color: var(--text-2); max-width: 600px; }
-  .start { background: var(--white); }
-  .start-inner { max-width: 1120px; margin: 0 auto; display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 40px; align-items: start; }
-  .start-cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px; background: var(--gray-200); border: 1px solid var(--gray-200); margin-top: 34px; }
-  .start-card { background: var(--off-white); padding: 26px 22px; }
-  .start-card-title { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 22px; line-height: 1.02; text-transform: uppercase; color: var(--navy); margin-bottom: 8px; }
-  .start-card p { font-size: 14px; color: var(--text-2); }
-  .start-proof { background: var(--navy); color: var(--white); padding: 28px; box-shadow: var(--shadow-md); }
-  .start-proof .mini-eyebrow { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--blue-light); margin-bottom: 10px; }
+  /* Overview — merged Model + Outcomes. Four tiles, primary section. */
+  .overview { background: var(--white); }
+  .overview-inner { max-width: 1120px; margin: 0 auto; }
+  .overview-header { margin-bottom: 56px; max-width: 720px; }
+  .overview-header .section-lead { margin-top: 14px; }
+  .overview-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px; background: var(--gray-200); border: 1px solid var(--gray-200); }
+  .overview-tile { background: var(--white); padding: 36px 32px; display: flex; flex-direction: column; gap: 14px; min-height: 100%; }
+  .overview-tile-bar { height: 3px; width: 100%; }
+  .overview-tile.foundations .overview-tile-bar { background: var(--green); }
+  .overview-tile.academy      .overview-tile-bar { background: var(--blue); }
+  .overview-tile.unprompted   .overview-tile-bar { background: var(--gold); }
+  .overview-tile.classes      .overview-tile-bar { background: var(--teal); }
+  .overview-tile-eyebrow { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--text-3); }
+  .overview-tile-name { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 30px; line-height: 1.02; text-transform: uppercase; color: var(--navy); text-decoration: none; display: inline-block; padding-bottom: 2px; border-bottom: 2px solid transparent; transition: border-color 0.2s ease, color 0.2s ease; }
+  .overview-tile.foundations .overview-tile-name:hover { border-bottom-color: var(--green); color: var(--green); }
+  .overview-tile.academy      .overview-tile-name:hover { border-bottom-color: var(--blue);  color: var(--blue); }
+  .overview-tile.unprompted   .overview-tile-name:hover { border-bottom-color: var(--gold);  color: var(--gold); }
+  .overview-tile.classes      .overview-tile-name:hover { border-bottom-color: var(--teal);  color: var(--teal); }
+  .overview-tile-desc { font-size: 14px; font-weight: 300; line-height: 1.7; color: var(--text-2); }
+  .overview-tile-outcome { margin-top: auto; padding-top: 18px; border-top: 1px solid var(--gray-100); }
+  .overview-outcome-label { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 8px; }
+  .overview-tile.foundations .overview-outcome-label { color: var(--green); }
+  .overview-tile.academy      .overview-outcome-label { color: var(--blue); }
+  .overview-tile.unprompted   .overview-outcome-label { color: var(--gold); }
+  .overview-tile.classes      .overview-outcome-label { color: var(--teal); }
+  .overview-outcome-copy { font-size: 13px; font-weight: 300; line-height: 1.6; color: var(--text-2); }
+
+  /* App section — light bg with contained navy panel.
+     Sits between Overview and Programs as a secondary beat. */
+  .app { background: var(--off-white); border-top: 1px solid var(--gray-100); }
+  .app-inner { max-width: 1120px; margin: 0 auto; }
+  .app-title { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: clamp(34px, 4vw, 54px); line-height: 1; text-transform: uppercase; color: var(--navy); margin: 8px 0 12px; max-width: 720px; }
+  .app-lead { font-size: 16px; font-weight: 300; line-height: 1.7; color: var(--text-2); max-width: 600px; margin-bottom: 36px; }
+  .app-panel { background: var(--navy); color: var(--white); padding: 36px 40px; display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; align-items: center; box-shadow: var(--shadow-md); }
+  .app-panel-eyebrow { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--blue-light); margin-bottom: 10px; }
+  .app-panel-body { font-size: 15px; font-weight: 300; line-height: 1.7; color: rgba(255,255,255,0.78); margin-bottom: 22px; max-width: 460px; }
+  .app-code { display: inline-flex; align-items: baseline; gap: 14px; padding: 14px 18px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); }
+  .app-code-label { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--blue-light); }
+  .app-code-value { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 22px; letter-spacing: 0.12em; color: var(--white); }
+  .app-panel-stores { display: flex; flex-direction: column; gap: 14px; align-items: flex-start; }
+  .store-badge { display: block; line-height: 0; text-decoration: none; transition: opacity 0.2s ease; }
+  .store-badge:hover { opacity: 0.82; }
+  .store-badge img { display: block; width: 200px; height: auto; }
+  .app-direct-btn { width: 200px; min-height: 46px; }
   .programs { background: var(--off-white); border-top: 1px solid var(--gray-100); }
   .programs-inner { max-width: 1120px; margin: 0 auto; }
   .programs-header { margin-bottom: 40px; display: flex; justify-content: space-between; align-items: end; gap: 20px; flex-wrap: wrap; }
-  .programs-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: var(--gray-200); border: 1px solid var(--gray-200); }
+  .programs-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px; background: var(--gray-200); border: 1px solid var(--gray-200); }
   .prog-card { background: var(--white); padding: 34px 28px; display: flex; flex-direction: column; min-height: 100%; }
   .prog-card:hover { background: #FAFAF8; }
   .prog-card-top-bar { height: 3px; width: 100%; margin-bottom: 24px; }
-  .prog-card.academy .prog-card-top-bar { background: var(--blue); }
-  .prog-card.unprompted .prog-card-top-bar { background: var(--gold); }
-  .prog-card.instruction .prog-card-top-bar { background: var(--green); }
+  .prog-card.academy      .prog-card-top-bar { background: var(--blue); }
+  .prog-card.unprompted   .prog-card-top-bar { background: var(--gold); }
+  .prog-card.instruction  .prog-card-top-bar { background: var(--green); }
+  .prog-card.classes      .prog-card-top-bar { background: var(--teal); }
   .prog-badge { display: inline-block; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; padding: 4px 12px; margin-bottom: 14px; }
-  .prog-card.academy .prog-badge { background: rgba(46,117,182,0.08); color: var(--blue); border: 1px solid rgba(46,117,182,0.25); }
-  .prog-card.unprompted .prog-badge { background: rgba(184,146,42,0.08); color: var(--gold); border: 1px solid rgba(184,146,42,0.25); }
-  .prog-card.instruction .prog-badge { background: rgba(84,130,53,0.08); color: var(--green); border: 1px solid rgba(84,130,53,0.25); }
+  .prog-card.academy      .prog-badge { background: rgba(46,117,182,0.08); color: var(--blue);  border: 1px solid rgba(46,117,182,0.25); }
+  .prog-card.unprompted   .prog-badge { background: rgba(184,146,42,0.08); color: var(--gold);  border: 1px solid rgba(184,146,42,0.25); }
+  .prog-card.instruction  .prog-badge { background: rgba(84,130,53,0.08);  color: var(--green); border: 1px solid rgba(84,130,53,0.25); }
+  .prog-card.classes      .prog-badge { background: rgba(44,95,124,0.08);  color: var(--teal);  border: 1px solid rgba(44,95,124,0.25); }
   .prog-name { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 30px; line-height: 1; text-transform: uppercase; color: var(--navy); margin-bottom: 4px; }
   .prog-format { font-family: 'Barlow Condensed', sans-serif; font-weight: 500; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-3); margin-bottom: 18px; }
   .prog-fit { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 14px; }
-  .prog-card.academy .prog-fit { color: var(--blue); }
-  .prog-card.unprompted .prog-fit { color: var(--gold); }
-  .prog-card.instruction .prog-fit { color: var(--green); }
+  .prog-card.academy      .prog-fit { color: var(--blue); }
+  .prog-card.unprompted   .prog-fit { color: var(--gold); }
+  .prog-card.instruction  .prog-fit { color: var(--green); }
+  .prog-card.classes      .prog-fit { color: var(--teal); }
   .prog-desc { font-size: 14px; font-weight: 300; line-height: 1.7; color: var(--text-2); margin-bottom: 20px; }
   .prog-details { display: flex; flex-direction: column; gap: 7px; margin-bottom: 26px; }
   .prog-detail { display: flex; align-items: flex-start; gap: 9px; font-family: 'Barlow Condensed', sans-serif; font-size: 13px; font-weight: 600; color: var(--text-2); }
   .prog-detail::before { content: ''; width: 4px; height: 4px; border-radius: 50%; margin-top: 7px; flex-shrink: 0; }
-  .prog-card.academy .prog-detail::before { background: var(--blue); }
-  .prog-card.unprompted .prog-detail::before { background: var(--gold); }
-  .prog-card.instruction .prog-detail::before { background: var(--green); }
+  .prog-card.academy      .prog-detail::before { background: var(--blue); }
+  .prog-card.unprompted   .prog-detail::before { background: var(--gold); }
+  .prog-card.instruction  .prog-detail::before { background: var(--green); }
+  .prog-card.classes      .prog-detail::before { background: var(--teal); }
   .prog-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: auto; }
   .club { background: var(--navy-dark); position: relative; overflow: hidden; }
   .club-bg { position: absolute; inset: 0; background: radial-gradient(ellipse at 30% 50%, rgba(46,117,182,0.12) 0%, transparent 55%), radial-gradient(ellipse at 80% 20%, rgba(84,130,53,0.06) 0%, transparent 45%); }
@@ -172,14 +213,14 @@
   .reveal.visible { opacity: 1; transform: none; }
   .rd1 { transition-delay: 0.08s; } .rd2 { transition-delay: 0.16s; } .rd3 { transition-delay: 0.24s; }
   @media (max-width: 1080px) {
-    .start-inner { grid-template-columns: 1fr; }
     .club-inner { grid-template-columns: 1fr; gap: 40px; }
     .programs-grid { grid-template-columns: 1fr; }
     .classes-grid { grid-template-columns: 1fr 1fr; }
+    .app-panel { grid-template-columns: 1fr; gap: 28px; padding: 32px; }
   }
   @media (max-width: 768px) {
     .classes-grid { grid-template-columns: 1fr; }
-    .start-cards { grid-template-columns: 1fr; }
+    .overview-grid { grid-template-columns: 1fr; }
     .hero-stats { grid-template-columns: repeat(2, 1fr); margin: 0 24px; }
   }
   @media (max-width: 960px) {
@@ -207,10 +248,10 @@
     .hstat-label { font-size: 10px; }
     .section-title, .club-title, .cta-title { font-size: clamp(28px, 9vw, 44px); }
     .footer-info { text-align: left; }
-    .start-cards { grid-template-columns: 1fr; }
-    .proof-outcome-headline { font-size: 22px !important; }
-    .start-proof { padding: 20px !important; }
-    .proof-card { padding: 16px 18px !important; }
+    .overview-tile { padding: 28px 24px; }
+    .overview-tile-name { font-size: 26px; }
+    .app-panel { padding: 28px 22px; }
+    .app-code-value { font-size: 18px; }
     footer { flex-direction: column; align-items: flex-start; gap: 12px; }
     .footer-links { gap: 16px; }
     .cta-final { padding-left: 20px; padding-right: 20px; }
@@ -236,20 +277,20 @@
 <nav>
   <a href="#top" class="nav-logo">TAP <span>Athletes</span></a>
   <ul class="nav-links">
-    <li><a href="tel:+18338602711">Start Here</a></li>
-    <li><a href="https://www.trainingathleticperformance.com/services">Programs</a></li>
-    <li><a href="https://www.trainingathleticperformance.com/services">Classes</a></li>
+    <li><a href="#programs">Programs</a></li>
+    <li><a href="#classes">Classes</a></li>
+    <li><a href="#app">App</a></li>
     <li><a href="#faq-lite">FAQ</a></li>
   </ul>
-  <a href="tel:+18338602711" class="nav-cta">Talk With a Coach</a>
+  <a href="https://wix.app/mobile.apps/9UnuV7p?ref=mam" class="nav-cta" target="_blank" rel="noopener noreferrer">Get the App</a>
   <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu">Menu</button>
 </nav>
 <div class="mobile-menu" id="mobile-menu">
-  <a href="tel:+18338602711">Start Here</a>
-  <a href="https://www.trainingathleticperformance.com/services">Programs</a>
-  <a href="https://www.trainingathleticperformance.com/services">Classes</a>
+  <a href="#programs">Programs</a>
+  <a href="#classes">Classes</a>
+  <a href="#app">App</a>
   <a href="#faq-lite">FAQ</a>
-  <a href="tel:+18338602711">Call or Text</a>
+  <a href="https://wix.app/mobile.apps/9UnuV7p?ref=mam" target="_blank" rel="noopener noreferrer">Get the App</a>
 </div>
 <main id="main">
   <section class="hero" id="top">
@@ -264,10 +305,9 @@
         </h1>
         <p class="hero-sub">TAP Athletes is a pitching academy built on the belief that anyone can learn to pitch. We help young pitchers build mechanics, command, and confidence through structured programs, classes, and individual instruction.</p>
         <div class="hero-actions">
-          <a class="btn-primary" href="https://www.trainingathleticperformance.com/services">Explore Programs</a>
-          <a class="btn-secondary" href="tel:+18338602711">Talk With a Coach</a>
+          <a class="btn-primary" href="#programs">Explore Programs</a>
+          <a class="btn-secondary" href="https://wix.app/mobile.apps/9UnuV7p?ref=mam" target="_blank" rel="noopener noreferrer">Get the App</a>
         </div>
-        <div class="hero-note">Call or text for the fastest next step</div>
       </div>
     </div>
   </section>
@@ -279,61 +319,105 @@
     <div class="hero-stat"><div class="hstat-num">60<em>/</em>10</div><div class="hstat-label">Performance Benchmark</div></div>
   </div>
 
-  <section class="start" id="start-here">
-    <div class="start-inner">
-      <div>
+  <section class="overview" id="overview">
+    <div class="overview-inner">
+      <div class="overview-header">
         <div class="section-eyebrow reveal">The TAP Athletes Model</div>
-        <h2 class="section-title reveal rd1">One Standard. Every Format.</h2>
+        <h2 class="section-title reveal rd1">Four Paths. One Standard.</h2>
         <p class="section-lead reveal rd2">TAP Athletes is a pitching academy built on the belief that anyone can learn to pitch. We teach pitching through programs, classes, and individual instruction — each designed around a defined curriculum, delivered by coaches who meet athletes where they are, and measured against a real standard of progress.</p>
-        <div class="start-cards reveal rd2">
-          <article class="start-card"><div class="start-card-title">Foundations</div><p>Ages 8 and up. Self-paced individual instruction with a clear milestone path into the full system.</p></article>
-          <article class="start-card"><div class="start-card-title">Pitching Academy</div><p>The full development path. Structured sessions, progression, and measurable standards across 6 months.</p></article>
-          <article class="start-card"><div class="start-card-title">Train Unprompted™</div><p>A 6-week accountability program for athletes ready to take ownership of their own development.</p></article>
-          <article class="start-card"><div class="start-card-title">Classes &amp; Instruction</div><p>Standalone classes and individual sessions. Targeted skill work with no long-term commitment required.</p></article>
+      </div>
+      <div class="overview-grid">
+        <article class="overview-tile foundations reveal">
+          <div class="overview-tile-bar"></div>
+          <div class="overview-tile-eyebrow">Ages 8+ · Progression-Based · Monthly</div>
+          <a href="/foundations" class="overview-tile-name">Foundations</a>
+          <p class="overview-tile-desc">Self-paced individual instruction with a clear milestone path into the full system. Not session-based training — a defined development system with phased, execution-based advancement.</p>
+          <div class="overview-tile-outcome">
+            <div class="overview-outcome-label">Built Right From the Start</div>
+            <p class="overview-outcome-copy">Four earned milestones that give every young pitcher the mechanical foundation to keep developing for years.</p>
+          </div>
+        </article>
+        <article class="overview-tile academy reveal rd1">
+          <div class="overview-tile-bar"></div>
+          <div class="overview-tile-eyebrow">Ages 14+ · 6-Month Cohort · Guaranteed</div>
+          <a href="/pitching-accelerator" class="overview-tile-name">Pitching Accelerator</a>
+          <p class="overview-tile-desc">For athletes 14+ at the inflection point. More touchpoints, faster gains, and a velocity + command guarantee inside six months.</p>
+          <div class="overview-tile-outcome">
+            <div class="overview-outcome-label">Measurable Progress. Guaranteed.</div>
+            <p class="overview-outcome-copy">+5 MPH on fastball velocity and +5% strike percentage — within 6 months, or a full refund.</p>
+          </div>
+        </article>
+        <article class="overview-tile unprompted reveal rd2">
+          <div class="overview-tile-bar"></div>
+          <div class="overview-tile-eyebrow">Ages 11–18 · 6-Week Cohort</div>
+          <a href="/train-unprompted" class="overview-tile-name">Train Unprompted™</a>
+          <p class="overview-tile-desc">A 6-week program designed to build athlete ownership. The goal is simple: help athletes train without being told to, through repeated touchpoints and practical accountability.</p>
+          <div class="overview-tile-outcome">
+            <div class="overview-outcome-label">Trains Without Being Told To</div>
+            <p class="overview-outcome-copy">A personal drill library, six weeks of logged sessions, and the confidence to run their own training.</p>
+          </div>
+        </article>
+        <article class="overview-tile classes reveal rd3">
+          <div class="overview-tile-bar"></div>
+          <div class="overview-tile-eyebrow">À la Carte · Booked in the App</div>
+          <a href="https://wix.app/mobile.apps/9UnuV7p?ref=mam" class="overview-tile-name" target="_blank" rel="noopener noreferrer">Classes &amp; Instruction</a>
+          <p class="overview-tile-desc">Standalone classes and individual sessions. Targeted skill work with no long-term commitment required — booked one at a time inside the TAP Athletes app.</p>
+          <div class="overview-tile-outcome">
+            <div class="overview-outcome-label">Coaching When You Need It</div>
+            <p class="overview-outcome-copy">Single sessions, group classes, live at-bats, and Rapsodo bullpens — all booked inside the TAP Athletes app.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="app" id="app">
+    <div class="app-inner">
+      <div class="section-eyebrow reveal">The TAP Athletes App</div>
+      <h2 class="app-title reveal rd1">Run by you. Powered by Spaces by Wix.</h2>
+      <p class="app-lead reveal rd2">Book sessions and programs, message coaches, manage your schedule, and see new openings as we post them. The TAP Athletes app runs inside Spaces by Wix — a scheduling and communication companion, not a training platform. The baseball happens at the facility.</p>
+      <div class="app-panel reveal rd2">
+        <div class="app-panel-text">
+          <div class="app-panel-eyebrow">Get the App</div>
+          <p class="app-panel-body">Download Spaces by Wix from the App Store or Google Play, then join with the TAP Athletes invite code below.</p>
+          <div class="app-code">
+            <span class="app-code-label">Invite Code</span>
+            <span class="app-code-value">VWMF1Y</span>
+          </div>
+        </div>
+        <div class="app-panel-stores">
+          <a href="https://apps.apple.com/app/spaces-by-wix/id1099748482" class="store-badge" target="_blank" rel="noopener noreferrer" aria-label="Download Spaces by Wix on the App Store">
+            <img src="/images/app-store-badge.svg" alt="Download Spaces by Wix on the App Store" width="200" height="60">
+          </a>
+          <a href="https://play.google.com/store/apps/details?id=com.wix.android" class="store-badge" target="_blank" rel="noopener noreferrer" aria-label="Get Spaces by Wix on Google Play">
+            <img src="/images/google-play-badge.svg" alt="Get Spaces by Wix on Google Play" width="200" height="60">
+          </a>
+          <a href="https://wix.app/mobile.apps/9UnuV7p?ref=mam" class="btn-primary app-direct-btn" target="_blank" rel="noopener noreferrer">Open Direct Invite</a>
         </div>
       </div>
-      <aside class="start-proof reveal rd2" style="background:var(--navy);padding:28px;">
-        <div class="mini-eyebrow" style="color:var(--blue-light);font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;margin-bottom:18px;">What Athletes Achieve</div>
-        <div style="display:flex;flex-direction:column;gap:2px;">
-          <div class="proof-card" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);padding:20px 22px;">
-            <div style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--blue-light);margin-bottom:10px;">Pitching Academy</div>
-            <div class="proof-outcome-headline" style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:28px;line-height:1;color:var(--white);margin-bottom:8px;">Measurable Progress. Guaranteed.</div>
-            <div style="font-size:13px;font-weight:300;color:rgba(255,255,255,0.5);line-height:1.5;">+5 MPH on fastball velocity and +5% strike percentage — within 6 months, or a full refund.</div>
-          </div>
-          <div class="proof-card" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);padding:20px 22px;">
-            <div style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;">Train Unprompted™</div>
-            <div class="proof-outcome-headline" style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:28px;line-height:1;color:var(--white);margin-bottom:8px;">Trains Without Being Told To</div>
-            <div style="font-size:13px;font-weight:300;color:rgba(255,255,255,0.5);line-height:1.5;">A personal drill library, six weeks of logged sessions, and the confidence to run their own training.</div>
-          </div>
-          <div class="proof-card" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);padding:20px 22px;">
-            <div style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--green-light);margin-bottom:10px;">Foundations</div>
-            <div class="proof-outcome-headline" style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:28px;line-height:1;color:var(--white);margin-bottom:8px;">Built Right From the Start</div>
-            <div style="font-size:13px;font-weight:300;color:rgba(255,255,255,0.5);line-height:1.5;">Four earned milestones that give every young pitcher the mechanical foundation to keep developing for years.</div>
-          </div>
-        </div>
-      </aside>
     </div>
   </section>
 
   <section class="programs" id="programs">
     <div class="programs-inner">
       <div class="programs-header">
-        <div><div class="section-eyebrow reveal">Three Programs</div><h2 class="section-title reveal rd1">Find Your Program</h2></div>
+        <div><div class="section-eyebrow reveal">Programs &amp; Sessions</div><h2 class="section-title reveal rd1">Find Your Program</h2></div>
         <p class="section-lead reveal rd2" style="max-width:340px; font-size:14px;">Every offer leads back to pitching instruction. The difference is how much structure, accountability, and support your athlete needs right now.</p>
       </div>
       <div class="programs-grid">
         <article class="prog-card academy reveal">
           <div class="prog-card-top-bar"></div>
-          <div class="prog-badge">Flagship</div>
-          <div class="prog-name">Pitching<br>Academy</div>
-          <div class="prog-format">6-Month Cohort Program</div>
-          <div class="prog-fit">Best for committed athletes ready for the full system</div>
-          <p class="prog-desc">Our most complete pitching development path. Athletes train through a defined curriculum with structured sessions, tech feedback, and a standard that makes progress visible.</p>
+          <div class="prog-badge">Flagship · Guaranteed</div>
+          <div class="prog-name">Pitching<br>Accelerator</div>
+          <div class="prog-format">6-Month Cohort · Ages 14+</div>
+          <div class="prog-fit">Best for committed athletes 14+ at the inflection point</div>
+          <p class="prog-desc">For athletes 14+ at the inflection point. More touchpoints, faster gains, and a velocity + command guarantee inside six months.</p>
           <div class="prog-details">
             <div class="prog-detail">6 months · 4 athletes per cohort</div>
             <div class="prog-detail">72 sessions across 18 skills</div>
             <div class="prog-detail">Rapsodo analysis + live at-bats</div>
             <div class="prog-detail">4 effort phases from 30% to 85%+</div>
+            <div class="prog-detail">+5 MPH velocity + 5% strike guarantee, or full refund</div>
             <div class="prog-detail">$4,500 per athlete</div>
           </div>
           <div class="prog-actions"><a href="/pitching-accelerator" class="btn-secondary">Learn More</a></div>
@@ -369,6 +453,21 @@
           </div>
           <div class="prog-actions"><a href="/foundations" class="btn-secondary">Learn More</a></div>
         </article>
+        <article class="prog-card classes reveal rd3">
+          <div class="prog-card-top-bar"></div>
+          <div class="prog-badge">À la Carte</div>
+          <div class="prog-name">Classes &amp;<br>Instruction</div>
+          <div class="prog-format">Standalone Bookings · Booked in the App</div>
+          <div class="prog-fit">Best for targeted skill work without long-term commitment</div>
+          <p class="prog-desc">Single sessions, group classes, live at-bats, and Rapsodo bullpens. Open to any athlete — no program enrollment required. All booking happens inside the TAP Athletes app.</p>
+          <div class="prog-details">
+            <div class="prog-detail">Pitch Design, Beyond the Pitch, and rotating classes</div>
+            <div class="prog-detail">Live at-bats and Rapsodo bullpens</div>
+            <div class="prog-detail">Individual instruction available</div>
+            <div class="prog-detail">No commitment — pay per session</div>
+          </div>
+          <div class="prog-actions"><a href="#classes" class="btn-secondary">See Classes</a></div>
+        </article>
       </div>
     </div>
   </section>
@@ -396,11 +495,6 @@
           <div class="t-text">"My son loves working with Coach Calhoun. The ability he has to meet my son where he was performing and then make a plan with measurable steps of growth — in combination with his know-how, technology use, flexibility of teaching strategies, genuine listening skills, and his love of the sport — make him a great private instructor."</div>
           <div class="t-name">Jill S.</div>
           <div class="t-role">TAP Athletes Parent</div>
-        </article>
-        <article class="result-card">
-          <div class="result-label">Not sure where to start?</div>
-          <h3>Talk to a Coach First</h3>
-          <p>If you are deciding between programs, the fastest move is a quick call. We will point you to the right entry point before you commit to anything.</p>
         </article>
       </div>
     </div>
@@ -472,7 +566,7 @@
       <div class="section-eyebrow reveal">FAQ</div>
       <h2 class="section-title reveal rd1" style="margin-bottom:32px;">Questions Parents Ask Before They Call</h2>
       <div class="faq-list reveal" style="max-width:800px;">
-        <article class="faq-item"><div class="faq-q">What age does TAP Athletes work with?</div><div class="faq-a">We work with pitchers ages 8 and up. Foundations is designed specifically for younger and newer athletes. The Academy and Train Unprompted™ programs are best suited for athletes who already have some pitching experience.</div></article>
+        <article class="faq-item"><div class="faq-q">What age does TAP Athletes work with?</div><div class="faq-a">We work with pitchers ages 8 and up. Foundations is designed specifically for younger and newer athletes. The Pitching Accelerator and Train Unprompted™ programs are best suited for athletes 14+ who already have some pitching experience.</div></article>
         <article class="faq-item"><div class="faq-q">Do you offer private instruction outside of programs?</div><div class="faq-a">Yes. We offer individual instruction, group sessions, live at-bats, and Rapsodo scripted bullpens outside of our structured programs. Classes are also available as standalone bookings with no long-term commitment required.</div></article>
         <article class="faq-item"><div class="faq-q">What makes TAP Athletes different from a private pitching coach?</div><div class="faq-a">A defined curriculum, measurable outcomes, and a structured environment where athletes train alongside other pitchers. Every session has a purpose and every program has a real finish line — not just ongoing lessons with no clear destination.</div></article>
       </div>
@@ -486,7 +580,7 @@
       <h2 class="cta-title">Find the Right Program for Your Athlete</h2>
       <p class="cta-sub">Three programs. One standard. Whether you're ready for a cohort or just getting started, there's a path at TAP Athletes.</p>
       <div class="cta-buttons">
-        <a href="https://www.trainingathleticperformance.com/services" class="btn-white">See All Programs & Pricing</a>
+        <a href="#programs" class="btn-white">See All Programs &amp; Pricing</a>
         <a href="mailto:support@tapathletes.com" class="btn-outline">Get in Touch</a>
       </div>
       <div class="cta-footnote">1751 S 1st Street · Rogers, Arkansas · (833) 860-2711</div>
@@ -497,11 +591,10 @@
 <footer>
   <div class="footer-logo">TAP <span>Athletes</span></div>
   <div class="footer-links">
-    <a href="tel:+18338602711">Start Here</a>
-    <a href="https://www.trainingathleticperformance.com/services">Programs</a>
-    <a href="https://www.trainingathleticperformance.com/services">Classes</a>
-    <a href="https://www.trainingathleticperformance.com/faq">FAQ</a>
-    <a href="https://www.trainingathleticperformance.com/blog">Blog</a>
+    <a href="#programs">Programs</a>
+    <a href="#classes">Classes</a>
+    <a href="#app">App</a>
+    <a href="#faq-lite">FAQ</a>
   </div>
   <div class="footer-info">
     1751 S 1st Street, Rogers, Arkansas 72758<br>
