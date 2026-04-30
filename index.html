@@ -75,45 +75,15 @@
   /* Secondary sections override section-title to h2 */
   .classes .section-title, .faq-lite .section-title { font-size: var(--text-h2); }
   .section-lead { font-size: var(--text-body-lead); font-weight: var(--weight-light); line-height: var(--leading-loose); color: var(--color-text-muted); max-width: var(--measure-default); }
-  /* ============== METHOD (primary, editorial, three pillars) ============== */
-  /* No card chrome anywhere. Hairline rules + asymmetric grid + colored
-     numerals do the structural work. Off-grid eyebrow sits in a narrow
-     left column so the eye registers it as a section marker without
-     aligning it to the H1. */
-  .method { background: var(--color-bg-alt); }
-  .method-inner {
-    max-width: var(--container-max);
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: minmax(140px, 180px) minmax(0, 1fr);
-    column-gap: var(--space-md);
-    align-items: start;
-  }
-  .method-eyebrow {
-    font-family: var(--font-display);
-    font-weight: var(--weight-semibold);
-    font-size: var(--text-caption);
-    letter-spacing: var(--tracking-eyebrow);
-    text-transform: uppercase;
-    color: var(--blue);
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding-top: 14px;     /* visually align rule with H1 cap-height */
-    white-space: nowrap;
-  }
-  .method-eyebrow-rule {
-    display: block;
-    width: 22px;
-    height: 2px;
-    background: var(--blue);
-    flex-shrink: 0;
-  }
-  .method-content { max-width: var(--measure-wide); }
-  /* Method title intentionally uses h2 (not h1) so it doesn't compete
-     with the hero headline. The section's visual weight comes from the
-     numerals + hairlines + pillar bodies, not from the title size. */
-  .method-title {
+  /* ============== HOW WE TRAIN (primary, editorial chart) ============== */
+  /* Pedagogical rigor section. No card chrome around the chart —
+     hairline rules between rows do the structural work. SVG fill-
+     circles guarantee identical sizing across all OS/browser font
+     stacks (unicode circle glyphs render inconsistently). */
+  .htw { background: var(--color-bg-alt); }
+  .htw-inner { max-width: var(--container-max); margin: 0 auto; }
+  .htw-header { margin-bottom: var(--space-md); max-width: var(--measure-wide); }
+  .htw-title {
     font-family: var(--font-display);
     font-weight: var(--weight-black);
     font-size: var(--text-h2);
@@ -121,61 +91,175 @@
     letter-spacing: var(--tracking-display);
     text-transform: uppercase;
     color: var(--navy);
-    margin-bottom: var(--space-md);
+    margin: var(--space-3xs) 0 var(--space-2xs);
   }
-  .method-divider {
-    border: 0;
-    border-top: 1px solid var(--color-border-strong);
-    margin: 0;
-  }
-  /* Pillars — asymmetric numeral / body grid, hairline divided */
-  .pillar {
-    display: grid;
-    grid-template-columns: minmax(72px, 96px) minmax(0, 1fr);
-    column-gap: var(--space-sm);
-    align-items: baseline;
-    padding-block: var(--space-md);
-  }
-  .pillar-numeral {
-    font-family: var(--font-display);
-    font-weight: var(--weight-black);
-    font-size: var(--text-h1);
-    line-height: 1;
-    letter-spacing: -0.02em;
-  }
-  .pillar--01 .pillar-numeral { color: var(--color-accent-unprompted); }   /* gold */
-  .pillar--02 .pillar-numeral { color: var(--color-accent-academy); }      /* blue */
-  .pillar--03 .pillar-numeral { color: var(--color-accent-foundations); }  /* green */
-  .pillar-name {
-    font-family: var(--font-display);
-    font-weight: var(--weight-black);
-    font-size: var(--text-h3);
-    line-height: var(--leading-tight);
-    letter-spacing: 0.02em;
-    text-transform: uppercase;
-    color: var(--navy);
-    margin-bottom: var(--space-2xs);
-  }
-  .pillar-text {
+  .htw-lead {
     font-size: var(--text-body-lead);
     font-weight: var(--weight-light);
     line-height: var(--leading-loose);
     color: var(--color-text-muted);
     max-width: var(--measure-default);
   }
-  /* Inline pillar links — invisible at rest, colored on hover.
-     Soft escape hatch for parents who've already decided. */
-  .pillar-link {
-    color: inherit;
-    text-decoration: none;
-    border-bottom: 2px solid transparent;
-    padding-bottom: 1px;
-    transition: color var(--duration-base) ease, border-color var(--duration-base) ease;
+
+  /* Chart grid — 5 columns: 1 row-label + 4 grade ranges */
+  .htw-chart {
+    display: grid;
+    grid-template-columns: minmax(110px, 1.4fr) repeat(4, minmax(0, 1fr));
+    border-top: 1px solid var(--color-border-strong);
+    border-bottom: 1px solid var(--color-border-strong);
   }
-  .pillar-link.foundations:hover { color: var(--color-accent-foundations); border-bottom-color: var(--color-accent-foundations); }
-  .pillar-link.academy:hover     { color: var(--color-accent-academy);     border-bottom-color: var(--color-accent-academy); }
-  .pillar-link.unprompted:hover  { color: var(--color-accent-unprompted);  border-bottom-color: var(--color-accent-unprompted); }
-  .pillar-link:focus-visible     { outline: 2px solid currentColor; outline-offset: 3px; border-bottom-color: transparent; }
+  .htw-row { display: contents; }
+  .htw-cell {
+    padding: var(--space-2xs);
+    border-bottom: 1px solid var(--color-border);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 6px;
+    text-align: center;
+    min-height: 84px;
+  }
+  .htw-row:last-child .htw-cell { border-bottom: none; }
+  .htw-cell--head {
+    border-bottom: 2px solid var(--color-border-strong);
+    padding-block: var(--space-2xs);
+    justify-content: center;
+  }
+  .htw-cell--corner { border-bottom: 2px solid var(--color-border-strong); }
+  .htw-cell--label {
+    text-align: left;
+    align-items: flex-start;
+    justify-content: center;
+    font-family: var(--font-display);
+    font-weight: var(--weight-bold);
+    font-size: var(--text-caption);
+    letter-spacing: var(--tracking-caps);
+    text-transform: uppercase;
+    color: var(--navy);
+    padding-inline: 0 var(--space-2xs);
+  }
+  .htw-grade {
+    font-family: var(--font-display);
+    font-weight: var(--weight-bold);
+    font-size: 13px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--navy);
+  }
+  .htw-grade-sub {
+    font-size: 10px;
+    font-weight: var(--weight-medium);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-text-faint);
+    margin-top: 2px;
+  }
+
+  /* Fill circles — fixed 22px, never resize. */
+  .fc {
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+    color: var(--navy);
+    display: block;
+  }
+
+  /* Cell descriptor below the circle */
+  .htw-descriptor {
+    font-size: 10px;
+    font-style: italic;
+    line-height: 1.3;
+    color: var(--color-text-faint);
+    text-align: center;
+  }
+
+  /* Info button — small, muted, opens dialog */
+  .htw-info {
+    background: none;
+    border: 0;
+    cursor: pointer;
+    padding: 2px 4px;
+    font-size: 12px;
+    line-height: 1;
+    color: var(--color-text-faint);
+    transition: color var(--duration-base) ease;
+  }
+  .htw-info:hover, .htw-info:focus-visible { color: var(--blue); }
+  .htw-info:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }
+
+  /* Legend */
+  .htw-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+    margin-top: var(--space-md);
+    padding-top: var(--space-sm);
+    border-top: 1px dashed var(--color-border);
+  }
+  .htw-legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-display);
+    font-weight: var(--weight-semibold);
+    font-size: var(--text-caption);
+    letter-spacing: var(--tracking-caps);
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+  }
+
+  /* Popup dialogs */
+  .htw-popup {
+    max-width: 32rem;
+    width: calc(100vw - 32px);
+    padding: var(--space-md);
+    border: 1px solid var(--color-border-strong);
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-sans);
+    box-shadow: var(--shadow-lg);
+    position: fixed;
+    inset: 0;
+    margin: auto;
+  }
+  .htw-popup::backdrop {
+    background: rgba(14, 26, 46, 0.55);
+  }
+  .htw-popup-close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: none;
+    border: 0;
+    font-size: 28px;
+    line-height: 1;
+    width: 36px;
+    height: 36px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--color-text-muted);
+    transition: color var(--duration-base) ease, background var(--duration-base) ease;
+  }
+  .htw-popup-close:hover { color: var(--color-text); background: var(--color-bg-alt); }
+  .htw-popup-frame {
+    font-family: var(--font-display);
+    font-weight: var(--weight-bold);
+    font-size: var(--text-caption);
+    letter-spacing: var(--tracking-eyebrow);
+    text-transform: uppercase;
+    color: var(--blue);
+    margin-bottom: var(--space-2xs);
+    padding-right: var(--space-md);
+  }
+  .htw-popup-frame strong { font-weight: var(--weight-bold); }
+  .htw-popup-body {
+    font-size: var(--text-body);
+    line-height: var(--leading-loose);
+    color: var(--color-text-muted);
+  }
 
   /* ============== APP (secondary, contained navy panel) ============== */
   .app { background: var(--color-bg); border-top: 1px solid var(--color-border); }
@@ -275,12 +359,45 @@
   .class-meta { font-family: var(--font-display); font-size: 12px; font-weight: var(--weight-semibold); letter-spacing: 0.04em; color: var(--color-text-faint); }
   .class-book { font-family: var(--font-display); font-weight: var(--weight-bold); font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--blue); text-decoration: none; border-bottom: 1px solid rgba(46,117,182,0.3); padding-bottom: 1px; }
 
-  /* ============== FAQ (secondary, supporting) ============== */
-  .faq-lite { background: var(--color-bg-alt); border-top: 1px solid var(--color-border); }
-  .faq-list { display: grid; gap: 2px; background: var(--gray-200); border: 1px solid var(--gray-200); }
-  .faq-item { background: var(--white); padding: 22px; }
-  .faq-q { font-family: var(--font-display); font-weight: var(--weight-extrabold); font-size: var(--text-h3); line-height: var(--leading-tight); text-transform: uppercase; color: var(--navy); margin-bottom: var(--space-3xs); }
-  .faq-a { font-size: var(--text-body); color: var(--color-text-muted); }
+  /* ============== FAQ — Foundations-style accordion cards ============== */
+  /* Native <details>/<summary> dropdowns. Question collapsed by default;
+     click expands the answer. Smaller, sentence-case question type. */
+  .faq-lite { background: var(--color-bg); border-top: 1px solid var(--color-border); }
+  .faq-list { display: flex; flex-direction: column; gap: 12px; background: transparent; border: none; }
+  .faq-item { background: var(--white); border: 1px solid var(--gray-200); border-radius: 12px; overflow: hidden; padding: 0; }
+  .faq-q {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 16px 22px;
+    cursor: pointer;
+    font-family: var(--font-sans);
+    font-weight: var(--weight-semibold);
+    font-size: 16px;
+    line-height: 1.4;
+    letter-spacing: normal;
+    text-transform: none;
+    color: var(--navy);
+    margin-bottom: 0;
+    list-style: none;
+    transition: color var(--duration-base) ease;
+  }
+  .faq-q::-webkit-details-marker { display: none; }
+  .faq-q::marker { content: ''; }
+  .faq-q:hover { color: var(--blue); }
+  .faq-q span { flex: 1 1 auto; }
+  .faq-chevron { width: 16px; height: 16px; flex-shrink: 0; color: var(--color-text-faint); transition: transform var(--duration-base) ease; }
+  .faq-item[open] .faq-chevron { transform: rotate(180deg); }
+  .faq-item[open] .faq-q { color: var(--blue); }
+  .faq-a { padding: 16px 22px 20px; border-top: 1px solid var(--color-border); font-size: var(--text-body); color: var(--color-text-muted); }
+  .faq-a > *:first-child { margin-top: 0; }
+  .faq-a p { font-size: var(--text-body); color: var(--color-text-muted); line-height: var(--leading-loose); }
+  .faq-a p + ul, .faq-a ul + p { margin-top: var(--space-3xs); }
+  .faq-bullets { list-style: none; padding: 0; margin: 0; display: grid; gap: 6px; }
+  .faq-bullets li { display: flex; gap: 9px; font-size: var(--text-body); line-height: var(--leading-normal); color: var(--color-text-muted); }
+  .faq-bullets li::before { content: ''; width: 4px; height: 4px; border-radius: 50%; background: var(--blue); flex-shrink: 0; margin-top: 9px; }
+  .faq-bullets li strong { color: var(--navy); font-weight: var(--weight-bold); }
 
   /* ============== FINAL CTA (secondary, closing) ============== */
   .cta-final { background: var(--color-bg-strong); text-align: center; position: relative; overflow: hidden; }
@@ -315,7 +432,13 @@
     .club-inner { grid-template-columns: 1fr; gap: 40px; }
     .programs-grid { grid-template-columns: 1fr; }
     .classes-grid { grid-template-columns: 1fr 1fr; }
+    /* App panel — collapse to single column AND center its children
+       (invite code box + store badges + Open Direct Invite). At
+       desktop the 2-col layout works left-aligned; at mobile a
+       centered stack reads clearer. */
     .app-panel { grid-template-columns: 1fr; gap: 28px; padding: var(--space-sm); }
+    .app-panel-text { text-align: center; }
+    .app-panel-stores { align-items: center; }
   }
   @media (max-width: 960px) {
     nav { padding: 14px var(--container-pad-md); }
@@ -334,32 +457,32 @@
        visual patterns so consecutive sections don't all read as
        "another card grid." */
 
-    /* Method section — collapse asymmetric grid to single column.
-       Eyebrow stacks above H1 in normal flow. Pillar numerals stack
-       above their bodies. Hairlines and color anchoring still do
-       all the structural work. */
-    .method-inner { grid-template-columns: 1fr; row-gap: var(--space-xs); }
-    .method-eyebrow { padding-top: 0; }
-    .method-content { max-width: none; }
-    .pillar { grid-template-columns: 1fr; row-gap: var(--space-3xs); padding-block: var(--space-sm); }
-    .pillar-numeral { font-size: clamp(40px, 12vw, 56px); }
-    .pillar-text { font-size: var(--text-body); }
+    /* How We Train chart — keep 5-column grid on mobile per spec
+       ("4 narrow columns at 375px viewport"). Tighten cell padding
+       and font sizes; row labels get more compact. */
+    .htw-chart { grid-template-columns: minmax(82px, 1.2fr) repeat(4, minmax(0, 1fr)); }
+    .htw-cell { padding: 8px 4px; gap: 4px; min-height: 78px; }
+    .htw-cell--label { font-size: 10px; padding-inline: 0 6px; }
+    .htw-grade { font-size: 11px; }
+    .htw-grade-sub { font-size: 9px; }
+    .htw-descriptor { font-size: 9px; }
+    .htw-legend { gap: var(--space-xs); }
+    .htw-legend-item { font-size: 10px; }
 
-    /* Programs — drop bordered card pattern. Becomes a vertical
-       comparison list with hairline rules between items. Hides fit
-       line and detail bullets (deep dive lives on the linked page). */
+    /* Programs — drop bordered card pattern but KEEP detail bullets
+       (parents want the specs visible at mobile too). Hides fit line
+       only — that line is descriptive, not a spec. */
     .programs-grid { grid-template-columns: 1fr; gap: 0; background: transparent; border: none; }
     .prog-card { background: transparent; border: none; border-top: 1px solid var(--color-border); padding: var(--space-sm) 0; }
     .prog-card:first-child { border-top: none; padding-top: 0; }
     .prog-card:hover { background: transparent; }
     .prog-card-top-bar { display: none; }
     .prog-fit { display: none; }
-    .prog-details { display: none; }
     .prog-desc { margin-bottom: var(--space-xs); }
 
-    /* Classes — same pattern shift: drop bordered cards, become a
-       hairline-divided vertical list. Hides topic bullets (book the
-       class to see the agenda). */
+    /* Classes — drop bordered cards, become a hairline-divided
+       vertical list. Topic bullets stay visible on mobile so the
+       class agenda is scannable without tapping in. */
     .classes-grid { grid-template-columns: 1fr; gap: 0; }
     .class-card { background: transparent; border: none; border-top: 1px solid var(--color-border); }
     .class-card:first-child { border-top: none; }
@@ -367,8 +490,14 @@
     .class-card-top { padding: var(--space-sm) 0 0; }
     .class-divider { display: none; }
     .class-body { padding: 0; }
-    .class-topics { display: none; }
+    .class-topics { padding: var(--space-2xs) 0 0; }
     .class-footer { padding: var(--space-2xs) 0 var(--space-sm); border-top: none; margin-top: var(--space-3xs); }
+
+    /* App section — tighter on mobile so the panel (the actual ask)
+       gets attention faster. Heading + lead compress; panel stays
+       prominent. */
+    .app-title { font-size: var(--text-h3); margin-bottom: var(--space-3xs); }
+    .app-lead { font-size: var(--text-body); margin-bottom: var(--space-sm); }
   }
   @media (max-width: 640px) {
     /* Compress section padding while preserving primary/secondary rhythm.
@@ -386,8 +515,11 @@
     .hstat-num { font-size: 22px; }
     .hstat-label { font-size: 10px; }
     .footer-info { text-align: left; }
-    .pillar { padding-block: var(--space-xs); }
-    .pillar-numeral { font-size: 40px; }
+    .htw-chart { grid-template-columns: minmax(72px, 1fr) repeat(4, minmax(0, 1fr)); }
+    .htw-cell { padding: 8px 2px; min-height: 72px; }
+    .htw-cell--label { font-size: 9px; }
+    .htw-grade { font-size: 10px; }
+    .htw-grade-sub { font-size: 8px; }
     .app-panel { padding: var(--space-xs); }
     .app-code-value { font-size: 18px; }
     .cta-final { padding-inline: var(--container-pad-sm); }
@@ -443,50 +575,7 @@
         <p class="hero-sub">TAP Athletes is a pitching academy built on the belief that anyone can learn to pitch. We help young pitchers build mechanics, command, and confidence through structured programs, classes, and individual instruction.</p>
         <div class="hero-actions">
           <a class="btn-primary" href="#programs">Explore Programs</a>
-          <a class="btn-secondary" href="https://wix.app/mobile.apps/9UnuV7p?ref=mam" target="_blank" rel="noopener noreferrer">Get the App</a>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="hero-stats" aria-label="TAP Athletes at a glance">
-    <div class="hero-stat"><div class="hstat-num">Rogers, AR</div><div class="hstat-label">Northwest Arkansas</div></div>
-    <div class="hero-stat"><div class="hstat-num">Ages 8+</div><div class="hstat-label">Foundations through HS</div></div>
-    <div class="hero-stat"><div class="hstat-num">4 Programs</div><div class="hstat-label">Foundations to Accelerator</div></div>
-    <div class="hero-stat"><div class="hstat-num">1 Standard</div><div class="hstat-label">The 60/10 Club</div></div>
-  </div>
-
-  <section class="method" id="method">
-    <div class="method-inner">
-      <div class="method-eyebrow reveal" aria-hidden="false">
-        <span class="method-eyebrow-rule" aria-hidden="true"></span>The Method
-      </div>
-      <div class="method-content">
-        <h2 class="method-title reveal rd1">Pitching, taught as a subject.</h2>
-        <hr class="method-divider" aria-hidden="true">
-        <article class="pillar pillar--01 reveal rd1">
-          <div class="pillar-numeral" aria-hidden="true">01</div>
-          <div class="pillar-body">
-            <h3 class="pillar-name">An Integrated Environment.</h3>
-            <p class="pillar-text">Pitchers learn faster when they train next to other pitchers. They watch, they copy, they push each other &mdash; and they pick up things a coach wouldn't have thought to say. That's why we built one facility around one curriculum, with one group of athletes &mdash; instead of running parallel studios for private lessons. The room teaches as much as the coach does.</p>
-          </div>
-        </article>
-        <hr class="method-divider" aria-hidden="true">
-        <article class="pillar pillar--02 reveal rd2">
-          <div class="pillar-numeral" aria-hidden="true">02</div>
-          <div class="pillar-body">
-            <h3 class="pillar-name">A School Mindset.</h3>
-            <p class="pillar-text">Pitching is a teachable subject. It has a curriculum. It has prerequisites. It has standards an athlete can demonstrate and milestones they can earn. We don't measure progress in hours, because hours don't measure progress. Athletes advance when they execute the skill &mdash; not when enough Tuesdays have passed.</p>
-          </div>
-        </article>
-        <hr class="method-divider" aria-hidden="true">
-        <article class="pillar pillar--03 reveal rd3">
-          <div class="pillar-numeral" aria-hidden="true">03</div>
-          <div class="pillar-body">
-            <h3 class="pillar-name">Guided Freedom.</h3>
-            <p class="pillar-text">At some point an athlete has to do the work without us watching. Our job isn't to drill them into being a pitcher &mdash; it's to teach them how to teach themselves. We coach with proximity, not control. We expect athletes to take responsibility between sessions. The structure is real. The freedom to experiment is the point.</p>
-          </div>
-        </article>
       </div>
     </div>
   </section>
@@ -495,7 +584,7 @@
     <div class="app-inner">
       <div class="section-eyebrow reveal">The TAP Athletes App</div>
       <h2 class="app-title reveal rd1">Run by you. Powered by Spaces by Wix.</h2>
-      <p class="app-lead reveal rd2">Book sessions and programs, message coaches, manage your schedule, and see new openings as we post them. The TAP Athletes app runs inside Spaces by Wix — a scheduling and communication companion, not a training platform. The baseball happens at the facility.</p>
+      <p class="app-lead reveal rd2">The TAP Athletes app runs inside Spaces by Wix &mdash; a scheduling and communication companion; Book sessions and programs, message coaches, manage your schedule, and see new openings as we post them.</p>
       <div class="app-panel reveal rd2">
         <div class="app-panel-text">
           <div class="app-panel-eyebrow">Get the App</div>
@@ -529,16 +618,14 @@
           <div class="prog-card-top-bar"></div>
           <div class="prog-badge">Flagship · Guaranteed</div>
           <div class="prog-name">Pitching<br>Accelerator</div>
-          <div class="prog-format">6-Month Cohort · Ages 14+</div>
-          <div class="prog-fit">Best for committed athletes 14+ at the inflection point</div>
-          <p class="prog-desc">For athletes 14+ at the inflection point. More touchpoints, faster gains, and a velocity + command guarantee inside six months.</p>
+          <div class="prog-format">6-Month Cohort · 14U+ Playing Level</div>
+          <div class="prog-fit">Best for committed athletes at 14U playing level and higher</div>
+          <p class="prog-desc">For athletes at 14U playing level and up, at the inflection point. More touchpoints, faster gains, and a velocity + command guarantee inside six months.</p>
           <div class="prog-details">
-            <div class="prog-detail">6 months · 4 athletes per cohort</div>
-            <div class="prog-detail">72 sessions across 18 skills</div>
-            <div class="prog-detail">Rapsodo analysis + live at-bats</div>
-            <div class="prog-detail">4 effort phases from 30% to 85%+</div>
-            <div class="prog-detail">+5 MPH velocity + 5% strike guarantee, or full refund</div>
-            <div class="prog-detail">$4,500 per athlete</div>
+            <div class="prog-detail">6-month semi-private cohort</div>
+            <div class="prog-detail">6+ hours per week of hybrid instruction</div>
+            <div class="prog-detail">+5 mph FB velocity + 5% strike guarantee, or full refund</div>
+            <div class="prog-detail">$4,500</div>
           </div>
           <div class="prog-actions"><a href="/pitching-accelerator" class="btn-secondary">Learn More</a></div>
         </article>
@@ -546,13 +633,12 @@
           <div class="prog-card-top-bar"></div>
           <div class="prog-badge">Cohort Program</div>
           <div class="prog-name">Train<br>Unprompted™</div>
-          <div class="prog-format">6 Weeks · 3 Touchpoints Per Week</div>
+          <div class="prog-format">6-Week Cohort · Ages 13+</div>
           <div class="prog-fit">Best for athletes who need structure between sessions</div>
           <p class="prog-desc">A 6-week program designed to build athlete ownership. The goal is simple: help athletes train without being told to through repeated touchpoints and practical accountability.</p>
           <div class="prog-details">
-            <div class="prog-detail">3–4 athletes per cohort</div>
-            <div class="prog-detail">Facility session, home visit, and recorded video call</div>
-            <div class="prog-detail">15+ total touchpoints across the program</div>
+            <div class="prog-detail">Ages 13+ (Jr High and up) · 6-week program</div>
+            <div class="prog-detail">3 weekly touchpoints: facility, home visit, video call</div>
             <div class="prog-detail">Student-athlete planner included</div>
             <div class="prog-detail">$497 flat — no add-ons</div>
           </div>
@@ -661,22 +747,153 @@
           </div>
           <div class="class-footer"><div class="class-meta">Open Enrollment · All Levels</div><a href="https://wix.to/6k7W5iF" class="class-book" target="_blank" rel="noopener noreferrer">Book Class</a></div>
         </article>
-        <article class="class-card reveal rd2">
-          <div class="class-card-top">
-            <div class="class-number">Not sure which class?</div>
-            <div class="class-tag">Fastest Next Step</div>
-            <div class="class-title">Ask Before You Book</div>
-            <div class="class-subtitle">Program vs. Class Guidance</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="htw" id="how-we-train">
+    <div class="htw-inner">
+      <div class="htw-header">
+        <div class="section-eyebrow reveal">How We Train</div>
+        <h2 class="htw-title reveal rd1">Same curriculum. Different tools.</h2>
+        <p class="htw-lead reveal rd2">Tools and load scale to where the athlete is developmentally. Grade ranges shown as a reference, not a rule.</p>
+      </div>
+
+      <div class="htw-chart reveal rd2" role="table" aria-label="Training tools by grade range">
+        <!-- Header row -->
+        <div class="htw-row htw-row--head" role="row">
+          <div class="htw-cell htw-cell--corner" role="columnheader"></div>
+          <div class="htw-cell htw-cell--head" role="columnheader">
+            <div class="htw-grade">3rd&ndash;4th</div>
+            <div class="htw-grade-sub">Elementary</div>
           </div>
-          <div class="class-divider"></div>
-          <div class="class-body">If you're deciding between a class, Foundations, or a full program, the fastest move is to talk to a coach first and get pointed in the right direction.</div>
-          <div class="class-topics">
-            <div class="class-topic">Get a recommendation based on age and experience</div>
-            <div class="class-topic">Avoid starting in the wrong offer</div>
-            <div class="class-topic">Use classes as a smart entry point when needed</div>
+          <div class="htw-cell htw-cell--head" role="columnheader">
+            <div class="htw-grade">5th&ndash;6th</div>
+            <div class="htw-grade-sub">Middle</div>
           </div>
-          <div class="class-footer"><div class="class-meta">Call or Text for Guidance</div><a href="tel:+18338602711" class="class-book">Talk With a Coach</a></div>
-        </article>
+          <div class="htw-cell htw-cell--head" role="columnheader">
+            <div class="htw-grade">7th&ndash;8th</div>
+            <div class="htw-grade-sub">Jr High</div>
+          </div>
+          <div class="htw-cell htw-cell--head" role="columnheader">
+            <div class="htw-grade">9&ndash;12</div>
+            <div class="htw-grade-sub">High School</div>
+          </div>
+        </div>
+
+        <!-- Row 1: Strength equipment -->
+        <div class="htw-row" role="row">
+          <div class="htw-cell htw-cell--label" role="rowheader">Strength equipment</div>
+          <div class="htw-cell" role="cell"><svg class="fc fc--empty" viewBox="0 0 24 24" aria-label="Not used"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/></svg></div>
+          <div class="htw-cell" role="cell"><svg class="fc fc--empty" viewBox="0 0 24 24" aria-label="Not used"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/></svg></div>
+          <div class="htw-cell" role="cell">
+            <svg class="fc fc--half" viewBox="0 0 24 24" aria-label="Introduced / scaling"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M 12 3 A 9 9 0 0 1 12 21 L 12 12 Z" fill="currentColor"/></svg>
+            <button class="htw-info" type="button" aria-haspopup="dialog" aria-label="More information about strength equipment for 7th-8th grade" data-popup="htw-popup-strength"><span aria-hidden="true">&#9432;</span></button>
+          </div>
+          <div class="htw-cell" role="cell"><svg class="fc fc--full" viewBox="0 0 24 24" aria-label="Standard"><circle cx="12" cy="12" r="9" fill="currentColor"/></svg></div>
+        </div>
+
+        <!-- Row 2: Weighted balls (plyo) -->
+        <div class="htw-row" role="row">
+          <div class="htw-cell htw-cell--label" role="rowheader">Weighted balls (plyo)</div>
+          <div class="htw-cell" role="cell">
+            <svg class="fc fc--quarter" viewBox="0 0 24 24" aria-label="First introduction"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M 12 3 A 9 9 0 0 1 21 12 L 12 12 Z" fill="currentColor"/></svg>
+            <span class="htw-descriptor">up to 5.25oz</span>
+          </div>
+          <div class="htw-cell" role="cell">
+            <svg class="fc fc--half" viewBox="0 0 24 24" aria-label="Introduced / scaling"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M 12 3 A 9 9 0 0 1 12 21 L 12 12 Z" fill="currentColor"/></svg>
+            <span class="htw-descriptor">up to 10oz</span>
+          </div>
+          <div class="htw-cell" role="cell"><svg class="fc fc--full" viewBox="0 0 24 24" aria-label="Standard"><circle cx="12" cy="12" r="9" fill="currentColor"/></svg></div>
+          <div class="htw-cell" role="cell"><svg class="fc fc--full" viewBox="0 0 24 24" aria-label="Standard"><circle cx="12" cy="12" r="9" fill="currentColor"/></svg></div>
+        </div>
+
+        <!-- Row 3: Medicine / Slam balls -->
+        <div class="htw-row" role="row">
+          <div class="htw-cell htw-cell--label" role="rowheader">Medicine / Slam balls</div>
+          <div class="htw-cell" role="cell"><svg class="fc fc--empty" viewBox="0 0 24 24" aria-label="Not used"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/></svg></div>
+          <div class="htw-cell" role="cell">
+            <svg class="fc fc--quarter" viewBox="0 0 24 24" aria-label="First introduction"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M 12 3 A 9 9 0 0 1 21 12 L 12 12 Z" fill="currentColor"/></svg>
+            <span class="htw-descriptor">2lb max</span>
+          </div>
+          <div class="htw-cell" role="cell"><svg class="fc fc--full" viewBox="0 0 24 24" aria-label="Standard"><circle cx="12" cy="12" r="9" fill="currentColor"/></svg></div>
+          <div class="htw-cell" role="cell"><svg class="fc fc--full" viewBox="0 0 24 24" aria-label="Standard"><circle cx="12" cy="12" r="9" fill="currentColor"/></svg></div>
+        </div>
+
+        <!-- Row 4: J-Bands -->
+        <div class="htw-row" role="row">
+          <div class="htw-cell htw-cell--label" role="rowheader">J-Bands</div>
+          <div class="htw-cell" role="cell"><svg class="fc fc--empty" viewBox="0 0 24 24" aria-label="Not used"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/></svg></div>
+          <div class="htw-cell" role="cell"><svg class="fc fc--empty" viewBox="0 0 24 24" aria-label="Not used"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/></svg></div>
+          <div class="htw-cell" role="cell">
+            <svg class="fc fc--full" viewBox="0 0 24 24" aria-label="Standard"><circle cx="12" cy="12" r="9" fill="currentColor"/></svg>
+            <span class="htw-descriptor">non-resistance warmup</span>
+            <button class="htw-info" type="button" aria-haspopup="dialog" aria-label="More information about J-Bands for 7th-8th grade" data-popup="htw-popup-jbands"><span aria-hidden="true">&#9432;</span></button>
+          </div>
+          <div class="htw-cell" role="cell"><svg class="fc fc--full" viewBox="0 0 24 24" aria-label="Standard"><circle cx="12" cy="12" r="9" fill="currentColor"/></svg></div>
+        </div>
+
+        <!-- Row 5: Rapsodo -->
+        <div class="htw-row" role="row">
+          <div class="htw-cell htw-cell--label" role="rowheader">Rapsodo</div>
+          <div class="htw-cell" role="cell"><svg class="fc fc--empty" viewBox="0 0 24 24" aria-label="Not used"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/></svg></div>
+          <div class="htw-cell" role="cell"><svg class="fc fc--empty" viewBox="0 0 24 24" aria-label="Not used"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/></svg></div>
+          <div class="htw-cell" role="cell">
+            <svg class="fc fc--half" viewBox="0 0 24 24" aria-label="Introduced / scaling"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M 12 3 A 9 9 0 0 1 12 21 L 12 12 Z" fill="currentColor"/></svg>
+            <button class="htw-info" type="button" aria-haspopup="dialog" aria-label="More information about Rapsodo for 7th-8th grade" data-popup="htw-popup-rapsodo"><span aria-hidden="true">&#9432;</span></button>
+          </div>
+          <div class="htw-cell" role="cell"><svg class="fc fc--full" viewBox="0 0 24 24" aria-label="Standard"><circle cx="12" cy="12" r="9" fill="currentColor"/></svg></div>
+        </div>
+
+        <!-- Row 6: Pocket radar -->
+        <div class="htw-row" role="row">
+          <div class="htw-cell htw-cell--label" role="rowheader">Pocket radar</div>
+          <div class="htw-cell" role="cell">
+            <svg class="fc fc--half" viewBox="0 0 24 24" aria-label="Introduced / scaling"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M 12 3 A 9 9 0 0 1 12 21 L 12 12 Z" fill="currentColor"/></svg>
+            <span class="htw-descriptor">effort bands</span>
+            <button class="htw-info" type="button" aria-haspopup="dialog" aria-label="More information about Pocket radar effort bands" data-popup="htw-popup-pocket-radar"><span aria-hidden="true">&#9432;</span></button>
+          </div>
+          <div class="htw-cell" role="cell">
+            <svg class="fc fc--half" viewBox="0 0 24 24" aria-label="Introduced / scaling"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M 12 3 A 9 9 0 0 1 12 21 L 12 12 Z" fill="currentColor"/></svg>
+            <span class="htw-descriptor">effort bands</span>
+            <button class="htw-info" type="button" aria-haspopup="dialog" aria-label="More information about Pocket radar effort bands" data-popup="htw-popup-pocket-radar"><span aria-hidden="true">&#9432;</span></button>
+          </div>
+          <div class="htw-cell" role="cell"><svg class="fc fc--full" viewBox="0 0 24 24" aria-label="Standard"><circle cx="12" cy="12" r="9" fill="currentColor"/></svg></div>
+          <div class="htw-cell" role="cell"><svg class="fc fc--full" viewBox="0 0 24 24" aria-label="Standard"><circle cx="12" cy="12" r="9" fill="currentColor"/></svg></div>
+        </div>
+
+        <!-- Row 7: Pulldowns / Long-toss -->
+        <div class="htw-row" role="row">
+          <div class="htw-cell htw-cell--label" role="rowheader">Pulldowns / Long-toss</div>
+          <div class="htw-cell" role="cell"><svg class="fc fc--empty" viewBox="0 0 24 24" aria-label="Not used"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/></svg></div>
+          <div class="htw-cell" role="cell">
+            <svg class="fc fc--quarter" viewBox="0 0 24 24" aria-label="First introduction"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M 12 3 A 9 9 0 0 1 21 12 L 12 12 Z" fill="currentColor"/></svg>
+            <span class="htw-descriptor">light long-toss</span>
+            <button class="htw-info" type="button" aria-haspopup="dialog" aria-label="More information about light long-toss for 5th-6th grade" data-popup="htw-popup-longtoss"><span aria-hidden="true">&#9432;</span></button>
+          </div>
+          <div class="htw-cell" role="cell"><svg class="fc fc--full" viewBox="0 0 24 24" aria-label="Standard"><circle cx="12" cy="12" r="9" fill="currentColor"/></svg></div>
+          <div class="htw-cell" role="cell"><svg class="fc fc--full" viewBox="0 0 24 24" aria-label="Standard"><circle cx="12" cy="12" r="9" fill="currentColor"/></svg></div>
+        </div>
+
+        <!-- Row 8: Independent Training -->
+        <div class="htw-row" role="row">
+          <div class="htw-cell htw-cell--label" role="rowheader">Independent Training</div>
+          <div class="htw-cell" role="cell"><svg class="fc fc--empty" viewBox="0 0 24 24" aria-label="Not used"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/></svg></div>
+          <div class="htw-cell" role="cell"><svg class="fc fc--empty" viewBox="0 0 24 24" aria-label="Not used"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/></svg></div>
+          <div class="htw-cell" role="cell">
+            <svg class="fc fc--half" viewBox="0 0 24 24" aria-label="Introduced / scaling"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M 12 3 A 9 9 0 0 1 12 21 L 12 12 Z" fill="currentColor"/></svg>
+            <button class="htw-info" type="button" aria-haspopup="dialog" aria-label="More information about Independent Training for 7th-8th grade" data-popup="htw-popup-independent"><span aria-hidden="true">&#9432;</span></button>
+          </div>
+          <div class="htw-cell" role="cell"><svg class="fc fc--full" viewBox="0 0 24 24" aria-label="Standard"><circle cx="12" cy="12" r="9" fill="currentColor"/></svg></div>
+        </div>
+      </div>
+
+      <!-- Legend -->
+      <div class="htw-legend reveal rd3" aria-label="Legend">
+        <div class="htw-legend-item"><svg class="fc fc--empty" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/></svg><span>Not used</span></div>
+        <div class="htw-legend-item"><svg class="fc fc--quarter" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M 12 3 A 9 9 0 0 1 21 12 L 12 12 Z" fill="currentColor"/></svg><span>First introduction</span></div>
+        <div class="htw-legend-item"><svg class="fc fc--half" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M 12 3 A 9 9 0 0 1 12 21 L 12 12 Z" fill="currentColor"/></svg><span>Introduced / scaling</span></div>
+        <div class="htw-legend-item"><svg class="fc fc--full" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="currentColor"/></svg><span>Standard</span></div>
       </div>
     </div>
   </section>
@@ -686,9 +903,53 @@
       <div class="section-eyebrow reveal">FAQ</div>
       <h2 class="section-title reveal rd1" style="margin-bottom:32px;">Questions Parents Ask Before They Call</h2>
       <div class="faq-list reveal" style="max-width:800px;">
-        <article class="faq-item"><div class="faq-q">What age does TAP Athletes work with?</div><div class="faq-a">We work with pitchers ages 8 and up. Foundations is designed specifically for younger and newer athletes. The Pitching Accelerator and Train Unprompted™ programs are best suited for athletes 14+ who already have some pitching experience.</div></article>
-        <article class="faq-item"><div class="faq-q">Do you offer private instruction outside of programs?</div><div class="faq-a">Yes. We offer individual instruction, group sessions, live at-bats, and Rapsodo scripted bullpens outside of our structured programs. Classes are also available as standalone bookings with no long-term commitment required.</div></article>
-        <article class="faq-item"><div class="faq-q">What makes TAP Athletes different from a private pitching coach?</div><div class="faq-a">A defined curriculum, measurable outcomes, and a structured environment where athletes train alongside other pitchers. Every session has a purpose and every program has a real finish line — not just ongoing lessons with no clear destination.</div></article>
+        <details class="faq-item">
+          <summary class="faq-q">
+            <span>What age does TAP Athletes work with?</span>
+            <svg class="faq-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </summary>
+          <div class="faq-a">
+            <p>We work with pitchers ages 8 and up. Each program targets a different stage:</p>
+            <ul class="faq-bullets">
+              <li><strong>Foundations</strong> &mdash; Ages 8+, all skill levels. Each pitcher starts with an in-person assessment, gets placed at the right phase, and advances by demonstrating execution.</li>
+              <li><strong>Pitching Accelerator</strong> &mdash; 14U playing level and higher, for athletes at the inflection point.</li>
+              <li><strong>Train Unprompted</strong> &mdash; Ages 13+ (Junior High and up), for athletes who need structure between sessions.</li>
+            </ul>
+            <p>The Accelerator and Train Unprompted both expect some pitching experience already.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-q">
+            <span>Do you offer private instruction outside of programs?</span>
+            <svg class="faq-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </summary>
+          <div class="faq-a">
+            <p>Yes. Outside of our structured programs we offer:</p>
+            <ul class="faq-bullets">
+              <li>Individual instruction</li>
+              <li>Live at-bats</li>
+              <li>Rapsodo scripted bullpens</li>
+              <li>Standalone classes &mdash; Pitch Design, Beyond the Pitch, and rotating topics</li>
+            </ul>
+            <p>All booked inside the TAP Athletes app. No long-term commitment required.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-q">
+            <span>What makes TAP Athletes different from a private pitching coach?</span>
+            <svg class="faq-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </summary>
+          <div class="faq-a">
+            <p>The difference isn't the technology or the facility &mdash; it's how, what, and why we teach pitching.</p>
+            <ul class="faq-bullets">
+              <li><strong>Pitching-only.</strong> No hitting, no fielding, no general baseball. We go deeper into pitching, not wider &mdash; and we offer private instruction, classes, and cohort programs all under one roof.</li>
+              <li><strong>Full-time pitching instructors.</strong> No other job, no other career. Pitcher development is the whole job.</li>
+              <li><strong>A documented curriculum</strong> with defined progression, regression, and real end points to every phase.</li>
+              <li><strong>Independent training resources.</strong> Drill libraries, planners, and video reference for the work athletes do between coached sessions.</li>
+              <li><strong>Finish lines.</strong> Every program has one &mdash; Foundations milestones, the 60/10 Club, and the Accelerator's velocity + command guarantee.</li>
+            </ul>
+          </div>
+        </details>
       </div>
     </div>
   </section>
@@ -707,6 +968,44 @@
     </div>
   </section>
 </main>
+
+<!-- How We Train popups. Native HTML5 <dialog> — opened by buttons in
+     the chart via showModal(). Backdrop click and Esc both close. -->
+<dialog id="htw-popup-strength" class="htw-popup" aria-labelledby="htw-popup-strength-title">
+  <button class="htw-popup-close" type="button" aria-label="Close">&times;</button>
+  <p class="htw-popup-frame" id="htw-popup-strength-title"><strong>Why introduced, not standard:</strong></p>
+  <p class="htw-popup-body">Junior high athletes are entering puberty and beginning structured strength work at school &mdash; many are already lifting in football or PE. We mirror that progression carefully. External load is introduced under direct supervision, scaled to the individual, and paired with mechanical work.</p>
+</dialog>
+
+<dialog id="htw-popup-jbands" class="htw-popup" aria-labelledby="htw-popup-jbands-title">
+  <button class="htw-popup-close" type="button" aria-label="Close">&times;</button>
+  <p class="htw-popup-frame" id="htw-popup-jbands-title"><strong>Why warmups, not resistance:</strong></p>
+  <p class="htw-popup-body">J-Bands are part of every junior high athlete's pre-throw routine &mdash; activating the rotator cuff and shoulder stabilizers before any throwing begins. They're not used for resistance training at this stage. The body's structural maturity drives that decision: warmup activation is appropriate, but heavy resisted band work isn't.</p>
+</dialog>
+
+<dialog id="htw-popup-rapsodo" class="htw-popup" aria-labelledby="htw-popup-rapsodo-title">
+  <button class="htw-popup-close" type="button" aria-label="Close">&times;</button>
+  <p class="htw-popup-frame" id="htw-popup-rapsodo-title"><strong>Why introduced at this stage:</strong></p>
+  <p class="htw-popup-body">Rapsodo enters during junior high in tracked bullpens, not on every session. Athletes start seeing their own pitch metrics &mdash; velocity, spin, movement &mdash; but data isn't yet the focus of training. The goal at this stage is exposure and awareness. By high school, the data becomes a regular part of how training decisions get made.</p>
+</dialog>
+
+<dialog id="htw-popup-pocket-radar" class="htw-popup" aria-labelledby="htw-popup-pocket-radar-title">
+  <button class="htw-popup-close" type="button" aria-label="Close">&times;</button>
+  <p class="htw-popup-frame" id="htw-popup-pocket-radar-title"><strong>What "effort bands" means:</strong></p>
+  <p class="htw-popup-body">Younger athletes don't train to a velocity number. Instead, throws are organized into effort bands &mdash; for example, 50% / 70% / 100% &mdash; to teach intent and self-regulation. The radar reads the actual output, helping the athlete and coach understand whether the body is matching the intent. It's a teaching tool, not a goal-setting one.</p>
+</dialog>
+
+<dialog id="htw-popup-longtoss" class="htw-popup" aria-labelledby="htw-popup-longtoss-title">
+  <button class="htw-popup-close" type="button" aria-label="Close">&times;</button>
+  <p class="htw-popup-frame" id="htw-popup-longtoss-title"><strong>Why light long-toss only:</strong></p>
+  <p class="htw-popup-body">Middle-school athletes begin building arm strength through controlled, distance-based long-toss &mdash; emphasizing clean throwing patterns and effortless distance, not maximum-effort pulldowns. The progression to true pulldowns happens in junior high, when the body can handle the volume and intensity safely.</p>
+</dialog>
+
+<dialog id="htw-popup-independent" class="htw-popup" aria-labelledby="htw-popup-independent-title">
+  <button class="htw-popup-close" type="button" aria-label="Close">&times;</button>
+  <p class="htw-popup-frame" id="htw-popup-independent-title"><strong>What "monitored independence" looks like:</strong></p>
+  <p class="htw-popup-body">Junior high athletes start running through drill blocks without a coach talking on every rep. The coach is in the room, observing &mdash; but stepping back. Athletes are allowed to make mistakes and self-correct, which is how real ownership begins. Full independent training capacity comes in high school. Until then, the coach stays close enough to step in when it matters.</p>
+</dialog>
 
 <footer>
   <div class="footer-logo">TAP <span>Athletes</span></div>
@@ -747,6 +1046,28 @@
   window.addEventListener('load', notifyHeight);
   window.addEventListener('resize', notifyHeight);
   setTimeout(notifyHeight, 500);
+
+  // How We Train popups — native <dialog> open/close. Each htw-info
+  // button has data-popup="<dialog-id>". Clicking opens via showModal();
+  // backdrop click and Esc both close (Esc handled natively).
+  document.querySelectorAll('.htw-info').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const target = document.getElementById(btn.dataset.popup);
+      if (target && typeof target.showModal === 'function') target.showModal();
+    });
+  });
+  document.querySelectorAll('.htw-popup').forEach((dialog) => {
+    // Backdrop click closes — detect via click outside the dialog content rect.
+    dialog.addEventListener('click', (e) => {
+      if (e.target !== dialog) return;
+      const rect = dialog.getBoundingClientRect();
+      const inside = e.clientX >= rect.left && e.clientX <= rect.right
+                  && e.clientY >= rect.top  && e.clientY <= rect.bottom;
+      if (!inside) dialog.close();
+    });
+    const closeBtn = dialog.querySelector('.htw-popup-close');
+    if (closeBtn) closeBtn.addEventListener('click', () => dialog.close());
+  });
 </script>
 </body>
 </html>
