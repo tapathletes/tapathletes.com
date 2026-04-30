@@ -398,6 +398,11 @@
   .faq-bullets li { display: flex; gap: 9px; font-size: var(--text-body); line-height: var(--leading-normal); color: var(--color-text-muted); }
   .faq-bullets li::before { content: ''; width: 4px; height: 4px; border-radius: 50%; background: var(--blue); flex-shrink: 0; margin-top: 9px; }
   .faq-bullets li strong { color: var(--navy); font-weight: var(--weight-bold); }
+  /* Stacked topic blocks (matches Foundations "what happens at the assessment"
+     pattern). Title above, body paragraph below — no inline side-by-side. */
+  .faq-topics { display: grid; gap: 18px; margin-top: var(--space-3xs); }
+  .faq-topic-title { font-family: var(--font-display); font-weight: var(--weight-bold); font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--navy); margin-bottom: 4px; }
+  .faq-topic-body { font-size: var(--text-body); font-weight: var(--weight-light); line-height: var(--leading-loose); color: var(--color-text-muted); margin: 0; }
 
   /* ============== FINAL CTA (secondary, closing) ============== */
   .cta-final { background: var(--color-bg-strong); text-align: center; position: relative; overflow: hidden; }
@@ -941,13 +946,28 @@
           </summary>
           <div class="faq-a">
             <p>The difference isn't the technology or the facility &mdash; it's how, what, and why we teach pitching.</p>
-            <ul class="faq-bullets">
-              <li><strong>Pitching-only.</strong> No hitting, no fielding, no general baseball. We go deeper into pitching, not wider &mdash; and we offer private instruction, classes, and cohort programs all under one roof.</li>
-              <li><strong>Full-time pitching instructors.</strong> No other job, no other career. Pitcher development is the whole job.</li>
-              <li><strong>A documented curriculum</strong> with defined progression, regression, and real end points to every phase.</li>
-              <li><strong>Independent training resources.</strong> Drill libraries, planners, and video reference for the work athletes do between coached sessions.</li>
-              <li><strong>Finish lines.</strong> Every program has one &mdash; Foundations milestones, the 60/10 Club, and the Accelerator's velocity + command guarantee.</li>
-            </ul>
+            <div class="faq-topics">
+              <div class="faq-topic">
+                <div class="faq-topic-title">Pitching-only focus</div>
+                <p class="faq-topic-body">No hitting, no fielding, no general baseball. We go deeper into pitching, not wider &mdash; and we offer private instruction, classes, and cohort programs all under one roof.</p>
+              </div>
+              <div class="faq-topic">
+                <div class="faq-topic-title">Full-time pitching instructors</div>
+                <p class="faq-topic-body">No other job, no other career. Pitcher development is the whole job.</p>
+              </div>
+              <div class="faq-topic">
+                <div class="faq-topic-title">A documented curriculum</div>
+                <p class="faq-topic-body">Defined progression and regression, with real end points to every phase. Not session-by-session improvisation.</p>
+              </div>
+              <div class="faq-topic">
+                <div class="faq-topic-title">Independent training options</div>
+                <p class="faq-topic-body">Beyond coached sessions, athletes can train under our umbrella without a coach instructing every rep. Live at-bats, Rapsodo scripted bullpens, and bookable independent training slots let pitchers grow safely &mdash; with our facility, our drill plans, and our standards in place.</p>
+              </div>
+              <div class="faq-topic">
+                <div class="faq-topic-title">Finish lines</div>
+                <p class="faq-topic-body">Every program has one &mdash; Foundations milestones, the 60/10 Club, and the Accelerator's velocity + command guarantee.</p>
+              </div>
+            </div>
           </div>
         </details>
       </div>
