@@ -158,7 +158,10 @@
   .club-inner { position: relative; z-index: 1; max-width: var(--container-max); margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
   .club-eyebrow { display: inline-flex; align-items: center; gap: 10px; font-family: var(--font-display); font-weight: var(--weight-semibold); font-size: var(--text-caption); letter-spacing: var(--tracking-eyebrow); text-transform: uppercase; color: var(--gold); margin-bottom: 14px; }
   .club-eyebrow::before { content: ''; width: 22px; height: 2px; background: var(--gold); display: block; }
-  .club-title { font-family: var(--font-display); font-weight: var(--weight-black); font-size: var(--text-h2); line-height: var(--leading-display); text-transform: uppercase; color: var(--white); margin-bottom: 18px; }
+  /* 60/10 Club is the earned brand moment — uses h1 size despite
+     being a secondary section. The dark navy + gold + light-blue
+     accents earn the extra weight. */
+  .club-title { font-family: var(--font-display); font-weight: var(--weight-black); font-size: var(--text-h1); line-height: var(--leading-display); text-transform: uppercase; color: var(--white); margin-bottom: 18px; }
   .club-title .slash { color: var(--gold); }
   .club-body { font-size: var(--text-body); font-weight: var(--weight-light); line-height: 1.75; color: rgba(255,255,255,0.66); margin-bottom: 28px; }
   .club-body strong { color: var(--white); font-weight: var(--weight-medium); }
