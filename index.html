@@ -419,14 +419,19 @@
   .cta-footnote { font-family: var(--font-display); font-size: 12px; font-weight: var(--weight-bold); letter-spacing: var(--tracking-caps); text-transform: uppercase; color: rgba(255,255,255,0.42); }
 
   /* ============== FOOTER (utility) ============== */
+  /* Matches the Foundations landing page footer: dark navy bg,
+     sans-serif sentence-case typography, low-opacity white tones.
+     Logo on left, links center, address right at desktop;
+     stacks to a left-aligned column at <=960. */
   footer { background: var(--navy-dark); padding: var(--space-sm) var(--container-pad); display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.07); flex-wrap: wrap; gap: 16px; }
-  .footer-logo { font-family: var(--font-display); font-weight: var(--weight-extrabold); font-size: 18px; letter-spacing: var(--tracking-tight); text-transform: uppercase; color: var(--white); }
-  .footer-logo span { color: var(--blue-light); }
+  .footer-logo { font-family: var(--font-sans); font-weight: var(--weight-bold); font-size: 14px; letter-spacing: -0.01em; text-transform: none; color: rgba(255,255,255,0.8); }
+  .footer-logo span { color: inherit; }
   .footer-links { display: flex; gap: 24px; flex-wrap: wrap; }
-  .footer-links a { font-family: var(--font-display); font-weight: var(--weight-semibold); font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.35); text-decoration: none; }
-  .footer-links a:hover { color: var(--white); }
-  .footer-info { font-size: 12px; color: rgba(255,255,255,0.34); text-align: right; line-height: var(--leading-loose); }
-  .footer-info a { color: inherit; text-decoration: none; }
+  .footer-links a { font-family: var(--font-sans); font-weight: var(--weight-medium); font-size: 12px; letter-spacing: normal; text-transform: none; color: rgba(255,255,255,0.3); text-decoration: none; transition: color var(--duration-base) ease; }
+  .footer-links a:hover { color: rgba(255,255,255,0.7); }
+  .footer-info { font-size: 12px; color: rgba(255,255,255,0.25); text-align: right; line-height: var(--leading-loose); }
+  .footer-info a { color: inherit; text-decoration: none; transition: color var(--duration-base) ease; }
+  .footer-info a:hover { color: rgba(255,255,255,0.5); }
 
   /* Reveal animation */
   .reveal { opacity: 0; transform: translateY(18px); transition: opacity var(--duration-slow) ease, transform var(--duration-slow) ease; }
@@ -454,7 +459,10 @@
     .hero-inner { padding-block: var(--space-lg); }
     .hero-stats { grid-template-columns: repeat(2, 1fr); margin: 0 var(--container-pad-md); }
     section { padding-inline: var(--container-pad-md); }
-    footer { padding-inline: var(--container-pad-md); }
+    /* Footer stacks at <=960 to match Foundations layout (column,
+       left-aligned, address top → bottom in vertical flow). */
+    footer { flex-direction: column; align-items: flex-start; gap: 16px; padding-inline: var(--container-pad-md); }
+    .footer-info { text-align: left; }
     .faq-lite > .container { padding-left: var(--container-pad-md) !important; padding-right: var(--container-pad-md) !important; }
   }
   @media (max-width: 768px) {
@@ -519,7 +527,6 @@
     .hero-stat { padding: 14px 16px; }
     .hstat-num { font-size: 22px; }
     .hstat-label { font-size: 10px; }
-    .footer-info { text-align: left; }
     .htw-chart { grid-template-columns: minmax(72px, 1fr) repeat(4, minmax(0, 1fr)); }
     .htw-cell { padding: 8px 2px; min-height: 72px; }
     .htw-cell--label { font-size: 9px; }
@@ -528,7 +535,8 @@
     .app-panel { padding: var(--space-xs); }
     .app-code-value { font-size: 18px; }
     .cta-final { padding-inline: var(--container-pad-sm); }
-    footer { flex-direction: column; align-items: flex-start; gap: 12px; padding-inline: var(--container-pad-sm); }
+    /* Already column-stacked from <=960; just tighten padding + gap here */
+    footer { gap: 12px; padding-inline: var(--container-pad-sm); }
     .footer-links { gap: 16px; }
     .programs-header, .classes-header { flex-direction: column; align-items: flex-start; }
     .club-inner { padding: 0; }
@@ -1028,7 +1036,7 @@
 </dialog>
 
 <footer>
-  <div class="footer-logo">TAP <span>Athletes</span></div>
+  <div class="footer-logo">TAP Athletes</div>
   <div class="footer-links">
     <a href="#programs">Programs</a>
     <a href="#classes">Classes</a>
@@ -1036,7 +1044,7 @@
     <a href="#faq-lite">FAQ</a>
   </div>
   <div class="footer-info">
-    1751 S 1st Street, Rogers, Arkansas 72758<br>
+    1751 S 1st Street, Rogers, AR 72758<br>
     <a href="tel:+18338602711">(833) 860-2711</a> · <a href="mailto:support@tapathletes.com">support@tapathletes.com</a>
   </div>
 </footer>
