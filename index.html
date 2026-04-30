@@ -252,8 +252,40 @@
     .faq-lite > .container { padding-left: var(--container-pad-md) !important; padding-right: var(--container-pad-md) !important; }
   }
   @media (max-width: 768px) {
-    .classes-grid { grid-template-columns: 1fr; }
+    /* Mobile reader flow: compress card-grid sections + differentiate
+       visual patterns so consecutive sections don't all read as
+       "another card grid." */
+
+    /* Overview — keep bordered tile pattern (it's the menu) but hide
+       outcome row to compress; tap name for the full pitch. */
     .overview-grid { grid-template-columns: 1fr; }
+    .overview-tile { gap: var(--space-3xs); padding: var(--space-xs); }
+    .overview-tile-outcome { display: none; }
+
+    /* Programs — drop bordered card pattern. Becomes a vertical
+       comparison list with hairline rules between items. Hides fit
+       line and detail bullets (deep dive lives on the linked page). */
+    .programs-grid { grid-template-columns: 1fr; gap: 0; background: transparent; border: none; }
+    .prog-card { background: transparent; border: none; border-top: 1px solid var(--color-border); padding: var(--space-sm) 0; }
+    .prog-card:first-child { border-top: none; padding-top: 0; }
+    .prog-card:hover { background: transparent; }
+    .prog-card-top-bar { display: none; }
+    .prog-fit { display: none; }
+    .prog-details { display: none; }
+    .prog-desc { margin-bottom: var(--space-xs); }
+
+    /* Classes — same pattern shift: drop bordered cards, become a
+       hairline-divided vertical list. Hides topic bullets (book the
+       class to see the agenda). */
+    .classes-grid { grid-template-columns: 1fr; gap: 0; }
+    .class-card { background: transparent; border: none; border-top: 1px solid var(--color-border); }
+    .class-card:first-child { border-top: none; }
+    .class-card:hover { border-color: transparent; box-shadow: none; }
+    .class-card-top { padding: var(--space-sm) 0 0; }
+    .class-divider { display: none; }
+    .class-body { padding: 0; }
+    .class-topics { display: none; }
+    .class-footer { padding: var(--space-2xs) 0 var(--space-sm); border-top: none; margin-top: var(--space-3xs); }
   }
   @media (max-width: 640px) {
     /* Compress section padding while preserving primary/secondary rhythm.
