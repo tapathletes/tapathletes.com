@@ -8,13 +8,18 @@ import { defineConfig } from 'vite';
  * (index.html, styles/*.css, sub-page directories) directly. No build
  * step is run for production. Do not run `vite build` — there is no
  * dist artifact to deploy.
+ *
+ * Port: reads PORT from env if set (used by the Claude Code harness
+ * preview manager when autoPort is enabled); otherwise falls back to
+ * 5173 for plain `npm run dev`.
  */
+const port = process.env.PORT ? Number(process.env.PORT) : 5173;
+
 export default defineConfig({
   root: '.',
   server: {
-    port: 5173,
+    port,
     host: 'localhost',
-    // open: false — do not auto-launch a browser. Navigate manually
-    // to the URL printed in the terminal.
+    // No auto-launch of a browser. Navigate manually to the URL.
   },
 });

@@ -49,6 +49,7 @@
   --text-1:      #0E1A2E;        /* primary type */
   --text-2:      #4A4845;        /* secondary type */
   --text-3:      #6E6B65;        /* faint type */
+  --text:        var(--text-1);  /* legacy alias — prefer --color-text */
 
   /* ----------------------------------------------------------
      2. Semantic color tokens — what components consume
