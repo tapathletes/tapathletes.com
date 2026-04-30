@@ -75,32 +75,107 @@
   /* Secondary sections override section-title to h2 */
   .classes .section-title, .faq-lite .section-title { font-size: var(--text-h2); }
   .section-lead { font-size: var(--text-body-lead); font-weight: var(--weight-light); line-height: var(--leading-loose); color: var(--color-text-muted); max-width: var(--measure-default); }
-  /* ============== OVERVIEW (primary, four tiles) ============== */
-  .overview { background: var(--color-bg-alt); }
-  .overview-inner { max-width: var(--container-max); margin: 0 auto; }
-  .overview-header { margin-bottom: var(--space-md); max-width: var(--measure-wide); }
-  .overview-header .section-lead { margin-top: 14px; }
-  .overview-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px; background: var(--gray-200); border: 1px solid var(--gray-200); }
-  .overview-tile { background: var(--color-bg); padding: var(--space-sm); display: flex; flex-direction: column; gap: 14px; min-height: 100%; }
-  .overview-tile-bar { height: 3px; width: 100%; }
-  .overview-tile.foundations .overview-tile-bar { background: var(--color-accent-foundations); }
-  .overview-tile.academy      .overview-tile-bar { background: var(--color-accent-academy); }
-  .overview-tile.unprompted   .overview-tile-bar { background: var(--color-accent-unprompted); }
-  .overview-tile.classes      .overview-tile-bar { background: var(--color-accent-classes); }
-  .overview-tile-eyebrow { font-family: var(--font-display); font-weight: var(--weight-bold); font-size: var(--text-caption); letter-spacing: 0.18em; text-transform: uppercase; color: var(--color-text-faint); }
-  .overview-tile-name { font-family: var(--font-display); font-weight: var(--weight-black); font-size: var(--text-h3); line-height: var(--leading-tight); text-transform: uppercase; color: var(--navy); text-decoration: none; display: inline-block; padding-bottom: 2px; border-bottom: 2px solid transparent; transition: border-color var(--duration-base) ease, color var(--duration-base) ease; }
-  .overview-tile.foundations .overview-tile-name:hover { border-bottom-color: var(--color-accent-foundations); color: var(--color-accent-foundations); }
-  .overview-tile.academy      .overview-tile-name:hover { border-bottom-color: var(--color-accent-academy);      color: var(--color-accent-academy); }
-  .overview-tile.unprompted   .overview-tile-name:hover { border-bottom-color: var(--color-accent-unprompted);   color: var(--color-accent-unprompted); }
-  .overview-tile.classes      .overview-tile-name:hover { border-bottom-color: var(--color-accent-classes);      color: var(--color-accent-classes); }
-  .overview-tile-desc { font-size: var(--text-body); font-weight: var(--weight-light); line-height: var(--leading-loose); color: var(--color-text-muted); }
-  .overview-tile-outcome { margin-top: auto; padding-top: 18px; border-top: 1px solid var(--color-border); }
-  .overview-outcome-label { font-family: var(--font-display); font-weight: var(--weight-bold); font-size: var(--text-caption); letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: var(--space-3xs); }
-  .overview-tile.foundations .overview-outcome-label { color: var(--color-accent-foundations); }
-  .overview-tile.academy      .overview-outcome-label { color: var(--color-accent-academy); }
-  .overview-tile.unprompted   .overview-outcome-label { color: var(--color-accent-unprompted); }
-  .overview-tile.classes      .overview-outcome-label { color: var(--color-accent-classes); }
-  .overview-outcome-copy { font-size: var(--text-body); font-weight: var(--weight-light); line-height: var(--leading-normal); color: var(--color-text-muted); }
+  /* ============== METHOD (primary, editorial, three pillars) ============== */
+  /* No card chrome anywhere. Hairline rules + asymmetric grid + colored
+     numerals do the structural work. Off-grid eyebrow sits in a narrow
+     left column so the eye registers it as a section marker without
+     aligning it to the H1. */
+  .method { background: var(--color-bg-alt); }
+  .method-inner {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(140px, 180px) minmax(0, 1fr);
+    column-gap: var(--space-md);
+    align-items: start;
+  }
+  .method-eyebrow {
+    font-family: var(--font-display);
+    font-weight: var(--weight-semibold);
+    font-size: var(--text-caption);
+    letter-spacing: var(--tracking-eyebrow);
+    text-transform: uppercase;
+    color: var(--blue);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-top: 14px;     /* visually align rule with H1 cap-height */
+    white-space: nowrap;
+  }
+  .method-eyebrow-rule {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--blue);
+    flex-shrink: 0;
+  }
+  .method-content { max-width: var(--measure-wide); }
+  /* Method title intentionally uses h2 (not h1) so it doesn't compete
+     with the hero headline. The section's visual weight comes from the
+     numerals + hairlines + pillar bodies, not from the title size. */
+  .method-title {
+    font-family: var(--font-display);
+    font-weight: var(--weight-black);
+    font-size: var(--text-h2);
+    line-height: var(--leading-tight);
+    letter-spacing: var(--tracking-display);
+    text-transform: uppercase;
+    color: var(--navy);
+    margin-bottom: var(--space-md);
+  }
+  .method-divider {
+    border: 0;
+    border-top: 1px solid var(--color-border-strong);
+    margin: 0;
+  }
+  /* Pillars — asymmetric numeral / body grid, hairline divided */
+  .pillar {
+    display: grid;
+    grid-template-columns: minmax(72px, 96px) minmax(0, 1fr);
+    column-gap: var(--space-sm);
+    align-items: baseline;
+    padding-block: var(--space-md);
+  }
+  .pillar-numeral {
+    font-family: var(--font-display);
+    font-weight: var(--weight-black);
+    font-size: var(--text-h1);
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+  .pillar--01 .pillar-numeral { color: var(--color-accent-unprompted); }   /* gold */
+  .pillar--02 .pillar-numeral { color: var(--color-accent-academy); }      /* blue */
+  .pillar--03 .pillar-numeral { color: var(--color-accent-foundations); }  /* green */
+  .pillar-name {
+    font-family: var(--font-display);
+    font-weight: var(--weight-black);
+    font-size: var(--text-h3);
+    line-height: var(--leading-tight);
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: var(--navy);
+    margin-bottom: var(--space-2xs);
+  }
+  .pillar-text {
+    font-size: var(--text-body-lead);
+    font-weight: var(--weight-light);
+    line-height: var(--leading-loose);
+    color: var(--color-text-muted);
+    max-width: var(--measure-default);
+  }
+  /* Inline pillar links — invisible at rest, colored on hover.
+     Soft escape hatch for parents who've already decided. */
+  .pillar-link {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 1px;
+    transition: color var(--duration-base) ease, border-color var(--duration-base) ease;
+  }
+  .pillar-link.foundations:hover { color: var(--color-accent-foundations); border-bottom-color: var(--color-accent-foundations); }
+  .pillar-link.academy:hover     { color: var(--color-accent-academy);     border-bottom-color: var(--color-accent-academy); }
+  .pillar-link.unprompted:hover  { color: var(--color-accent-unprompted);  border-bottom-color: var(--color-accent-unprompted); }
+  .pillar-link:focus-visible     { outline: 2px solid currentColor; outline-offset: 3px; border-bottom-color: transparent; }
 
   /* ============== APP (secondary, contained navy panel) ============== */
   .app { background: var(--color-bg); border-top: 1px solid var(--color-border); }
@@ -259,11 +334,16 @@
        visual patterns so consecutive sections don't all read as
        "another card grid." */
 
-    /* Overview — keep bordered tile pattern (it's the menu) but hide
-       outcome row to compress; tap name for the full pitch. */
-    .overview-grid { grid-template-columns: 1fr; }
-    .overview-tile { gap: var(--space-3xs); padding: var(--space-xs); }
-    .overview-tile-outcome { display: none; }
+    /* Method section — collapse asymmetric grid to single column.
+       Eyebrow stacks above H1 in normal flow. Pillar numerals stack
+       above their bodies. Hairlines and color anchoring still do
+       all the structural work. */
+    .method-inner { grid-template-columns: 1fr; row-gap: var(--space-xs); }
+    .method-eyebrow { padding-top: 0; }
+    .method-content { max-width: none; }
+    .pillar { grid-template-columns: 1fr; row-gap: var(--space-3xs); padding-block: var(--space-sm); }
+    .pillar-numeral { font-size: clamp(40px, 12vw, 56px); }
+    .pillar-text { font-size: var(--text-body); }
 
     /* Programs — drop bordered card pattern. Becomes a vertical
        comparison list with hairline rules between items. Hides fit
@@ -306,7 +386,8 @@
     .hstat-num { font-size: 22px; }
     .hstat-label { font-size: 10px; }
     .footer-info { text-align: left; }
-    .overview-tile { padding: var(--space-xs); }
+    .pillar { padding-block: var(--space-xs); }
+    .pillar-numeral { font-size: 40px; }
     .app-panel { padding: var(--space-xs); }
     .app-code-value { font-size: 18px; }
     .cta-final { padding-inline: var(--container-pad-sm); }
@@ -375,52 +456,35 @@
     <div class="hero-stat"><div class="hstat-num">1 Standard</div><div class="hstat-label">The 60/10 Club</div></div>
   </div>
 
-  <section class="overview" id="overview">
-    <div class="overview-inner">
-      <div class="overview-header">
-        <div class="section-eyebrow reveal">The TAP Athletes Model</div>
-        <h2 class="section-title reveal rd1">Four Paths. One Standard.</h2>
-        <p class="section-lead reveal rd2">TAP Athletes is a pitching academy built on the belief that anyone can learn to pitch. We teach pitching through programs, classes, and individual instruction — each designed around a defined curriculum, delivered by coaches who meet athletes where they are, and measured against a real standard of progress.</p>
+  <section class="method" id="method">
+    <div class="method-inner">
+      <div class="method-eyebrow reveal" aria-hidden="false">
+        <span class="method-eyebrow-rule" aria-hidden="true"></span>The Method
       </div>
-      <div class="overview-grid">
-        <article class="overview-tile foundations reveal">
-          <div class="overview-tile-bar"></div>
-          <div class="overview-tile-eyebrow">Ages 8+ · Progression-Based · Monthly</div>
-          <a href="/foundations" class="overview-tile-name">Foundations</a>
-          <p class="overview-tile-desc">Self-paced individual instruction with a clear milestone path into the full system. Not session-based training — a defined development system with phased, execution-based advancement.</p>
-          <div class="overview-tile-outcome">
-            <div class="overview-outcome-label">Built Right From the Start</div>
-            <p class="overview-outcome-copy">Four earned milestones that give every young pitcher the mechanical foundation to keep developing for years.</p>
+      <div class="method-content">
+        <h2 class="method-title reveal rd1">Pitching, taught as a subject.</h2>
+        <hr class="method-divider" aria-hidden="true">
+        <article class="pillar pillar--01 reveal rd1">
+          <div class="pillar-numeral" aria-hidden="true">01</div>
+          <div class="pillar-body">
+            <h3 class="pillar-name">An Integrated Environment.</h3>
+            <p class="pillar-text">Pitchers learn faster when they train next to other pitchers. They watch, they copy, they push each other &mdash; and they pick up things a coach wouldn't have thought to say. That's why we built one facility around one curriculum, with one group of athletes &mdash; instead of running parallel studios for private lessons. The room teaches as much as the coach does.</p>
           </div>
         </article>
-        <article class="overview-tile academy reveal rd1">
-          <div class="overview-tile-bar"></div>
-          <div class="overview-tile-eyebrow">Ages 14+ · 6-Month Cohort · Guaranteed</div>
-          <a href="/pitching-accelerator" class="overview-tile-name">Pitching Accelerator</a>
-          <p class="overview-tile-desc">For athletes 14+ at the inflection point. More touchpoints, faster gains, and a velocity + command guarantee inside six months.</p>
-          <div class="overview-tile-outcome">
-            <div class="overview-outcome-label">Measurable Progress. Guaranteed.</div>
-            <p class="overview-outcome-copy">+5 MPH on fastball velocity and +5% strike percentage — within 6 months, or a full refund.</p>
+        <hr class="method-divider" aria-hidden="true">
+        <article class="pillar pillar--02 reveal rd2">
+          <div class="pillar-numeral" aria-hidden="true">02</div>
+          <div class="pillar-body">
+            <h3 class="pillar-name">A School Mindset.</h3>
+            <p class="pillar-text">Pitching is a teachable subject. It has a curriculum. It has prerequisites. It has standards an athlete can demonstrate and milestones they can earn. We don't measure progress in hours, because hours don't measure progress. Athletes advance when they execute the skill &mdash; not when enough Tuesdays have passed.</p>
           </div>
         </article>
-        <article class="overview-tile unprompted reveal rd2">
-          <div class="overview-tile-bar"></div>
-          <div class="overview-tile-eyebrow">Ages 11–18 · 6-Week Cohort</div>
-          <a href="/train-unprompted" class="overview-tile-name">Train Unprompted™</a>
-          <p class="overview-tile-desc">A 6-week program designed to build athlete ownership. The goal is simple: help athletes train without being told to, through repeated touchpoints and practical accountability.</p>
-          <div class="overview-tile-outcome">
-            <div class="overview-outcome-label">Trains Without Being Told To</div>
-            <p class="overview-outcome-copy">A personal drill library, six weeks of logged sessions, and the confidence to run their own training.</p>
-          </div>
-        </article>
-        <article class="overview-tile classes reveal rd3">
-          <div class="overview-tile-bar"></div>
-          <div class="overview-tile-eyebrow">À la Carte · Booked in the App</div>
-          <a href="https://wix.app/mobile.apps/9UnuV7p?ref=mam" class="overview-tile-name" target="_blank" rel="noopener noreferrer">Classes &amp; Instruction</a>
-          <p class="overview-tile-desc">Standalone classes and individual sessions. Targeted skill work with no long-term commitment required — booked one at a time inside the TAP Athletes app.</p>
-          <div class="overview-tile-outcome">
-            <div class="overview-outcome-label">Coaching When You Need It</div>
-            <p class="overview-outcome-copy">Single sessions, group classes, live at-bats, and Rapsodo bullpens — all booked inside the TAP Athletes app.</p>
+        <hr class="method-divider" aria-hidden="true">
+        <article class="pillar pillar--03 reveal rd3">
+          <div class="pillar-numeral" aria-hidden="true">03</div>
+          <div class="pillar-body">
+            <h3 class="pillar-name">Guided Freedom.</h3>
+            <p class="pillar-text">At some point an athlete has to do the work without us watching. Our job isn't to drill them into being a pitcher &mdash; it's to teach them how to teach themselves. We coach with proximity, not control. We expect athletes to take responsibility between sessions. The structure is real. The freedom to experiment is the point.</p>
           </div>
         </article>
       </div>
