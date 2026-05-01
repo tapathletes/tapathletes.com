@@ -8,7 +8,7 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Instrument+Serif:ital@0;1&family=Barlow:wght@300;400;500&family=Barlow+Condensed:wght@400;600;700;900&display=swap" rel="stylesheet" />
 
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -60,6 +60,8 @@
     @layer utilities {
       .fade-up { opacity: 0; transform: translateY(20px); transition: opacity 0.6s cubic-bezier(0.16,1,0.3,1), transform 0.6s cubic-bezier(0.16,1,0.3,1); }
       .fade-up.visible { opacity: 1; transform: translateY(0); }
+      .no-scrollbar { scrollbar-width: none; -ms-overflow-style: none; }
+      .no-scrollbar::-webkit-scrollbar { display: none; width: 0; height: 0; }
     }
   </style>
 
@@ -73,15 +75,15 @@
     }
     .htw-row { display: contents; }
     .htw-cell {
-      padding: 12px 8px;
+      padding: 7px 6px;
       border-bottom: 1px solid #EDEBE6;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: flex-start;
-      gap: 6px;
+      gap: 3px;
       text-align: center;
-      min-height: 84px;
+      min-height: 52px;
     }
     .htw-row:last-child .htw-cell { border-bottom: none; }
     .htw-cell--head {
@@ -99,7 +101,7 @@
       letter-spacing: 0.12em;
       text-transform: uppercase;
       color: #1A1A1A;
-      padding: 12px 12px 12px 0;
+      padding: 7px 12px 7px 0;
     }
     .htw-grade {
       font-family: 'DM Sans', system-ui, sans-serif;
@@ -118,17 +120,17 @@
       margin-top: 2px;
     }
     .fc {
-      width: 22px;
-      height: 22px;
+      width: 18px;
+      height: 18px;
       flex-shrink: 0;
       color: #1B3D2F;
       display: block;
     }
     .htw-descriptor {
       font-family: 'Instrument Serif', Georgia, serif;
-      font-size: 12px;
+      font-size: 11px;
       font-style: italic;
-      line-height: 1.3;
+      line-height: 1.2;
       color: #6B6B6B;
       text-align: center;
     }
@@ -210,12 +212,12 @@
       color: #6B6B6B;
     }
     @media (max-width: 640px) {
-      .htw-cell--label { font-size: 10px; padding-right: 8px; }
-      .htw-cell { padding: 8px 4px; min-height: 72px; }
-      .htw-grade { font-size: 11px; }
-      .htw-grade-sub { font-size: 9px; }
-      .fc { width: 18px; height: 18px; }
-      .htw-descriptor { font-size: 10px; }
+      .htw-cell--label { font-size: 9px; padding-right: 6px; padding-left: 0; }
+      .htw-cell { padding: 5px 3px; min-height: 44px; }
+      .htw-grade { font-size: 10px; }
+      .htw-grade-sub { font-size: 8px; }
+      .fc { width: 14px; height: 14px; }
+      .htw-descriptor { font-size: 9px; }
     }
   </style>
 </head>
@@ -260,9 +262,9 @@
       <div class="max-w-wide mx-auto px-5 lg:px-12">
         <div class="max-w-[740px]">
           <p class="text-sm-r font-semibold uppercase tracking-[0.15em] text-forest mb-6">Rogers, Arkansas · Youth &amp; HS Pitching Instruction</p>
-          <h1 class="font-display text-hero text-ink leading-[1.05] mb-6">
+          <h1 class="font-body text-hero font-bold text-ink leading-[1.05] mb-6">
             Anyone can<br>
-            <em class="text-forest">learn to pitch.</em>
+            <span class="text-forest">learn to pitch.</span>
           </h1>
           <p class="text-lg-r text-ink-muted leading-relaxed mb-10 max-w-[52ch]">
             TAP Athletes is a pitching academy built on the belief that anyone can learn to pitch. We help young pitchers build mechanics, command, and confidence through structured programs, classes, and individual instruction.
@@ -281,6 +283,34 @@
       </div>
     </section>
 
+    <!-- APP STRIP -->
+    <section class="py-8 lg:py-12 bg-white" id="app-strip">
+      <div class="max-w-wide mx-auto px-5 lg:px-12">
+        <div class="bg-forest rounded-xl px-5 py-4 lg:px-7 lg:py-5 flex flex-wrap items-center gap-x-6 gap-y-3 fade-up">
+          <p class="text-sm-r text-white/80 leading-snug flex-1 min-w-[200px] lg:order-2 lg:px-4">
+            Download Spaces by Wix, then join with our invite code.
+          </p>
+          <div class="flex flex-col-reverse items-center gap-3 mx-auto lg:flex-row lg:mx-0 lg:order-3">
+            <div class="inline-flex items-baseline gap-3 px-4 py-2 bg-white/5 border border-white/10 rounded-lg">
+              <span class="text-[10px] font-semibold uppercase tracking-[0.15em] text-forest-pale/80">Invite</span>
+              <span class="font-body text-base-r font-bold tracking-[0.15em] text-white">VWMF1Y</span>
+            </div>
+            <a href="https://wix.app/mobile.apps/9UnuV7p?ref=mam" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-4 py-2.5 text-xs-r font-semibold rounded-lg bg-rust text-white hover:bg-rust-hover transition-colors whitespace-nowrap">
+              Open Direct Invite
+            </a>
+          </div>
+          <div class="flex items-center gap-2 lg:order-1">
+            <a href="https://apps.apple.com/app/spaces-by-wix/id1099748482" target="_blank" rel="noopener noreferrer" class="block">
+              <img src="/images/app-store-badge.svg" alt="Download on the App Store" width="135" height="40" class="h-10 w-auto">
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=com.wix.android" target="_blank" rel="noopener noreferrer" class="block">
+              <img src="/images/google-play-badge.svg" alt="Get it on Google Play" width="135" height="40" class="h-10 w-auto">
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- PROGRAMS -->
     <section class="py-16 lg:py-24 bg-white" id="programs">
       <div class="max-w-wide mx-auto px-5 lg:px-12">
@@ -291,6 +321,71 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-5 items-stretch">
+
+          <!-- Classes & Instruction -->
+          <div class="bg-white border-2 border-forest rounded-2xl p-6 lg:p-8 flex flex-col gap-5 fade-up">
+            <div>
+              <span class="inline-block text-xs font-semibold uppercase tracking-[0.1em] text-slate mb-2">À la Carte</span>
+              <h3 class="font-body text-xl-r font-bold text-ink">Classes &amp; Instruction</h3>
+              <p class="text-xs-r text-ink-faint mt-1 uppercase tracking-wide">Booked in the App · Ages 8+</p>
+            </div>
+            <p class="text-sm-r text-ink-muted leading-relaxed">Single sessions, group classes, live at-bats, and Rapsodo bullpens. Open to any athlete — no program enrollment required.</p>
+            <ul class="flex flex-col gap-2 flex-1">
+              <li class="flex items-center gap-2.5 text-sm-r text-ink font-medium"><svg class="shrink-0" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1B3D2F" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Pitch Design, Beyond the Pitch, and rotating classes</li>
+              <li class="flex items-center gap-2.5 text-sm-r text-ink font-medium"><svg class="shrink-0" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1B3D2F" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Individual instruction available</li>
+              <li class="flex items-center gap-2.5 text-sm-r text-ink font-medium"><svg class="shrink-0" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1B3D2F" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Live at-bats and Rapsodo bullpens</li>
+              <li class="flex items-center gap-2.5 text-sm-r text-ink font-medium"><svg class="shrink-0" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1B3D2F" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Pay per session</li>
+            </ul>
+            <div class="pt-4 border-t border-cream-dark">
+              <span class="font-display text-2xl-r italic text-ink">$15&ndash;$49</span>
+              <span class="text-sm-r text-ink-muted">/session</span>
+            </div>
+            <a href="#classes" class="w-full inline-flex items-center justify-center px-6 py-3 text-sm-r font-semibold rounded-lg bg-transparent text-ink border border-ink/15 hover:border-ink/30 hover:bg-cream-warm transition-colors">See Classes</a>
+          </div>
+
+          <!-- Foundations -->
+          <div class="bg-cream border-2 border-forest rounded-2xl p-6 lg:p-8 flex flex-col gap-5 shadow-medium fade-up">
+            <div>
+              <span class="inline-block text-xs font-semibold uppercase tracking-[0.1em] text-forest mb-2">Start Here · Ages 8+</span>
+              <h3 class="font-body text-xl-r font-bold text-ink">TAP Athletes Foundations</h3>
+              <p class="text-xs-r text-ink-faint mt-1 uppercase tracking-wide">Monthly · Ages 8+ · Individual</p>
+            </div>
+            <p class="text-sm-r text-ink-muted leading-relaxed">Progression-based training — a defined development curriculum. Free in-person assessment, phase-based placement, advance by demonstrating execution.</p>
+            <ul class="flex flex-col gap-2 flex-1">
+              <li class="flex items-center gap-2.5 text-sm-r text-ink font-medium"><svg class="shrink-0" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1B3D2F" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Up to 8 sessions/month</li>
+              <li class="flex items-center gap-2.5 text-sm-r text-ink font-medium"><svg class="shrink-0" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1B3D2F" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Reserved weekly time slots</li>
+              <li class="flex items-center gap-2.5 text-sm-r text-ink font-medium"><svg class="shrink-0" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1B3D2F" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>We Come To You add-on available</li>
+              <li class="flex items-center gap-2.5 text-sm-r text-ink font-medium"><svg class="shrink-0" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1B3D2F" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>FoundationsPrep available</li>
+            </ul>
+            <div class="pt-4 border-t border-cream-dark flex flex-wrap items-baseline gap-x-2">
+              <span class="font-display text-2xl-r italic text-ink">$510</span>
+              <span class="text-sm-r text-ink-muted">/mo</span>
+              <span class="text-xs font-semibold uppercase tracking-[0.15em] text-ink-faint mx-1">or</span>
+              <span class="font-display text-2xl-r italic text-ink">$600</span>
+              <span class="text-sm-r text-ink-muted">/mo</span>
+            </div>
+            <a href="/foundations" class="w-full inline-flex items-center justify-center px-6 py-3 text-sm-r font-semibold rounded-lg bg-forest text-white hover:bg-forest-light transition-colors">Learn More</a>
+          </div>
+
+          <!-- Train Unprompted -->
+          <div class="bg-white border-2 border-forest rounded-2xl p-6 lg:p-8 flex flex-col gap-5 fade-up">
+            <div>
+              <span class="inline-block text-xs font-semibold uppercase tracking-[0.1em] text-rust mb-2">Cohort Program</span>
+              <h3 class="font-body text-xl-r font-bold text-ink">Train Unprompted&trade;</h3>
+              <p class="text-xs-r text-ink-faint mt-1 uppercase tracking-wide">6-Week Cohort · Ages 13+</p>
+            </div>
+            <p class="text-sm-r text-ink-muted leading-relaxed">Designed to build athlete ownership. Help athletes train without being told to — through repeated touchpoints and practical accountability.</p>
+            <ul class="flex flex-col gap-2 flex-1">
+              <li class="flex items-center gap-2.5 text-sm-r text-ink font-medium"><svg class="shrink-0" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1B3D2F" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>3 weekly touchpoints</li>
+              <li class="flex items-center gap-2.5 text-sm-r text-ink font-medium"><svg class="shrink-0" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1B3D2F" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Facility, home visit, video call</li>
+              <li class="flex items-center gap-2.5 text-sm-r text-ink font-medium"><svg class="shrink-0" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1B3D2F" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Student-athlete planner included</li>
+            </ul>
+            <div class="pt-4 border-t border-cream-dark">
+              <span class="font-display text-2xl-r italic text-ink">$497</span>
+              <span class="text-sm-r text-ink-muted">flat — no add-ons</span>
+            </div>
+            <a href="/train-unprompted" class="w-full inline-flex items-center justify-center px-6 py-3 text-sm-r font-semibold rounded-lg bg-transparent text-ink border border-ink/15 hover:border-ink/30 hover:bg-cream-warm transition-colors">Learn More</a>
+          </div>
 
           <!-- Pitching Accelerator -->
           <div class="bg-white border-2 border-forest rounded-2xl p-6 lg:p-8 flex flex-col gap-5 fade-up">
@@ -307,68 +402,9 @@
             </ul>
             <div class="pt-4 border-t border-cream-dark">
               <span class="font-display text-2xl-r italic text-ink">$4,500</span>
-              <span class="text-sm-r text-ink-muted">/program</span>
+              <span class="text-sm-r text-ink-muted">/seat</span>
             </div>
             <a href="/pitching-accelerator" class="w-full inline-flex items-center justify-center px-6 py-3 text-sm-r font-semibold rounded-lg bg-transparent text-ink border border-ink/15 hover:border-ink/30 hover:bg-cream-warm transition-colors">Learn More</a>
-          </div>
-
-          <!-- Foundations -->
-          <div class="bg-cream border-2 border-forest rounded-2xl p-6 lg:p-8 flex flex-col gap-5 shadow-medium fade-up">
-            <div>
-              <span class="inline-block text-xs font-semibold uppercase tracking-[0.1em] text-forest mb-2">Start Here · Ages 8+</span>
-              <h3 class="font-body text-xl-r font-bold text-ink">TAP Athletes Foundations</h3>
-              <p class="text-xs-r text-ink-faint mt-1 uppercase tracking-wide">Individual · Progression-Based · Monthly</p>
-            </div>
-            <p class="text-sm-r text-ink-muted leading-relaxed">Not session-based training — a defined development system. Free in-person assessment, phase-based placement, advance by demonstrating execution.</p>
-            <ul class="flex flex-col gap-2 flex-1">
-              <li class="flex items-center gap-2.5 text-sm-r text-ink font-medium"><svg class="shrink-0" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1B3D2F" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Up to 8 sessions/month</li>
-              <li class="flex items-center gap-2.5 text-sm-r text-ink font-medium"><svg class="shrink-0" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1B3D2F" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Reserved weekly time slots</li>
-              <li class="flex items-center gap-2.5 text-sm-r text-ink font-medium"><svg class="shrink-0" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1B3D2F" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Execution-based advancement</li>
-            </ul>
-            <div class="pt-4 border-t border-cream-dark">
-              <span class="font-display text-2xl-r italic text-ink">$510</span>
-              <span class="text-sm-r text-ink-muted">/mo · $600 Hybrid</span>
-            </div>
-            <a href="/foundations" class="w-full inline-flex items-center justify-center px-6 py-3 text-sm-r font-semibold rounded-lg bg-forest text-white hover:bg-forest-light transition-colors">Learn More</a>
-          </div>
-
-          <!-- Train Unprompted -->
-          <div class="bg-white border-2 border-forest rounded-2xl p-6 lg:p-8 flex flex-col gap-5 fade-up">
-            <div>
-              <span class="inline-block text-xs font-semibold uppercase tracking-[0.1em] text-rust mb-2">Cohort Program</span>
-              <h3 class="font-body text-xl-r font-bold text-ink">Train Unprompted™</h3>
-              <p class="text-xs-r text-ink-faint mt-1 uppercase tracking-wide">6-Week Cohort · Ages 13+</p>
-            </div>
-            <p class="text-sm-r text-ink-muted leading-relaxed">Designed to build athlete ownership. Help athletes train without being told to — through repeated touchpoints and practical accountability.</p>
-            <ul class="flex flex-col gap-2 flex-1">
-              <li class="flex items-center gap-2.5 text-sm-r text-ink font-medium"><svg class="shrink-0" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1B3D2F" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>3 weekly touchpoints</li>
-              <li class="flex items-center gap-2.5 text-sm-r text-ink font-medium"><svg class="shrink-0" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1B3D2F" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Facility, home visit, video call</li>
-              <li class="flex items-center gap-2.5 text-sm-r text-ink font-medium"><svg class="shrink-0" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1B3D2F" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Student-athlete planner included</li>
-            </ul>
-            <div class="pt-4 border-t border-cream-dark">
-              <span class="font-display text-2xl-r italic text-ink">$497</span>
-              <span class="text-sm-r text-ink-muted">flat — no add-ons</span>
-            </div>
-            <a href="/train-unprompted" class="w-full inline-flex items-center justify-center px-6 py-3 text-sm-r font-semibold rounded-lg bg-transparent text-ink border border-ink/15 hover:border-ink/30 hover:bg-cream-warm transition-colors">Learn More</a>
-          </div>
-
-          <!-- Classes & Instruction -->
-          <div class="bg-white border-2 border-forest rounded-2xl p-6 lg:p-8 flex flex-col gap-5 fade-up">
-            <div>
-              <span class="inline-block text-xs font-semibold uppercase tracking-[0.1em] text-slate mb-2">À la Carte</span>
-              <h3 class="font-body text-xl-r font-bold text-ink">Classes &amp; Instruction</h3>
-              <p class="text-xs-r text-ink-faint mt-1 uppercase tracking-wide">Standalone Bookings · Booked in the App</p>
-            </div>
-            <p class="text-sm-r text-ink-muted leading-relaxed">Single sessions, group classes, live at-bats, and Rapsodo bullpens. Open to any athlete — no program enrollment required.</p>
-            <ul class="flex flex-col gap-2 flex-1">
-              <li class="flex items-center gap-2.5 text-sm-r text-ink font-medium"><svg class="shrink-0" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1B3D2F" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Pitch Design &amp; Beyond the Pitch</li>
-              <li class="flex items-center gap-2.5 text-sm-r text-ink font-medium"><svg class="shrink-0" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1B3D2F" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Live at-bats &amp; Rapsodo bullpens</li>
-              <li class="flex items-center gap-2.5 text-sm-r text-ink font-medium"><svg class="shrink-0" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1B3D2F" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Pay per session</li>
-            </ul>
-            <div class="pt-4 border-t border-cream-dark">
-              <span class="font-display text-lg italic text-ink">No commitment</span>
-            </div>
-            <a href="#classes" class="w-full inline-flex items-center justify-center px-6 py-3 text-sm-r font-semibold rounded-lg bg-transparent text-ink border border-ink/15 hover:border-ink/30 hover:bg-cream-warm transition-colors">See Classes</a>
           </div>
 
         </div>
@@ -376,32 +412,31 @@
     </section>
 
     <!-- 60/10 CLUB -->
-    <section class="py-16 lg:py-24 bg-cream" id="club">
-      <div class="max-w-wide mx-auto px-5 lg:px-12">
-        <div class="grid grid-cols-1 lg:grid-cols-[1fr_1fr] gap-12 lg:gap-20 items-start">
+    <section class="py-16 lg:py-24 bg-[#0E1A2E] relative overflow-hidden" id="club">
+      <div class="absolute inset-0 pointer-events-none" style="background: radial-gradient(ellipse at 30% 50%, rgba(46,117,182,0.12) 0%, transparent 55%), radial-gradient(ellipse at 80% 20%, rgba(184,146,42,0.08) 0%, transparent 45%);"></div>
+      <div class="relative max-w-wide mx-auto px-5 lg:px-12">
+        <div class="grid grid-cols-1 lg:grid-cols-[1fr_1fr] gap-12 lg:gap-16 items-center">
           <div>
-            <p class="text-xs-r font-semibold uppercase tracking-[0.15em] text-forest mb-4">The Standard</p>
-            <h2 class="font-display text-2xl-r text-ink leading-tight mb-5">The 60<em class="text-forest">/</em>10 Club.</h2>
-            <p class="text-base-r text-ink-muted leading-relaxed mb-5">TAP Athletes uses a benchmark to show what serious training can produce. To earn it, an athlete must achieve <strong class="text-ink">60%+ strikes across two consecutive competitive bullpens</strong> and record a <strong class="text-ink">+10 MPH fastball gain</strong> since starting at TAP Athletes.</p>
-            <p class="text-base-r text-ink-muted italic border-l-2 border-forest/20 pl-5 max-w-[52ch]">A standard worth chasing. Earned, not awarded.</p>
+            <div class="flex items-start gap-4 mb-7 max-w-[44ch]">
+              <span class="block w-9 h-[2px] bg-[#B8922A] mt-[14px] shrink-0"></span>
+              <p class="font-['Barlow_Condensed'] font-semibold uppercase tracking-[0.04em] text-[clamp(1.1rem,0.95rem+0.7vw,1.5rem)] leading-[1.25] text-[#B8922A]">A standard worth chasing.<br><span class="text-white/85">Earned, not awarded.</span></p>
+            </div>
+            <h2 class="font-['Barlow_Condensed'] font-black uppercase text-white leading-[0.95] tracking-[-0.01em] text-[clamp(2.75rem,1.5rem+4vw,5rem)] mb-5">The 60<span class="text-[#B8922A]">/</span>10 Club</h2>
+            <p class="font-['Barlow'] font-light text-base-r leading-[1.75] text-white/65 max-w-[52ch]">TAP Athletes uses a benchmark to show what serious training can produce. To earn it, an athlete must achieve <strong class="text-white font-medium">60%+ strikes across two consecutive competitive bullpens</strong> and record a <strong class="text-white font-medium">+10 MPH fastball gain</strong> since starting at TAP Athletes.</p>
           </div>
-          <div class="space-y-3">
-            <div class="bg-white border border-cream-dark rounded-xl p-5 fade-up">
-              <div class="flex items-baseline gap-4">
-                <span class="font-display text-2xl-r italic text-forest">60%+</span>
-                <div>
-                  <div class="text-sm-r font-bold text-ink mb-1">Strike Standard</div>
-                  <p class="text-xs-r text-ink-muted leading-relaxed">Two consecutive competitive bullpens at a real command threshold. MLB average: ~62%.</p>
-                </div>
+          <div class="space-y-[2px]">
+            <div class="bg-white/[0.04] border border-white/10 px-[22px] py-[18px] flex items-start gap-[18px] fade-up">
+              <span class="font-['Barlow_Condensed'] font-black text-[40px] leading-none text-[#4A90D9] shrink-0">60%+</span>
+              <div>
+                <div class="font-['Barlow_Condensed'] font-bold uppercase text-[15px] tracking-[0.02em] text-white mb-[3px]">Strike Standard</div>
+                <p class="font-['Barlow'] font-light text-[13px] leading-[1.5] text-white/50">Two consecutive competitive bullpens at a real command threshold. MLB average: ~62%.</p>
               </div>
             </div>
-            <div class="bg-white border border-cream-dark rounded-xl p-5 fade-up">
-              <div class="flex items-baseline gap-4">
-                <span class="font-display text-2xl-r italic text-rust">+10</span>
-                <div>
-                  <div class="text-sm-r font-bold text-ink mb-1">Velocity Gain</div>
-                  <p class="text-xs-r text-ink-muted leading-relaxed">A measurable fastball gain tied to work done inside the system.</p>
-                </div>
+            <div class="bg-white/[0.04] border border-white/10 px-[22px] py-[18px] flex items-start gap-[18px] fade-up">
+              <span class="font-['Barlow_Condensed'] font-black text-[40px] leading-none text-[#B8922A] shrink-0">+10</span>
+              <div>
+                <div class="font-['Barlow_Condensed'] font-bold uppercase text-[15px] tracking-[0.02em] text-white mb-[3px]">Velocity Gain</div>
+                <p class="font-['Barlow'] font-light text-[13px] leading-[1.5] text-white/50">A measurable fastball gain tied to work done inside the system.</p>
               </div>
             </div>
           </div>
@@ -409,77 +444,56 @@
       </div>
     </section>
 
-    <!-- TESTIMONIAL -->
-    <section class="py-16 lg:py-20 bg-white">
-      <div class="max-w-default mx-auto px-5 lg:px-12">
-        <figure class="bg-forest-pale text-ink rounded-xl p-8 lg:p-10 border-l-2 border-l-forest/50 fade-up">
-          <blockquote class="text-lg-r italic leading-relaxed mb-5">"My son loves working with Coach Calhoun. The ability he has to meet my son where he was performing and then make a plan with measurable steps of growth — make him a great private instructor."</blockquote>
-          <figcaption>
-            <div class="text-xs-r font-bold uppercase tracking-wide">Jill S.</div>
-            <div class="text-xs-r text-ink-muted">TAP Athletes Parent</div>
-          </figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <!-- CLASSES -->
-    <section class="py-16 lg:py-24 bg-white" id="classes">
-      <div class="max-w-wide mx-auto px-5 lg:px-12">
-        <div class="max-w-[640px] mb-10">
-          <p class="text-xs-r font-semibold uppercase tracking-[0.15em] text-forest mb-4">Standalone Bookings</p>
-          <h2 class="font-display text-2xl-r text-ink leading-tight mb-5">TAP Athletes Classes.</h2>
-          <p class="text-base-r text-ink-muted leading-relaxed">Focused classes open to any athlete — no program enrollment required. Book a single session or attend regularly.</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-          <div class="bg-cream rounded-xl p-6 lg:p-8 fade-up">
-            <div class="flex items-baseline gap-3 mb-3">
-              <span class="font-display text-lg italic text-forest">Class 01</span>
-              <span class="text-xs font-semibold text-rust uppercase tracking-wide bg-rust-pale px-2 py-0.5 rounded-full">Pitch Design</span>
-            </div>
-            <h3 class="font-display text-xl-r text-ink leading-tight mb-2">Sequencing &amp; Mix Creation</h3>
-            <p class="text-sm-r text-ink-muted leading-relaxed mb-4">How to build a pitch mix that works in sequence, not just individually. Athletes learn to think like pitchers instead of just throwing harder.</p>
-            <ul class="flex flex-col gap-2 mb-5">
-              <li class="text-sm-r text-ink-muted pl-4 relative"><span class="absolute left-0 text-forest">+</span>Sequence pitches to create deception</li>
-              <li class="text-sm-r text-ink-muted pl-4 relative"><span class="absolute left-0 text-forest">+</span>Build a mix around your actual stuff</li>
-              <li class="text-sm-r text-ink-muted pl-4 relative"><span class="absolute left-0 text-forest">+</span>Smarter count-based decisions</li>
-              <li class="text-sm-r text-ink-muted pl-4 relative"><span class="absolute left-0 text-forest">+</span>Read hitters and adjust mid-outing</li>
-            </ul>
-            <div class="flex justify-between items-center pt-4 border-t border-cream-dark">
-              <span class="text-xs-r text-ink-faint">Open Enrollment · All Levels</span>
-              <a href="https://wix.to/dpJ1izs" target="_blank" rel="noopener noreferrer" class="text-sm-r font-semibold text-forest hover:text-forest-light">Book Class →</a>
-            </div>
-          </div>
-
-          <div class="bg-cream rounded-xl p-6 lg:p-8 fade-up">
-            <div class="flex items-baseline gap-3 mb-3">
-              <span class="font-display text-lg italic text-forest">Class 02</span>
-              <span class="text-xs font-semibold text-rust uppercase tracking-wide bg-rust-pale px-2 py-0.5 rounded-full">Complete Pitcher</span>
-            </div>
-            <h3 class="font-display text-xl-r text-ink leading-tight mb-2">Beyond the Pitch</h3>
-            <p class="text-sm-r text-ink-muted leading-relaxed mb-4">The game doesn't stop when the pitch crosses the plate. This class covers everything a pitcher is responsible for that doesn't show up in a velocity reading.</p>
-            <ul class="flex flex-col gap-2 mb-5">
-              <li class="text-sm-r text-ink-muted pl-4 relative"><span class="absolute left-0 text-forest">+</span>Pickoff mechanics &amp; holding runners</li>
-              <li class="text-sm-r text-ink-muted pl-4 relative"><span class="absolute left-0 text-forest">+</span>Backup responsibilities on throws</li>
-              <li class="text-sm-r text-ink-muted pl-4 relative"><span class="absolute left-0 text-forest">+</span>Fielding your position — PFPs</li>
-              <li class="text-sm-r text-ink-muted pl-4 relative"><span class="absolute left-0 text-forest">+</span>Communicating with catcher &amp; infield</li>
-            </ul>
-            <div class="flex justify-between items-center pt-4 border-t border-cream-dark">
-              <span class="text-xs-r text-ink-faint">Open Enrollment · All Levels</span>
-              <a href="https://wix.to/6k7W5iF" target="_blank" rel="noopener noreferrer" class="text-sm-r font-semibold text-forest hover:text-forest-light">Book Class →</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- HOW WE TRAIN (tools-by-grade chart) -->
+    <!-- A LOOK INSIDE THE ACADEMY -->
     <section class="py-16 lg:py-24 bg-cream" id="how">
       <div class="max-w-wide mx-auto px-5 lg:px-12">
-        <div class="max-w-[640px] mb-10">
-          <p class="text-xs-r font-semibold uppercase tracking-[0.15em] text-forest mb-4">How We Train</p>
-          <h2 class="font-display text-2xl-r text-ink leading-tight mb-5">Same curriculum.<br>Different tools.</h2>
-          <p class="text-base-r text-ink-muted leading-relaxed">Tools and load scale to where the athlete is developmentally. Grade ranges shown as a reference, not a rule.</p>
+        <div class="max-w-[640px] mb-10 lg:mb-14">
+          <p class="text-xs-r font-semibold uppercase tracking-[0.15em] text-forest mb-4">Inside the Academy</p>
+          <h2 class="font-display text-2xl-r text-ink leading-tight mb-5">A look inside the academy.</h2>
+          <p class="text-base-r text-ink-muted leading-relaxed">Athletes putting in the work, the tools we use as they grow, the app that runs it all, and the curriculum behind it.</p>
+        </div>
+
+        <!-- Athlete carousel -->
+        <div class="mb-12 lg:mb-16" id="athletes">
+          <div class="flex flex-wrap items-end justify-between gap-4 mb-5">
+            <h3 class="font-body text-lg-r font-bold text-ink">Athletes</h3>
+            <div class="flex gap-2 shrink-0" data-carousel-controls="athletes">
+              <button type="button" data-carousel-prev aria-label="Previous athlete" class="w-11 h-11 inline-flex items-center justify-center rounded-full border border-ink/15 text-ink hover:border-ink/40 hover:bg-cream-warm transition-colors disabled:opacity-30 disabled:cursor-not-allowed">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+              </button>
+              <button type="button" data-carousel-next aria-label="Next athlete" class="w-11 h-11 inline-flex items-center justify-center rounded-full border border-ink/15 text-ink hover:border-ink/40 hover:bg-cream-warm transition-colors disabled:opacity-30 disabled:cursor-not-allowed">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+              </button>
+            </div>
+          </div>
+          <div class="overflow-x-auto -mx-5 lg:-mx-12 px-5 lg:px-12 no-scrollbar scroll-smooth" data-carousel-track="athletes">
+            <div class="flex gap-4 lg:gap-5 snap-x snap-mandatory">
+              <article class="snap-start shrink-0 w-[260px] lg:w-[300px] aspect-[3/4] rounded-2xl overflow-hidden bg-cream-dark fade-up">
+                <img src="/images/athletes/IMG_6483.jpeg" alt="TAP Athletes athlete" class="w-full h-full object-cover" loading="lazy">
+              </article>
+              <article class="snap-start shrink-0 w-[260px] lg:w-[300px] aspect-[3/4] rounded-2xl overflow-hidden bg-cream-dark fade-up">
+                <img src="/images/athletes/IMG_6488.jpeg" alt="TAP Athletes athlete" class="w-full h-full object-cover" loading="lazy">
+              </article>
+              <article class="snap-start shrink-0 w-[260px] lg:w-[300px] aspect-[3/4] rounded-2xl overflow-hidden bg-cream-dark fade-up">
+                <img src="/images/athletes/IMG_6494.jpeg" alt="TAP Athletes athlete" class="w-full h-full object-cover" loading="lazy">
+              </article>
+              <article class="snap-start shrink-0 w-[260px] lg:w-[300px] aspect-[3/4] rounded-2xl overflow-hidden bg-cream-dark fade-up">
+                <img src="/images/athletes/IMG_6503.jpeg" alt="TAP Athletes athlete" class="w-full h-full object-cover" loading="lazy">
+              </article>
+              <article class="snap-start shrink-0 w-[260px] lg:w-[300px] aspect-[3/4] rounded-2xl overflow-hidden bg-cream-dark fade-up">
+                <img src="/images/athletes/IMG_6505.jpeg" alt="TAP Athletes athlete" class="w-full h-full object-cover" loading="lazy">
+              </article>
+              <article class="snap-start shrink-0 w-[260px] lg:w-[300px] aspect-[3/4] rounded-2xl overflow-hidden bg-cream-dark fade-up">
+                <img src="/images/athletes/IMG_6940.jpeg" alt="TAP Athletes athlete" class="w-full h-full object-cover" loading="lazy">
+              </article>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tools by grade -->
+        <div class="mb-5 max-w-[640px]">
+          <h3 class="font-body text-lg-r font-bold text-ink mb-2">Same curriculum, different tools.</h3>
+          <p class="text-sm-r text-ink-muted leading-relaxed">Load and equipment scale to where the athlete is developmentally. Grade ranges shown as a reference, not a rule.</p>
         </div>
 
         <div class="htw-chart fade-up" role="table" aria-label="Training tools by grade range">
@@ -618,42 +632,97 @@
           <div class="htw-legend-item"><svg class="fc" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M 12 3 A 9 9 0 0 1 12 21 L 12 12 Z" fill="currentColor"/></svg><span>Introduced / scaling</span></div>
           <div class="htw-legend-item"><svg class="fc" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="currentColor"/></svg><span>Standard</span></div>
         </div>
-      </div>
-    </section>
 
-    <!-- APP -->
-    <section class="py-16 lg:py-24 bg-white" id="app">
-      <div class="max-w-wide mx-auto px-5 lg:px-12">
-        <div class="max-w-[640px] mb-10">
-          <p class="text-xs-r font-semibold uppercase tracking-[0.15em] text-forest mb-4">The TAP Athletes App</p>
-          <h2 class="font-display text-2xl-r text-ink leading-tight mb-5">Run by you. Powered by Spaces by Wix.</h2>
-          <p class="text-base-r text-ink-muted leading-relaxed">The TAP Athletes app runs inside Spaces by Wix — book sessions, message coaches, manage your schedule, and see new openings as we post them.</p>
-        </div>
-
-        <div class="bg-forest rounded-2xl p-6 lg:p-10 grid grid-cols-1 md:grid-cols-[1.2fr_1fr] gap-8 items-center shadow-medium">
-          <div>
-            <p class="text-xs-r font-semibold uppercase tracking-[0.15em] text-forest-pale/80 mb-3">Get the App</p>
-            <p class="text-base-r text-white/80 leading-relaxed mb-5 max-w-[44ch]">Download Spaces by Wix from the App Store or Google Play, then join with the TAP Athletes invite code below.</p>
-            <div class="inline-flex items-baseline gap-4 px-5 py-3 bg-white/5 border border-white/10 rounded-lg">
-              <span class="text-xs-r font-semibold uppercase tracking-[0.15em] text-forest-pale/80">Invite Code</span>
-              <span class="font-display text-xl-r italic text-white">VWMF1Y</span>
+        <!-- App -->
+        <div class="mt-12 lg:mt-16" id="app">
+          <div class="mb-5 max-w-[640px]">
+            <h3 class="font-body text-lg-r font-bold text-ink mb-2">The TAP Athletes App.</h3>
+            <p class="text-sm-r text-ink-muted leading-relaxed">The TAP Athletes app runs inside Spaces by Wix &mdash; book sessions, message coaches, manage your schedule, and see new openings as we post them.</p>
+          </div>
+          <div class="bg-forest rounded-2xl p-6 lg:p-10 grid grid-cols-1 md:grid-cols-[1.2fr_1fr] gap-8 items-center shadow-medium fade-up">
+            <div>
+              <p class="text-xs-r font-semibold uppercase tracking-[0.15em] text-forest-pale/80 mb-3">Get the App</p>
+              <p class="text-base-r text-white/80 leading-relaxed mb-5 max-w-[44ch]">Download Spaces by Wix from the App Store or Google Play, then join with the TAP Athletes invite code below.</p>
+              <div class="inline-flex items-baseline gap-4 px-5 py-3 bg-white/5 border border-white/10 rounded-lg">
+                <span class="text-xs-r font-semibold uppercase tracking-[0.15em] text-forest-pale/80">Invite Code</span>
+                <span class="font-body text-base-r font-bold tracking-[0.15em] text-white">VWMF1Y</span>
+              </div>
+            </div>
+            <div class="flex flex-col gap-3 items-start md:items-end">
+              <a href="https://apps.apple.com/app/spaces-by-wix/id1099748482" target="_blank" rel="noopener noreferrer" class="block w-[200px] h-[60px] rounded-lg overflow-hidden">
+                <img src="/images/app-store-badge.svg" alt="Download on the App Store" class="!w-full !h-full !max-w-none object-cover">
+              </a>
+              <a href="https://play.google.com/store/apps/details?id=com.wix.android" target="_blank" rel="noopener noreferrer" class="block w-[200px] h-[60px] rounded-lg overflow-hidden">
+                <img src="/images/google-play-badge.svg" alt="Get it on Google Play" class="!w-full !h-full !max-w-none object-cover">
+              </a>
+              <a href="https://wix.app/mobile.apps/9UnuV7p?ref=mam" target="_blank" rel="noopener noreferrer" class="w-[200px] h-[60px] inline-flex items-center justify-center px-6 text-sm-r font-semibold rounded-lg bg-rust text-white hover:bg-rust-hover transition-colors">Open Direct Invite</a>
             </div>
           </div>
-          <div class="flex flex-col gap-3 items-start md:items-end">
-            <a href="https://apps.apple.com/app/spaces-by-wix/id1099748482" target="_blank" rel="noopener noreferrer" class="block">
-              <img src="/images/app-store-badge.svg" alt="Download on the App Store" width="200" height="60">
-            </a>
-            <a href="https://play.google.com/store/apps/details?id=com.wix.android" target="_blank" rel="noopener noreferrer" class="block">
-              <img src="/images/google-play-badge.svg" alt="Get it on Google Play" width="200" height="60">
-            </a>
-            <a href="https://wix.app/mobile.apps/9UnuV7p?ref=mam" target="_blank" rel="noopener noreferrer" class="w-[200px] inline-flex items-center justify-center px-6 py-3 text-sm-r font-semibold rounded-lg bg-rust text-white hover:bg-rust-hover transition-colors">Open Direct Invite</a>
+        </div>
+
+        <!-- Standalone bookings (Classes) -->
+        <div class="mt-12 lg:mt-16" id="classes">
+          <div class="mb-5 max-w-[640px]">
+            <h3 class="font-body text-lg-r font-bold text-ink mb-2">Standalone bookings.</h3>
+            <p class="text-sm-r text-ink-muted leading-relaxed">Focused classes open to any athlete &mdash; no program enrollment required. Book a single session or attend regularly.</p>
           </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+            <div class="bg-white rounded-xl p-6 lg:p-8 fade-up">
+              <div class="flex items-baseline gap-3 mb-3">
+                <span class="font-display text-lg italic text-forest">Class 01</span>
+                <span class="text-xs font-semibold text-rust uppercase tracking-wide bg-rust-pale px-2 py-0.5 rounded-full">Pitch Design</span>
+              </div>
+              <h4 class="font-display text-xl-r text-ink leading-tight mb-2">Sequencing &amp; Mix Creation</h4>
+              <p class="text-sm-r text-ink-muted leading-relaxed mb-4">How to build a pitch mix that works in sequence, not just individually. Athletes learn to think like pitchers instead of just throwing harder.</p>
+              <ul class="flex flex-col gap-2 mb-5">
+                <li class="text-sm-r text-ink-muted pl-4 relative"><span class="absolute left-0 text-forest">+</span>Sequence pitches to create deception</li>
+                <li class="text-sm-r text-ink-muted pl-4 relative"><span class="absolute left-0 text-forest">+</span>Build a mix around your actual stuff</li>
+                <li class="text-sm-r text-ink-muted pl-4 relative"><span class="absolute left-0 text-forest">+</span>Smarter count-based decisions</li>
+                <li class="text-sm-r text-ink-muted pl-4 relative"><span class="absolute left-0 text-forest">+</span>Read hitters and adjust mid-outing</li>
+              </ul>
+              <div class="flex justify-between items-center pt-4 border-t border-cream-dark">
+                <span class="text-xs-r text-ink-faint">Open Enrollment · All Levels</span>
+                <a href="https://wix.to/dpJ1izs" target="_blank" rel="noopener noreferrer" class="text-sm-r font-semibold text-forest hover:text-forest-light">Book Class &rarr;</a>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-xl p-6 lg:p-8 fade-up">
+              <div class="flex items-baseline gap-3 mb-3">
+                <span class="font-display text-lg italic text-forest">Class 02</span>
+                <span class="text-xs font-semibold text-rust uppercase tracking-wide bg-rust-pale px-2 py-0.5 rounded-full">Complete Pitcher</span>
+              </div>
+              <h4 class="font-display text-xl-r text-ink leading-tight mb-2">Beyond the Pitch</h4>
+              <p class="text-sm-r text-ink-muted leading-relaxed mb-4">The game doesn't stop when the pitch crosses the plate. This class covers everything a pitcher is responsible for that doesn't show up in a velocity reading.</p>
+              <ul class="flex flex-col gap-2 mb-5">
+                <li class="text-sm-r text-ink-muted pl-4 relative"><span class="absolute left-0 text-forest">+</span>Pickoff mechanics &amp; holding runners</li>
+                <li class="text-sm-r text-ink-muted pl-4 relative"><span class="absolute left-0 text-forest">+</span>Backup responsibilities on throws</li>
+                <li class="text-sm-r text-ink-muted pl-4 relative"><span class="absolute left-0 text-forest">+</span>Fielding your position &mdash; PFPs</li>
+                <li class="text-sm-r text-ink-muted pl-4 relative"><span class="absolute left-0 text-forest">+</span>Communicating with catcher &amp; infield</li>
+              </ul>
+              <div class="flex justify-between items-center pt-4 border-t border-cream-dark">
+                <span class="text-xs-r text-ink-faint">Open Enrollment · All Levels</span>
+                <a href="https://wix.to/6k7W5iF" target="_blank" rel="noopener noreferrer" class="text-sm-r font-semibold text-forest hover:text-forest-light">Book Class &rarr;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Curriculum download CTA -->
+        <div class="mt-12 lg:mt-16 bg-white border border-cream-dark rounded-2xl p-6 lg:p-8 flex flex-col md:flex-row md:items-center gap-5 md:gap-8 fade-up">
+          <div class="flex-1">
+            <h3 class="font-body text-lg-r font-bold text-ink mb-2">The full Foundations curriculum.</h3>
+            <p class="text-sm-r text-ink-muted leading-relaxed">Every phase, every milestone &mdash; what athletes work on and how progression is measured. Free download.</p>
+          </div>
+          <a href="#" data-guide-btn class="inline-flex items-center gap-2 justify-center px-7 py-3.5 text-base-r font-semibold rounded-lg bg-transparent text-ink border border-ink/15 hover:border-ink/30 hover:bg-cream-warm transition-all whitespace-nowrap shrink-0">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download Curriculum Guide
+          </a>
         </div>
       </div>
     </section>
 
     <!-- FAQ -->
-    <section class="py-16 lg:py-24 bg-cream" id="faq">
+    <section class="py-16 lg:py-24 bg-white" id="faq">
       <div class="max-w-default mx-auto px-5 lg:px-12">
         <div class="max-w-[640px] mb-10">
           <p class="text-xs-r font-semibold uppercase tracking-[0.15em] text-forest mb-4">Common Questions</p>
@@ -813,6 +882,32 @@
       if (closeBtn) closeBtn.addEventListener('click', () => dlg.close());
       dlg.addEventListener('click', (e) => { if (e.target === dlg) dlg.close(); });
     });
+
+    // Carousel click-through controls
+    document.querySelectorAll('[data-carousel-controls]').forEach(controls => {
+      const key = controls.dataset.carouselControls;
+      const track = document.querySelector(`[data-carousel-track="${key}"]`);
+      if (!track) return;
+      const prev = controls.querySelector('[data-carousel-prev]');
+      const next = controls.querySelector('[data-carousel-next]');
+      const stepSize = () => {
+        const card = track.querySelector('article');
+        if (!card) return track.clientWidth;
+        const styles = getComputedStyle(card.parentElement);
+        const gap = parseFloat(styles.columnGap || styles.gap || '0') || 0;
+        return card.offsetWidth + gap;
+      };
+      const updateButtons = () => {
+        const max = track.scrollWidth - track.clientWidth - 1;
+        if (prev) prev.disabled = track.scrollLeft <= 0;
+        if (next) next.disabled = track.scrollLeft >= max;
+      };
+      if (prev) prev.addEventListener('click', () => track.scrollBy({ left: -stepSize(), behavior: 'smooth' }));
+      if (next) next.addEventListener('click', () => track.scrollBy({ left: stepSize(), behavior: 'smooth' }));
+      track.addEventListener('scroll', updateButtons, { passive: true });
+      window.addEventListener('resize', updateButtons);
+      updateButtons();
+    });
   </script>
 
   <!-- How We Train popups -->
@@ -851,6 +946,75 @@
     <p class="htw-popup-frame" id="htw-popup-independent-title"><strong>Independent training in 7th–8th:</strong></p>
     <p class="htw-popup-body">Junior high is where athletes start training without a coach instructing every rep — bookable solo slots, scripted bullpens, and live at-bats. Coaches stay in the loop through plans, video review, and check-ins. By high school, independent work is a standard part of the week.</p>
   </dialog>
+
+  <!-- Curriculum Guide Email Gate -->
+  <div id="emailModal" class="hidden fixed inset-0 z-[9999] bg-black/50 backdrop-blur-sm items-center justify-center">
+    <div class="bg-white rounded-2xl p-8 max-w-[400px] w-[90%] relative shadow-heavy">
+      <button id="emailModalClose" type="button" class="absolute top-4 right-4 text-ink-muted hover:text-ink text-xl leading-none cursor-pointer" aria-label="Close">&times;</button>
+      <h3 class="font-display text-xl-r italic text-ink mb-2">Curriculum Guide</h3>
+      <p class="text-sm-r text-ink-muted mb-5">Enter your email to access the full Foundations curriculum guide.</p>
+      <form id="guideForm">
+        <input type="email" name="email" required placeholder="Email address" class="w-full px-4 py-3 border border-cream-dark rounded-lg font-body text-sm-r mb-3 outline-none focus:border-forest transition-colors" />
+        <button type="submit" id="guideSubmitBtn" class="w-full inline-flex items-center justify-center px-6 py-3.5 text-base-r font-semibold rounded-lg bg-rust text-white hover:bg-rust-hover transition-colors">Download</button>
+      </form>
+      <p id="guideError" class="hidden text-xs-r text-red-600 mt-2 text-center">Something went wrong. Please try again.</p>
+    </div>
+  </div>
+
+  <script>
+    (function(){
+      var modal = document.getElementById('emailModal');
+      var form = document.getElementById('guideForm');
+      var closeBtn = document.getElementById('emailModalClose');
+      var submitBtn = document.getElementById('guideSubmitBtn');
+      var errorMsg = document.getElementById('guideError');
+      var pdfUrl = '/foundations/curriculum-guide.html';
+      if (!modal || !form) return;
+
+      document.querySelectorAll('[data-guide-btn]').forEach(function(btn) {
+        btn.addEventListener('click', function(e) {
+          e.preventDefault();
+          modal.classList.remove('hidden');
+          modal.classList.add('flex');
+          modal.querySelector('input[type="email"]').focus();
+        });
+      });
+
+      closeBtn.addEventListener('click', function() {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      });
+      modal.addEventListener('click', function(e) {
+        if (e.target === modal) { modal.classList.add('hidden'); modal.classList.remove('flex'); }
+      });
+
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        errorMsg.classList.add('hidden');
+        submitBtn.textContent = 'Sending...';
+        submitBtn.disabled = true;
+
+        fetch('https://formspree.io/f/mqegvvdn', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify({ email: form.querySelector('input[type="email"]').value, _subject: 'Curriculum Guide Download' })
+        }).then(function(r) {
+          if (r.ok) {
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            form.reset();
+            submitBtn.textContent = 'Download';
+            submitBtn.disabled = false;
+            window.location.href = pdfUrl;
+          } else { throw new Error('fail'); }
+        }).catch(function() {
+          errorMsg.classList.remove('hidden');
+          submitBtn.textContent = 'Download';
+          submitBtn.disabled = false;
+        });
+      });
+    })();
+  </script>
 
 </body>
 </html>
