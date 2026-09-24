@@ -320,7 +320,7 @@ const PAGES = {
     breadcrumb(url, [['Home', `${BASE}/`], ['Train Unprompted', url]]),
     webPage(url, {
       name: 'Train Unprompted — TAP Athletes Pitching Academy',
-      description: 'A behavior-first pitching program for ages 13 and up that teaches athletes to train independently. Three touchpoints per week including coach home visits. $497.',
+      description: 'A six-week, behavior-first pitching program for ages 13+ that teaches athletes to train on their own. Weekly coach home visits. $497.',
       datePublished: '2026-04-08',
       dateModified: TODAY,
       breadcrumb: { '@id': `${url}#breadcrumb` },
