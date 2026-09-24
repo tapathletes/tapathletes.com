@@ -18,7 +18,7 @@
 # Rule of thumb for edits: the only things that belong in Disallow are gated
 # assets and print/PDF source pages. Everything public stays crawlable.
 #
-# Last reviewed: 2026-08-13
+# Last reviewed: 2026-09-24
 
 # ---------------------------------------------------------------------------
 # All standard crawlers (Googlebot, Bingbot, Slurp, DuckDuckBot, everyone else)
